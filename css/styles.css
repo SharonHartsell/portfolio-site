@@ -77,6 +77,33 @@
   list-style: none;
 }
 
+/* line 1, ../scss/_about.scss */
+.about {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  background: lightblue;
+  height: 100vh;
+}
+
+/* line 10, ../scss/_about.scss */
+.about_contentWrapper {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* line 15, ../scss/_about.scss */
+.about_image + .about_text {
+  margin-left: 40px;
+}
+
 /* line 1, ../scss/_footer.scss */
 .footer {
   text-align: center;

@@ -1,0 +1,17 @@
+.about {
+  @include display-flex;
+  @include align-items(center);
+  @include justify-content(center);
+  @include flex-direction(column);
+  background: lightblue;
+  height: 100vh;
+}
+
+  .about_contentWrapper {
+    @include display-flex;
+    @include align-items(center);
+  }
+
+    .about_image + .about_text {
+      margin-left: 40px;
+    }
