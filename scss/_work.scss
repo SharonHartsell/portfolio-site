@@ -1,0 +1,15 @@
+.work {
+  @include display-flex;
+  @include align-items(center);
+  @include justify-content(center);
+  @include flex-direction(column);
+  background: mintcream;
+  height: 100vh;
+}
+
+  .work_projectList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    list-style: none;
+  }
