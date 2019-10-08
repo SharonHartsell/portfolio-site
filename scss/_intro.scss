@@ -1,0 +1,24 @@
+.intro {
+  @include display-flex;
+  @include align-items(center);
+  @include justify-content(center);
+  @include flex-direction(column);
+  background: coral;
+  height: 100vh;
+}
+
+  .intro_techList {
+    @include display-flex;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+    .intro_techListItem {
+      text-align: center;
+
+      & + & {
+        margin-left: 40px;
+      }
+    }

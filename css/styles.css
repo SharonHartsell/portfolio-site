@@ -1,0 +1,62 @@
+/* line 1, ../scss/_header.scss */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  background: gold;
+  padding: 40px;
+}
+
+/* line 1, ../scss/_nav.scss */
+.nav {
+  background: lightblue;
+}
+
+/* line 5, ../scss/_nav.scss */
+.nav_list {
+  display: none;
+}
+
+/* line 1, ../scss/_footer.scss */
+.footer {
+  text-align: center;
+}
+
+/* line 1, ../scss/_intro.scss */
+.intro {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  background: coral;
+  height: 100vh;
+}
+
+/* line 10, ../scss/_intro.scss */
+.intro_techList {
+  display: -webkit-flex;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 18, ../scss/_intro.scss */
+.intro_techListItem {
+  text-align: center;
+}
+/* line 21, ../scss/_intro.scss */
+.intro_techListItem + .intro_techListItem {
+  margin-left: 40px;
+}
