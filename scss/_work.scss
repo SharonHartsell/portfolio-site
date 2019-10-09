@@ -1,10 +1,5 @@
 .work {
-  @include display-flex;
-  @include align-items(center);
-  @include justify-content(center);
-  @include flex-direction(column);
-  background: mintcream;
-  height: 100vh;
+  background: pink;
 }
 
   .work_projectList {

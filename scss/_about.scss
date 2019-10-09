@@ -1,10 +1,5 @@
 .about {
-  @include display-flex;
-  @include align-items(center);
-  @include justify-content(center);
-  @include flex-direction(column);
   background: lightblue;
-  height: 100vh;
 }
 
   .about_contentWrapper {

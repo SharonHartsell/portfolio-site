@@ -1,4 +1,4 @@
-<section class="about">
+<section class="about section--fullHt">
   <h2>&lt; about &gt;</h2>
   <div class="about_contentWrapper">
     <img src="https://via.placeholder.com/500" class="about_image" alt="Sharon" />

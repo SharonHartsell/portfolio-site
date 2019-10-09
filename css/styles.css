@@ -1,3 +1,16 @@
+/* line 1, ../scss/_global.scss */
+.section--fullHt {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: 100vh;
+}
+
 /* line 1, ../scss/_header.scss */
 .header {
   position: fixed;
@@ -11,7 +24,7 @@
   -webkit-justify-content: space-between;
   justify-content: space-between;
   background: gold;
-  padding: 40px;
+  padding: 20px;
 }
 
 /* line 1, ../scss/_nav.scss */
@@ -26,19 +39,10 @@
 
 /* line 1, ../scss/_intro.scss */
 .intro {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  flex-direction: column;
   background: coral;
-  height: 100vh;
 }
 
-/* line 10, ../scss/_intro.scss */
+/* line 5, ../scss/_intro.scss */
 .intro_techList {
   display: -webkit-flex;
   display: flex;
@@ -47,30 +51,21 @@
   list-style: none;
 }
 
-/* line 18, ../scss/_intro.scss */
+/* line 13, ../scss/_intro.scss */
 .intro_techListItem {
   text-align: center;
 }
-/* line 21, ../scss/_intro.scss */
+/* line 16, ../scss/_intro.scss */
 .intro_techListItem + .intro_techListItem {
   margin-left: 40px;
 }
 
 /* line 1, ../scss/_work.scss */
 .work {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  background: mintcream;
-  height: 100vh;
+  background: pink;
 }
 
-/* line 10, ../scss/_work.scss */
+/* line 5, ../scss/_work.scss */
 .work_projectList {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -79,19 +74,10 @@
 
 /* line 1, ../scss/_about.scss */
 .about {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  flex-direction: column;
   background: lightblue;
-  height: 100vh;
 }
 
-/* line 10, ../scss/_about.scss */
+/* line 5, ../scss/_about.scss */
 .about_contentWrapper {
   display: -webkit-flex;
   display: flex;
@@ -99,9 +85,14 @@
   align-items: center;
 }
 
-/* line 15, ../scss/_about.scss */
+/* line 10, ../scss/_about.scss */
 .about_image + .about_text {
   margin-left: 40px;
+}
+
+/* line 1, ../scss/_contact.scss */
+.contact {
+  background: green;
 }
 
 /* line 1, ../scss/_footer.scss */

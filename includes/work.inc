@@ -1,4 +1,4 @@
-<section class="work">
+<section class="work section--fullHt">
   <h2>&lt; work &gt;</h2>
   <ul class="work_projectList">
     <li class="work_projectListItem">

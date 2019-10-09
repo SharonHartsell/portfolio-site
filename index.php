@@ -4,6 +4,7 @@
 <?php include("includes/intro.inc"); ?>
 <?php include("includes/work.inc"); ?>
 <?php include("includes/about.inc"); ?>
+<?php include("includes/contact.inc"); ?>
 
 <?php include("includes/footer.inc"); ?>
 <?php include("includes/html_footer.inc"); ?>

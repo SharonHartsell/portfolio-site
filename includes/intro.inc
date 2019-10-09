@@ -1,4 +1,4 @@
-<section class="intro">
+<section class="intro section--fullHt">
   <img src="https://via.placeholder.com/300" class="intro_image" alt="Sharon" />
   <h1 class="intro_headline">Hi! I’m Sharon, a front-end web developer.</h1>
   <ul class="intro_techList">
