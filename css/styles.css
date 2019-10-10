@@ -25,6 +25,7 @@
   justify-content: space-between;
   background: gold;
   padding: 20px;
+  z-index: 9999;
 }
 
 /* line 1, ../scss/_nav.scss */
@@ -93,6 +94,124 @@
 /* line 1, ../scss/_contact.scss */
 .contact {
   background: green;
+}
+
+/* line 1, ../scss/_workDetail.scss */
+.workDetail-intro {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: dodgerblue;
+  height: 100vh;
+  padding: 40px;
+}
+
+/* line 10, ../scss/_workDetail.scss */
+.workDetail-challengeSection {
+  background: tomato;
+}
+
+/* line 13, ../scss/_workDetail.scss */
+.workDetail-challengeContent {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* line 18, ../scss/_workDetail.scss */
+.workDetail-challengeHeader + .workDetail-challengeText {
+  margin-left: 40px;
+}
+
+/* line 22, ../scss/_workDetail.scss */
+.workDetail-solutionSection {
+  background: greenyellow;
+  display: -webkit-flex;
+  display: flex;
+  height: 100vh;
+}
+
+/* line 28, ../scss/_workDetail.scss */
+.workDetail-solutionContent {
+  -webkit-flex: 1;
+  flex: 1;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: lavender;
+  padding: 40px;
+}
+
+/* line 37, ../scss/_workDetail.scss */
+.workDetail-solutionImageWrap {
+  -webkit-flex: 2;
+  flex: 2;
+  outline: solid 3px hotpink;
+  height: 100%;
+}
+
+/* line 43, ../scss/_workDetail.scss */
+.workDetail-solutionImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* line 49, ../scss/_workDetail.scss */
+.workDetail-slideshowSection {
+  position: relative;
+  height: 100vh;
+  background: orchid;
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* line 56, ../scss/_workDetail.scss */
+.workDetail-slideshow {
+  position: relative;
+  -webkit-flex: 1;
+  flex: 1;
+  outline: solid 1px blue;
+}
+
+/* line 62, ../scss/_workDetail.scss */
+.workDetail-slideshowItem {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: yellow;
+}
+
+/* line 74, ../scss/_workDetail.scss */
+.workDetail-slideshowBtn {
+  position: absolute;
+  top: 50%;
+}
+/* line 78, ../scss/_workDetail.scss */
+.workDetail-slideshowBtn--prev {
+  left: 40px;
+}
+/* line 82, ../scss/_workDetail.scss */
+.workDetail-slideshowBtn--next {
+  right: 40px;
+}
+
+/* line 87, ../scss/_workDetail.scss */
+.workDetail-backLinkWrap {
+  padding: 40px;
+  text-align: center;
 }
 
 /* line 1, ../scss/_footer.scss */

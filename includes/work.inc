@@ -4,32 +4,32 @@
     <li class="work_projectListItem">
       <h3>Project Title</h3>
       <p>Lorem ipsum dolor est sit amet.</p>
-      <a href="#" class="work_projectBtn">See Details</a>
+      <a href="work-detail.php" class="work_projectBtn">See Details</a>
     </li>
     <li class="work_projectListItem">
       <h3>Project Title</h3>
       <p>Lorem ipsum dolor est sit amet.</p>
-      <a href="#" class="work_projectBtn">See Details</a>
+      <a href="work-detail.php" class="work_projectBtn">See Details</a>
     </li>
     <li class="work_projectListItem">
       <h3>Project Title</h3>
       <p>Lorem ipsum dolor est sit amet.</p>
-      <a href="#" class="work_projectBtn">See Details</a>
+      <a href="work-detail.php" class="work_projectBtn">See Details</a>
     </li>
     <li class="work_projectListItem">
       <h3>Project Title</h3>
       <p>Lorem ipsum dolor est sit amet.</p>
-      <a href="#" class="work_projectBtn">See Details</a>
+      <a href="work-detail.php" class="work_projectBtn">See Details</a>
     </li>
     <li class="work_projectListItem">
       <h3>Project Title</h3>
       <p>Lorem ipsum dolor est sit amet.</p>
-      <a href="#" class="work_projectBtn">See Details</a>
+      <a href="work-detail.php" class="work_projectBtn">See Details</a>
     </li>
     <li class="work_projectListItem">
       <h3>Project Title</h3>
       <p>Lorem ipsum dolor est sit amet.</p>
-      <a href="#" class="work_projectBtn">See Details</a>
+      <a href="work-detail.php" class="work_projectBtn">See Details</a>
     </li>
     
   </ul>
