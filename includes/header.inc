@@ -3,7 +3,7 @@
   <a href="index.php">Sharon Hartsell</a>
   <nav class="nav">
     <button class="nav_toggle">Menu</button>
-    <ul class="nav_list">
+    <ul class="nav_list section--fullHt">
       <li><a href="#">Home</a></li>
       <li><a href="#">Work</a></li>
       <li><a href="#">About</a></li>
