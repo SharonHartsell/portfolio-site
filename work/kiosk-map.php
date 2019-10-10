@@ -10,13 +10,16 @@ $content = [
   'github_link' => '',
   'tech' => ['html5', 'css3', 'sass', 'js'],
   'intro_bgrd' => 'bgrd-map.jpg',
+
   'challenge' => 'Challenge lorem ipsum dolor est sit amet',
+
   'solution' => 'i solved stuff',
   'my_role' => [
     'made stuff',
     'made more stuff'
   ],
   'solution_img' => 'main.jpg',
+  
   'slideshow_imgs' => [
     'slide1.jpg',
     'slide2.jpg',
