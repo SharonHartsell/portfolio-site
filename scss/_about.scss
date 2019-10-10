@@ -1,0 +1,12 @@
+.about {
+  background: lightblue;
+}
+
+  .about_contentWrapper {
+    @include display-flex;
+    @include align-items(center);
+  }
+
+    .about_image + .about_text {
+      margin-left: 40px;
+    }

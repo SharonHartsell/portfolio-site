@@ -1,0 +1,13 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  @include display-flex;
+  @include align-items(center);
+  @include justify-content(space-between);
+  background: gold;
+  padding: 20px;
+
+  z-index: 9999;
+}

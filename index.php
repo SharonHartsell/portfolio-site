@@ -1,7 +1,10 @@
 <?php include("includes/html_header.inc"); ?>
 <?php include("includes/header.inc"); ?>
 
-<p><i class="fas fa-paper-plane"></i> Hello world! This is HTML5 Boilerplate.</p>
+<?php include("includes/intro.inc"); ?>
+<?php include("includes/work.inc"); ?>
+<?php include("includes/about.inc"); ?>
+<?php include("includes/contact.inc"); ?>
 
 <?php include("includes/footer.inc"); ?>
 <?php include("includes/html_footer.inc"); ?>
