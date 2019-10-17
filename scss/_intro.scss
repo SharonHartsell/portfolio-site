@@ -1,6 +1,12 @@
 .intro {
-  background: coral;
+  @include background-image(linear-gradient(to bottom right, $gradientStart, $gradientEnd));
+
+  text-align: center;
 }
+
+  .intro_headline {
+    color: white;
+  }
 
   .intro_techList {
     @include display-flex;
@@ -13,7 +19,17 @@
     .intro_techListItem {
       text-align: center;
 
+      opacity: 0.75;
+
       & + & {
         margin-left: 40px;
       }
     }
+
+      .intro_techIcon {
+        color: white;
+      }
+
+      .intro_techName {
+        color: white;
+      }

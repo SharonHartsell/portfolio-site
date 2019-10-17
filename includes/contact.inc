@@ -1,6 +1,6 @@
 <section class="contact section--fullHt">
-  <h2>&lt; contact &gt;</h2>
-  <p>Get in touch by emailing hello@sharonhartsell.com or by filling out the form below.</p>
+  <h2 class="t-title--40l">&lt; contact &gt;</h2>
+  <p class="t-body--18l">Get in touch by emailing hello@sharonhartsell.com or by filling out the form below.</p>
   <form method="post">
     <div>
       <label for="contactForm_name">Name</label>
@@ -14,7 +14,7 @@
       <label for="contactForm_msg">Message</label>
       <textarea id="contactForm_msg" name="msg"></textarea>
     </div>
-    <button type="submit">Send Message</button>
+    <button type="submit" class="t-title--20b t-caps">Send Message</button>
   </form>
   
   <?php if (!empty($_POST)) : ?>

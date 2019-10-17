@@ -1,0 +1,42 @@
+.btn {
+  @include border-radius(20px);
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px 20px;
+
+  text-align: center;
+  text-decoration: none;
+
+  transition: all 0.25s;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--primary {
+    @extend .btn;
+    border-color: $cta;
+    background: $cta;
+
+    color: white;
+
+    &:hover {
+      border-color: darken($cta, 12);
+      background: darken($cta, 12);
+    }
+  }
+
+  &--secondary {
+    @extend .btn;
+    border-color: $cta;
+    background: white;
+
+    color: $cta;
+
+    &:hover {
+      background: $cta;
+
+      color: white;
+    }
+  }
+}

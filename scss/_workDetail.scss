@@ -7,25 +7,13 @@
   padding: 40px;
 }
 
-.workDetail-challengeSection {
-  background: tomato;
-}
-.workDetail-challengeContent {
-  @include display-flex;
-  @include align-items(center);
-}
-
-  .workDetail-challengeHeader + .workDetail-challengeText {
-    margin-left: 40px;
-  }
-
-.workDetail-solutionSection {
+.workDetail-roleSection {
   background: greenyellow;
   @include display-flex;
   height: 100vh;
 }
 
-  .workDetail-solutionContent {
+  .workDetail-roleContent {
     @include flex(1);
     @include display-flex;
     @include flex-direction(column);
@@ -34,22 +22,17 @@
     padding: 40px;
   }
 
-  .workDetail-solutionImageWrap {
+  .workDetail-roleImageWrap {
     @include flex(2);
+    @include display-flex;
     outline: solid 3px hotpink;
     height: 100%;
   }
 
-    .workDetail-solutionImage {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
 .workDetail-slideshowSection {
   position: relative;
-  height: 100vh;
   background: orchid;
+  @include flex(1);
   @include display-flex;
 }
 
@@ -82,6 +65,18 @@
     &--next {
       right: 40px;
     }
+  }
+
+.workDetail-codeSection {
+  background: tomato;
+}
+.workDetail-codeContent {
+  @include display-flex;
+  @include align-items(center);
+}
+
+  .workDetail-codeHeader + .workDetail-codeText {
+    margin-left: 40px;
   }
 
 .workDetail-backLinkWrap {

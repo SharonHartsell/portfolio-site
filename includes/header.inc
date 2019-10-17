@@ -1,6 +1,6 @@
 <div class="stickyWrapper">
 <header class="header">
-  <a href="index.php">Sharon Hartsell</a>
+  <a href="/index.php" class="t-title--20b">Sharon Hartsell</a>
   <nav class="nav">
     <button class="nav_toggle">Menu</button>
     <ul class="nav_list section--fullHt">

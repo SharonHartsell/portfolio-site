@@ -8,3 +8,21 @@
 
     list-style: none;
   }
+
+    .work_projectListItem {
+      border-top: solid 5px blue;
+      border-left: solid 5px blue;
+      border-image: 
+        linear-gradient(
+          to bottom right, 
+          $gradientStart, 
+          $gradientEnd
+        ) 1 100%;
+      padding: 40px;
+    }
+
+      .work_projectTitle {
+        margin: 0;
+
+        color: $gray;
+      }
