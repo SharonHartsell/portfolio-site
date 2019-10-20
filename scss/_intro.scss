@@ -1,5 +1,9 @@
 .intro {
+  @include display-flex;
+  @include align-items(center);
+  @include flex-direction(column);
   @include background-image(linear-gradient(to bottom right, $gradientStart, $gradientEnd));
+  padding: 40px;
 
   text-align: center;
 }

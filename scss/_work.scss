@@ -2,8 +2,14 @@
   padding: 40px;
 }
 
+  .work_sectionTitle {
+    text-align: center;
+    color: $gray;
+  }
+
   .work_projectList {
     @include display-flex;
+    @include justify-content(center);
     margin: 0;
     padding: 0;
 
@@ -12,6 +18,10 @@
 
     .work_projectListItem {
       @include flex(1);
+      @include display-flex;
+      @include flex-direction(column);
+      @include justify-content(space-between);
+      max-width: 50%;
       position: relative;
       background: white;
       padding: 40px;
@@ -40,4 +50,13 @@
         margin: 0;
 
         color: $gray;
+      }
+
+      .work_projectTeaser {
+        color: $gray;
+      }
+
+      .work_projectTitle + .work_projectBtn,
+      .work_projectTeaser + .work_projectBtn {
+        margin-top: 20px;
       }

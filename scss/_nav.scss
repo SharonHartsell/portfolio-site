@@ -2,6 +2,25 @@
   
 }
 
+  .nav_toggle {
+    border: none;
+    background: none;
+    padding: 0;
+
+    color: white;
+    font-size: 30px;
+    text-align: right;
+    line-height: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .nav_toggleText {
+    font-size: 0px;
+  }
+
   .nav_list {
     display: none;
     position: fixed;
