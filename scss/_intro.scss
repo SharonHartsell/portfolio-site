@@ -4,6 +4,14 @@
   text-align: center;
 }
 
+  .intro_image {
+    @include border-radius(50%);
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+  }
+
   .intro_headline {
     color: white;
   }
