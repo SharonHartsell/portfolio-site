@@ -3,7 +3,7 @@
   @include align-items(center);
   @include flex-direction(column);
   @include background-image(linear-gradient(to bottom right, $gradientStart, $gradientEnd));
-  padding: 40px;
+  padding: 40px + $navHt 40px 40px 40px;
 
   text-align: center;
 }

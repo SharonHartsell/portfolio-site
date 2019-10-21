@@ -1,61 +1,67 @@
-<section class="workDetail-intro" style="background-image: url('/img/work/<?php print $content['intro_bgrd']; ?>')">
-  <?php if ( count($content['tech']) > 0 ) : ?>
-    <ul class="intro_techList">
-      <?php foreach($content['tech'] as $tech) : ?>
-        <li class="intro_techListItem">
-          <i class="fab fa-<?php print $tech; ?> intro_techIcon"></i>
-        </li>
-      <?php endforeach; ?>
-    </ul>
-  <?php endif; ?>
+<section class="workDetail_intro">
+  <div class="workDetail_introText">
+    <?php if ( count($content['tech']) > 0 ) : ?>
+      <ul class="intro_techList">
+        <?php foreach($content['tech'] as $tech) : ?>
+          <li class="intro_techListItem">
+            <i class="fab fa-<?php print $tech; ?> intro_techIcon"></i>
+          </li>
+        <?php endforeach; ?>
+      </ul>
+    <?php endif; ?>
 
-  <h1 class="workDetail-title t-title--60b"><?php print $content['title']; ?></h1>
-  <h2 class="workDetail-summary t-body--24sb"><?php print $content['summary']; ?></h2>
-  <?php if ( !empty($content['live_link']) || !empty($content['github_link']) ) : ?>
-    <div>
-      <?php if ( !empty($content['live_link']) ) : ?>
-        <a class="workDetail-liveBtn" href="#">See Live Site</a>
-      <?php endif; ?>
-      <?php if ( !empty($content['github_link']) ) : ?>
-        <a class="workDetail-githubLink" href="#">Check out the code on <i class="fab fa-github"></i></a>
-      <?php endif; ?>
-    </div>
-  <?php endif; ?>
+    <h1 class="workDetail_title t-title--60b"><?php print $content['title']; ?></h1>
+    <h2 class="workDetail_summary t-body--24sb"><?php print $content['summary']; ?></h2>
+    <?php if ( !empty($content['live_link']) || !empty($content['github_link']) ) : ?>
+      <div>
+        <?php if ( !empty($content['live_link']) ) : ?>
+          <a class="workDetail-liveBtn" href="#">See Live Site</a>
+        <?php endif; ?>
+        <?php if ( !empty($content['github_link']) ) : ?>
+          <a class="workDetail-githubLink" href="#">Check out the code on <i class="fab fa-github"></i></a>
+        <?php endif; ?>
+      </div>
+    <?php endif; ?>
+  </div>
+  <div class="workDetail_introImageWrapper">
+    <img src="https://via.placeholder.com/600x400" class="workDetail_introImage" alt="" />
+  </div>
 </section>
 
-<section class="workDetail-roleSection">
-  <div class="workDetail-roleContent">
-    <h2 class="workDetail-roleHeader t-title--40l">&gt; what I did</h2>
-    <div class="workDetail-roleText t-body--18l"><?php print $content['role']; ?></div>
+<section class="workDetail_roleSection">
+  <div class="workDetail_roleContent">
+    <h2 class="workDetail_roleHeader t-title--40l">&gt; what I did</h2>
     <?php if ( !empty($content['my_role']) ) : ?>
-      <ul>
+      <ul class="workDetail_roleList">
         <?php foreach($content['my_role'] as $role) : ?>
-          <li class="t-body--18l"><?php print $role; ?></li>
+          <li class="workDetail_roleItem t-body--18l"><?php print $role; ?></li>
         <?php endforeach; ?>
       </ul>
     <?php endif; ?>
   </div>
-  <div class="workDetail-roleImageWrap">
-    <section class="workDetail-slideshowSection">
-      <div class="workDetail-slideshow">
+  <div class="workDetail_roleImageWrap">
+    <section class="workDetail_slideshowSection">
+      <div class="workDetail_slideshow">
+        <?php $slide_counter = 1; ?>
         <?php foreach($content['slideshow_imgs'] as $img) : ?>
-          <img src="/img/work/<?php print $img; ?>" class="workDetail-slideshowItem" alt="" />
+          <?php $active_slide_class = ($slide_counter == 1) ? 'workDetail_slideshowItem--active' : ''; ?>
+          <!-- <img src="/img/work/<?php print $img; ?>" class="workDetail_slideshowItem" alt="" /> -->
+          <img src="<?php print $img; ?>" class="workDetail_slideshowItem <?php print $active_slide_class; ?>" alt="" />
+          <?php $slide_counter++; ?>
         <?php endforeach; ?>
       </div>
-      <button class="workDetail-slideshowBtn workDetail-slideshowBtn--prev">Previous</button>
-      <button class="workDetail-slideshowBtn workDetail-slideshowBtn--next">Next</button>
+      <button class="workDetail_slideshowBtn workDetail_slideshowBtn--prev">Previous</button>
+      <button class="workDetail_slideshowBtn workDetail_slideshowBtn--next">Next</button>
     </section>
     <img src="/img/work/<?php print $content['solution_img'];?>" class="workDetail-solutionImage" alt="" />
   </div>
 </section>
 
-<section class="workDetail-codeSection section--fullHt">
-  <div class="workDetail-codeContent">
-    <h2 class="workDetail-codeHeader t-title--40l">&gt; code sample</h2>
-    <div class="workDetail-codeText t-body--18l"><?php print $content['challenge']; ?></div>
-  </div>
+<section class="workDetail_codeSection">
+  <h2 class="workDetail_codeHeader t-title--40l">&gt; code sample</h2>
+  <div class="workDetail_codeText t-body--18l"><?php print $content['challenge']; ?></div>
 </section>
 
-<div class="workDetail-backLinkWrap">
-  <a href="/index.php" class="t-body--18l">&lt; Back to main page</a>
+<div class="workDetail_backLinkWrap">
+  <a href="/index.php" class="workDetail_backLink t-body--18l">&lt; Back to main page</a>
 </div>
