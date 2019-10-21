@@ -3,6 +3,9 @@ $gradientEnd: #10D563;
 $cta: #FF9D2B;
 
 $gray: #707070;
+$ltGray: lighten($gray, 50);
 
 $sansTitle: 'Work Sans', Helvetica, sans-serif;
 $sansBody: 'Open Sans', Helvetica, sans-serif;
+
+$navHt: 50px;

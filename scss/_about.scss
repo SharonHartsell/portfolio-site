@@ -1,12 +1,48 @@
 .about {
-  background: lightblue;
+  background: $ltGray;
+  padding: 40px;
 }
+
+  .about_sectionTitle {
+    text-align: center;
+    color: $gray;
+  }
 
   .about_contentWrapper {
     @include display-flex;
     @include align-items(center);
   }
 
-    .about_image + .about_text {
+    .about_imageWrapper {
+      padding: 40px;
+    }
+
+    .about_image {
+      @include border-radius(50%);
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .about_text {
+      color: $gray;
+    }
+
+    .about_socialLink {
+      color: $gray;
+      font-size: 36px;
+
+      & + & {
+        margin-left: 20px;
+      }
+    }
+
+    .about_text + .about_resumeBtn,
+    .about_resumeBtn + .about_socialLinks {
+      margin-top: 20px;
+    }
+
+    .about_imageWrapper + .about_textWrapper {
       margin-left: 40px;
     }

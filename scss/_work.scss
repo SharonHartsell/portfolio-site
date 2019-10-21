@@ -1,28 +1,62 @@
 .work {
-  background: pink;
+  padding: 40px;
 }
 
+  .work_sectionTitle {
+    text-align: center;
+    color: $gray;
+  }
+
   .work_projectList {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    @include display-flex;
+    @include justify-content(center);
+    margin: 0;
+    padding: 0;
 
     list-style: none;
   }
 
     .work_projectListItem {
-      border-top: solid 5px blue;
-      border-left: solid 5px blue;
-      border-image: 
-        linear-gradient(
-          to bottom right, 
-          $gradientStart, 
-          $gradientEnd
-        ) 1 100%;
+      @include flex(1);
+      @include display-flex;
+      @include flex-direction(column);
+      @include justify-content(space-between);
+      max-width: 50%;
+      position: relative;
+      background: white;
       padding: 40px;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(100% + 5px);
+        height: calc(100% + 5px);
+        @include background-image(linear-gradient(to bottom right, $gradientStart, $gradientEnd));
+        
+        transform: translate(-5px, -5px);
+        transition: transform 0.5s;
+        z-index: -1;
+      }
+
+      & + & {
+        margin-left: 40px;
+      }
     }
 
       .work_projectTitle {
         margin: 0;
 
         color: $gray;
+      }
+
+      .work_projectTeaser {
+        color: $gray;
+      }
+
+      .work_projectTitle + .work_projectBtn,
+      .work_projectTeaser + .work_projectBtn {
+        margin-top: 20px;
       }

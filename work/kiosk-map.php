@@ -6,7 +6,7 @@ include('../includes/header.inc');
 $content = [
   // Intro
   'title' => 'Sales Kiosk Map foo',
-  'summary' => 'Decoupled front-end application utilizing Drupal API data.',
+  'summary' => 'Life Plan Communities use this tool to highlight their community’s lifestyle, amenities, and inventory to prospective residents. The interactive map allows prospects to explore the community via a touch-screen kiosk where they can view multimedia content and even choose their future home.',
   'live_link' => '',
   'github_link' => '',
   'tech' => ['html5', 'css3', 'sass', 'js'],
@@ -25,9 +25,9 @@ $content = [
 
   // Slideshow
   'slideshow_imgs' => [
-    'slide1.jpg',
-    'slide2.jpg',
-    'slide3.jpg'
+    'https://via.placeholder.com/800x400',
+    'https://via.placeholder.com/500x500',
+    'https://via.placeholder.com/600x200'
   ],
 ];
 

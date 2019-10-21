@@ -6,8 +6,13 @@
   @include display-flex;
   @include align-items(center);
   @include justify-content(space-between);
-  background: gold;
-  padding: 20px;
+  @include background-image(linear-gradient(to right, $gradientStart, $gradientEnd));
+  padding: 10px;
 
   z-index: 9999;
 }
+
+  .header_name {
+    text-decoration: none;
+    color: white;
+  }
