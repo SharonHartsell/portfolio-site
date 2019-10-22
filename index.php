@@ -3,7 +3,7 @@
 
 <!-- Intro -->
 <section class="intro">
-  <img src="https://via.placeholder.com/300" class="intro_image" alt="Sharon" />
+  <img src="/img/sharon-red1.jpg" class="intro_image" alt="Sharon" />
   <h1 class="intro_headline t-title--60b">Hi! I’m Sharon, a front-end web developer.</h1>
   <ul class="intro_techList">
     <li class="intro_techListItem">
@@ -70,7 +70,7 @@ $work = [
   <h2 class="about_sectionTitle t-title--40l">&lt; about &gt;</h2>
   <div class="about_contentWrapper">
     <div class="about_imageWrapper">
-      <img src="https://via.placeholder.com/500" class="about_image" alt="Sharon" />
+      <img src="/img/sharon-teal1.jpg" class="about_image" alt="Sharon" />
     </div>
     <div class="about_textWrapper">
       <p class="about_text t-body--18l">Hi! I’m Sharon, a front-end web developer who specializes in creating user-friendly and engaging web experiences. I’ve been in the field for nearly two years, and I love learning new things, especially why things work the way they do. I’m a diligent problem solver who pays keen attention to details, partly due to my background in graphic design. Check out some of my latest work above, and contact me via the form below or directly at <a href="mailto:hello@sharonhartsell.com">hello@sharonhartsell.com</a>.</p>
