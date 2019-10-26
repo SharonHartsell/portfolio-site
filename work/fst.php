@@ -7,9 +7,9 @@ $sample_code = file_get_contents('./code_samples/fst-package-list.php');
 
 $content = [
   // Intro
-  'title' => 'Sales Kiosk Map',
-  'summary' => 'Life Plan Communities use this tool to highlight their community’s lifestyle, amenities, and inventory to prospective residents. The interactive map allows prospects to explore the community via a touch-screen kiosk where they can view multimedia content and even choose their future home.',
-  'date' => '2018',
+  'title' => 'Finishings Selection Tool',
+  'summary' => 'Life Plan Communities often offer their new residents choices to customize their new home. This tool allows these residents to visualize their chosen paint colors, cabinets, flooring, and finishings all in one place. The Finishings Selection Tool also captures pricing information.',
+  'date' => '2018-19',
   'company' => 'GlynnDevins',
   'live_link' => '',
   'github_link' => '',
@@ -17,16 +17,12 @@ $content = [
   'intro_img' => 'bgrd-map.jpg',
 
   'my_role' => [
-    'Leverage Drupal API data',
-    'Asynchronous JavaScript',
-    'JavaScript promises',
-    'High-performing CSS animations',
-    'Optimized performance',
+    'Style custom Drupal forms',
+    'Customized PHP theme templates',
+    'Built and styled HTML email',
+    'Implemented skeleton screens',
     'CSS Grid and Flexbox', 
     'HTML, CSS, JS',
-    'Dynamic SVG map',
-    'Web workers to asynchronously process API data',
-    'Implemented façade OOP design pattern for 3rd-party media integrations',
   ],
   
   // Slideshow

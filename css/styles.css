@@ -1,4 +1,10 @@
+@charset "UTF-8";
 /* line 1, ../scss/_global.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 5, ../scss/_global.scss */
 .section--fullHt {
   display: -webkit-flex;
   display: flex;
@@ -39,23 +45,28 @@
 }
 
 /* line 31, ../scss/_t.scss */
-.t-body, .t-body--18l, .t-body--24sb {
+.t-body, .t-body--14l, .t-body--18l, .t-body--24sb {
   font-family: "Open Sans", Helvetica, sans-serif;
   letter-spacing: 0.03em;
   line-height: 1.5;
 }
 /* line 36, ../scss/_t.scss */
+.t-body--14l {
+  font-weight: 300;
+  font-size: 14px;
+}
+/* line 42, ../scss/_t.scss */
 .t-body--18l {
   font-weight: 300;
   font-size: 18px;
 }
-/* line 42, ../scss/_t.scss */
+/* line 48, ../scss/_t.scss */
 .t-body--24sb {
   font-weight: 600;
   font-size: 24px;
 }
 
-/* line 49, ../scss/_t.scss */
+/* line 55, ../scss/_t.scss */
 .t-caps {
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -388,10 +399,11 @@
   background-image: -moz-linear-gradient(top, #00bcde, #10d563);
   background-image: -webkit-linear-gradient(top, #00bcde, #10d563);
   background-image: linear-gradient(to bottom right, #00bcde, #10d563);
+  min-height: 80vh;
   padding-top: 50px;
 }
 
-/* line 7, ../scss/_workDetail.scss */
+/* line 8, ../scss/_workDetail.scss */
 .workDetail_introText {
   -webkit-flex: 1;
   flex: 1;
@@ -404,18 +416,34 @@
   padding: 40px;
 }
 
-/* line 15, ../scss/_workDetail.scss */
+/* line 16, ../scss/_workDetail.scss */
 .workDetail_title {
   margin: 0;
   color: white;
 }
 
-/* line 21, ../scss/_workDetail.scss */
+/* line 22, ../scss/_workDetail.scss */
 .workDetail_summary {
+  margin: 0;
   color: white;
 }
 
-/* line 25, ../scss/_workDetail.scss */
+/* line 28, ../scss/_workDetail.scss */
+.workDetail_title + .workDetail_summary {
+  margin-top: 20px;
+}
+
+/* line 32, ../scss/_workDetail.scss */
+.workDetail_dateCompany {
+  color: white;
+}
+
+/* line 37, ../scss/_workDetail.scss */
+.workDetail_date + .workDetail_company:before {
+  content: '• ';
+}
+
+/* line 42, ../scss/_workDetail.scss */
 .workDetail_introImageWrapper {
   -webkit-flex: 1;
   flex: 1;
@@ -423,20 +451,24 @@
   display: flex;
   -webkit-align-items: flex-end;
   align-items: flex-end;
+  padding-top: 40px;
+  padding-right: 40px;
 }
 
-/* line 31, ../scss/_workDetail.scss */
+/* line 50, ../scss/_workDetail.scss */
 .workDetail_introImage {
+  width: 100%;
   object-fit: contain;
 }
 
-/* line 35, ../scss/_workDetail.scss */
+/* line 55, ../scss/_workDetail.scss */
 .workDetail_roleSection {
   display: -webkit-flex;
   display: flex;
+  padding: 40px;
 }
 
-/* line 39, ../scss/_workDetail.scss */
+/* line 60, ../scss/_workDetail.scss */
 .workDetail_roleContent {
   -webkit-flex: 1;
   flex: 1;
@@ -446,10 +478,9 @@
   flex-direction: column;
   -webkit-justify-content: center;
   justify-content: center;
-  padding: 40px;
 }
 
-/* line 47, ../scss/_workDetail.scss */
+/* line 67, ../scss/_workDetail.scss */
 .workDetail_roleHeader {
   margin: 0;
   border-bottom: solid 5px #00BCDE;
@@ -458,17 +489,21 @@
   color: #707070;
 }
 
-/* line 56, ../scss/_workDetail.scss */
+/* line 76, ../scss/_workDetail.scss */
 .workDetail_roleHeader + .workDetail_roleList {
   margin-top: 20px;
 }
 
-/* line 60, ../scss/_workDetail.scss */
+/* line 80, ../scss/_workDetail.scss */
 .workDetail_roleItem {
   color: #707070;
 }
+/* line 83, ../scss/_workDetail.scss */
+.workDetail_roleItem + .workDetail_roleItem {
+  margin-top: 10px;
+}
 
-/* line 64, ../scss/_workDetail.scss */
+/* line 88, ../scss/_workDetail.scss */
 .workDetail_roleImageWrap {
   -webkit-flex: 2;
   flex: 2;
@@ -477,24 +512,30 @@
   height: 100%;
 }
 
-/* line 70, ../scss/_workDetail.scss */
-.workDetail_slideshowSection {
+/* line 94, ../scss/_workDetail.scss */
+.workDetail_roleContent + .workDetail_roleImageWrap {
+  margin-left: 40px;
+}
+
+/* line 98, ../scss/_workDetail.scss */
+.workDetail_slideshowWrapper {
   position: relative;
   -webkit-flex: 1;
   flex: 1;
   display: -webkit-flex;
   display: flex;
   height: 500px;
+  padding: 0px 40px;
 }
 
-/* line 77, ../scss/_workDetail.scss */
+/* line 106, ../scss/_workDetail.scss */
 .workDetail_slideshow {
   position: relative;
   -webkit-flex: 1;
   flex: 1;
 }
 
-/* line 82, ../scss/_workDetail.scss */
+/* line 111, ../scss/_workDetail.scss */
 .workDetail_slideshowItem {
   position: absolute;
   top: 0;
@@ -505,27 +546,40 @@
   height: 100%;
   object-fit: contain;
   opacity: 0;
+  transition: opacity 0.5s;
 }
-/* line 94, ../scss/_workDetail.scss */
+/* line 124, ../scss/_workDetail.scss */
 .workDetail_slideshowItem--active {
   opacity: 1;
 }
 
-/* line 99, ../scss/_workDetail.scss */
+/* line 129, ../scss/_workDetail.scss */
 .workDetail_slideshowBtn {
   position: absolute;
   top: 50%;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 90px;
+  color: #FF9D2B;
+  transform: translateY(-50%);
 }
-/* line 103, ../scss/_workDetail.scss */
+/* line 142, ../scss/_workDetail.scss */
 .workDetail_slideshowBtn--prev {
-  left: 40px;
+  left: 0;
 }
-/* line 107, ../scss/_workDetail.scss */
+/* line 146, ../scss/_workDetail.scss */
 .workDetail_slideshowBtn--next {
-  right: 40px;
+  right: 0;
 }
 
-/* line 112, ../scss/_workDetail.scss */
+/* line 151, ../scss/_workDetail.scss */
+.workDetail_slideshowBtnText {
+  display: none;
+}
+
+/* line 155, ../scss/_workDetail.scss */
 .workDetail_codeSection {
   display: -webkit-flex;
   display: flex;
@@ -537,7 +591,7 @@
   padding: 40px;
 }
 
-/* line 120, ../scss/_workDetail.scss */
+/* line 163, ../scss/_workDetail.scss */
 .workDetail_codeHeader {
   margin: 0;
   border-right: solid 5px #00BCDE;
@@ -546,29 +600,34 @@
   color: #707070;
 }
 
-/* line 129, ../scss/_workDetail.scss */
+/* line 172, ../scss/_workDetail.scss */
 .workDetail_codeText {
   color: #707070;
 }
 
-/* line 133, ../scss/_workDetail.scss */
+/* line 176, ../scss/_workDetail.scss */
 .workDetail_codeHeader + .workDetail_codeText {
   margin-left: 40px;
 }
 
-/* line 137, ../scss/_workDetail.scss */
+/* line 180, ../scss/_workDetail.scss */
 .workDetail_backLinkWrap {
-  padding: 40px;
+  padding: 0px 40px 40px 40px;
   text-align: center;
 }
 
-/* line 143, ../scss/_workDetail.scss */
+/* line 186, ../scss/_workDetail.scss */
 .workDetail_backLink {
   color: #707070;
   text-decoration: none;
 }
+/* line 190, ../scss/_workDetail.scss */
+.workDetail_backLink:hover {
+  text-decoration: underline;
+}
 
 /* line 1, ../scss/_footer.scss */
 .footer {
+  padding: 5px;
   text-align: center;
 }

@@ -33,6 +33,12 @@
   letter-spacing: 0.03em;
   line-height: 1.5;
 
+  &--14l {
+    @extend .t-body;
+    font-weight: 300;
+    font-size: 14px;
+  }
+
   &--18l {
     @extend .t-body;
     font-weight: 300;

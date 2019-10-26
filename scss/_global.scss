@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .section--fullHt {
   @include display-flex;
   @include align-items(center);
