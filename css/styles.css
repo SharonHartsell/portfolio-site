@@ -547,13 +547,14 @@
   object-fit: contain;
   opacity: 0;
   transition: opacity 0.5s;
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3)) drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
 }
-/* line 124, ../scss/_workDetail.scss */
+/* line 127, ../scss/_workDetail.scss */
 .workDetail_slideshowItem--active {
   opacity: 1;
 }
 
-/* line 129, ../scss/_workDetail.scss */
+/* line 132, ../scss/_workDetail.scss */
 .workDetail_slideshowBtn {
   position: absolute;
   top: 50%;
@@ -561,25 +562,29 @@
   border: none;
   background: none;
   padding: 0;
-  font-size: 90px;
+  font-size: 60px;
   color: #FF9D2B;
   transform: translateY(-50%);
 }
-/* line 142, ../scss/_workDetail.scss */
+/* line 145, ../scss/_workDetail.scss */
+.workDetail_slideshowBtn:hover {
+  cursor: pointer;
+}
+/* line 149, ../scss/_workDetail.scss */
 .workDetail_slideshowBtn--prev {
   left: 0;
 }
-/* line 146, ../scss/_workDetail.scss */
+/* line 153, ../scss/_workDetail.scss */
 .workDetail_slideshowBtn--next {
   right: 0;
 }
 
-/* line 151, ../scss/_workDetail.scss */
+/* line 158, ../scss/_workDetail.scss */
 .workDetail_slideshowBtnText {
   display: none;
 }
 
-/* line 155, ../scss/_workDetail.scss */
+/* line 162, ../scss/_workDetail.scss */
 .workDetail_codeSection {
   display: -webkit-flex;
   display: flex;
@@ -591,7 +596,7 @@
   padding: 40px;
 }
 
-/* line 163, ../scss/_workDetail.scss */
+/* line 170, ../scss/_workDetail.scss */
 .workDetail_codeHeader {
   margin: 0;
   border-right: solid 5px #00BCDE;
@@ -600,28 +605,28 @@
   color: #707070;
 }
 
-/* line 172, ../scss/_workDetail.scss */
+/* line 179, ../scss/_workDetail.scss */
 .workDetail_codeText {
   color: #707070;
 }
 
-/* line 176, ../scss/_workDetail.scss */
+/* line 183, ../scss/_workDetail.scss */
 .workDetail_codeHeader + .workDetail_codeText {
   margin-left: 40px;
 }
 
-/* line 180, ../scss/_workDetail.scss */
+/* line 187, ../scss/_workDetail.scss */
 .workDetail_backLinkWrap {
   padding: 0px 40px 40px 40px;
   text-align: center;
 }
 
-/* line 186, ../scss/_workDetail.scss */
+/* line 193, ../scss/_workDetail.scss */
 .workDetail_backLink {
   color: #707070;
   text-decoration: none;
 }
-/* line 190, ../scss/_workDetail.scss */
+/* line 197, ../scss/_workDetail.scss */
 .workDetail_backLink:hover {
   text-decoration: underline;
 }

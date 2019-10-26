@@ -121,6 +121,9 @@
       opacity: 0;
       transition: opacity 0.5s;
 
+      filter: drop-shadow(0px 0px 1px rgba(0,0,0,.3))
+          drop-shadow(0px 0px 5px rgba(0,0,0,.3));
+
       &--active {
         opacity: 1;
       }
@@ -134,10 +137,14 @@
     background: none;
     padding: 0;
     
-    font-size: 90px;
+    font-size: 60px;
     color: $cta;
 
     transform: translateY(-50%);
+
+    &:hover {
+      cursor: pointer;
+    }
 
     &--prev {
       left: 0;

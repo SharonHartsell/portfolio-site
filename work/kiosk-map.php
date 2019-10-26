@@ -6,6 +6,7 @@ include('../includes/header.inc');
 $sample_code = file_get_contents('./code_samples/fst-package-list.php');
 
 $content = [
+  'machine_name' => 'kiosk-map',
   // Intro
   'title' => 'Sales Kiosk Map',
   'summary' => 'Life Plan Communities use this tool to highlight their community’s lifestyle, amenities, and inventory to prospective residents. The interactive map allows prospects to explore the community via a touch-screen kiosk where they can view multimedia content and even choose their future home.',
@@ -14,7 +15,7 @@ $content = [
   'live_link' => '',
   'github_link' => '',
   'tech' => ['html5', 'css3', 'sass', 'js', 'jquery', 'php', 'drupal'],
-  'intro_img' => 'bgrd-map.jpg',
+  'intro_img' => 'map-on-kiosk-zoom-in.png',
 
   'my_role' => [
     'Leverage Drupal API data',
@@ -31,9 +32,15 @@ $content = [
   
   // Slideshow
   'slideshow_imgs' => [
-    'https://via.placeholder.com/800x400',
-    'https://via.placeholder.com/500x500',
-    'https://via.placeholder.com/600x200'
+    'map-zoom-out.jpg',
+    'map-zoom-in.jpg',
+    'map-levels-drawer.jpg',
+    'map-floor-plan-drawer.jpg',
+    'map-floor-plan-toggle.jpg',
+    'unit-modal-3d.jpg',
+    'unit-modal-2d.jpg',
+    'unit-modal-video.jpg',
+    'unit-modal-gallery.jpg',
   ],
 
   // Code
