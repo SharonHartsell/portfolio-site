@@ -24,9 +24,47 @@
   .nav_list {
     display: none;
     position: fixed;
-    top: 0;
+    top: $navHt;
     bottom: 0;
     left: 0;
     right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     margin: 0;
+    @include background-image(linear-gradient(to bottom right, rgba($gradientStart, 0.8), rgba($gradientEnd, 0.8)));
+    padding: 40px;
   }
+
+    .nav_listItem {
+      list-style-type: none;
+    }
+
+    .nav_link {
+      font: 300 100px/1.0 $sansTitle;
+      letter-spacing: 0.03em;
+      color: white;
+      text-decoration: none;
+
+      &:before,
+      &:after {
+        opacity: 0;
+        transition: opacity 0.25s;
+      }
+
+      &:before {
+        content: '< ';
+      }
+
+      &:after {
+        content: ' >';
+      }
+
+      &:hover {
+        &:before,
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
