@@ -75,11 +75,11 @@ $work = [
       <img src="/img/sharon-teal1.jpg" class="about_image" alt="Sharon" />
     </div>
     <div class="about_textWrapper">
-      <p class="about_text t-body--18l">Hi! I’m Sharon, a front-end web developer who specializes in creating user-friendly and engaging web experiences. I’ve been in the field for nearly two years, and I love learning new things, especially why things work the way they do. I’m a diligent problem solver who pays keen attention to details, partly due to my background in graphic design. Check out some of my latest work above, and contact me via the form below or directly at <a href="mailto:hello@sharonhartsell.com">hello@sharonhartsell.com</a>.</p>
+      <p class="about_text t-body--18l">Hi! I’m Sharon, a front-end web developer who specializes in creating user-friendly and engaging web experiences. I’ve been in the field for nearly two years, and I love learning new things, especially why things work the way they do. I’m a diligent problem solver who pays keen attention to details, partly due to my background in graphic design. Check out some of my latest work above, and contact me via the form below or directly at <a href="mailto:hello@sharonhartsell.com" >hello@sharonhartsell.com</a>.</p>
       <button class="about_resumeBtn btn--secondary t-title--20b t-caps">Download resume</button>
       <div class="about_socialLinks">
-        <a href="#" class="about_socialLink"><i class="fab fa-linkedin"></i></a>
-        <a href="#" class="about_socialLink"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sharonhartsell/" class="about_socialLink"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/SharonHartsell" class="about_socialLink"><i class="fab fa-github"></i></a>
         <a href="#" class="about_socialLink"><i class="fab fa-codepen"></i></a>
       </div>
     </div>

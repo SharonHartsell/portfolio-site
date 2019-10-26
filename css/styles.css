@@ -5,6 +5,11 @@
 }
 
 /* line 5, ../scss/_global.scss */
+a {
+  color: #FF9D2B;
+}
+
+/* line 9, ../scss/_global.scss */
 .noScroll {
   overflow: hidden;
 }
@@ -264,10 +269,11 @@
 
 /* line 41, ../scss/_intro.scss */
 .intro_techIcon {
+  font-size: 30px;
   color: white;
 }
 
-/* line 45, ../scss/_intro.scss */
+/* line 46, ../scss/_intro.scss */
 .intro_techName {
   color: white;
 }
@@ -394,26 +400,28 @@
 
 /* line 28, ../scss/_about.scss */
 .about_text {
+  margin: 0;
+  max-width: 500px;
   color: #707070;
 }
 
-/* line 32, ../scss/_about.scss */
+/* line 35, ../scss/_about.scss */
 .about_socialLink {
   color: #707070;
   font-size: 36px;
 }
-/* line 36, ../scss/_about.scss */
+/* line 39, ../scss/_about.scss */
 .about_socialLink + .about_socialLink {
   margin-left: 20px;
 }
 
-/* line 41, ../scss/_about.scss */
+/* line 44, ../scss/_about.scss */
 .about_text + .about_resumeBtn,
 .about_resumeBtn + .about_socialLinks {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
-/* line 46, ../scss/_about.scss */
+/* line 49, ../scss/_about.scss */
 .about_imageWrapper + .about_textWrapper {
   margin-left: 40px;
 }
