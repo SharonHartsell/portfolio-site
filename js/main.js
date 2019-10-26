@@ -15,4 +15,30 @@ $(document).ready(function() {
     $('.workDetail_slideshowItem--active').removeClass('workDetail_slideshowItem--active');
     $(newSlide).addClass('workDetail_slideshowItem--active');
   });
+
+  // Hide / show nav
+  $('.nav_toggle').on('click', function() {
+    $('body').toggleClass('noScroll');
+
+    // Swap between hamburger icon & close icon
+    const icon = $('.nav_toggle').children('i');
+    if ($('.nav_listWrapper').is(':visible')) {
+      icon.removeClass('fa-times').addClass('fa-bars');
+    } else {
+      icon.removeClass('fa-bars').addClass('fa-times');
+    }
+
+    $('.nav_listWrapper').toggle(500);
+  });
+
+  // Close nav when user clicks a nav link
+  $('.nav_link').on('click', function() {
+    $('body').removeClass('noScroll');
+
+    // Replace close icon with hamburger icon
+    const icon = $('.nav_toggle').children('i');
+    icon.removeClass('fa-times').addClass('fa-bars');
+
+    $('.nav_listWrapper').toggle(500);
+  });
 });
