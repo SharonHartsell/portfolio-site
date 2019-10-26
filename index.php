@@ -50,6 +50,7 @@ $work = [
   ]
 ];
 ?>
+<a id="work"></a>
 <section class="work">
   <h2 class="work_sectionTitle t-title--40l">&lt; work &gt;</h2>
   <ul class="work_projectList">
@@ -66,6 +67,7 @@ $work = [
 </section>
 
 <!-- About -->
+<a id="about"></a>
 <section class="about">
   <h2 class="about_sectionTitle t-title--40l">&lt; about &gt;</h2>
   <div class="about_contentWrapper">
@@ -85,6 +87,7 @@ $work = [
 </section>
 
 <!-- Contact -->
+<a id="contact"></a>
 <section class="contact">
   <h2 class="contact_sectionTitle t-title--40l">&lt; contact &gt;</h2>
   <p class="contact_instructions t-body--18l">Get in touch by emailing hello@sharonhartsell.com or by filling out the form below.</p>
