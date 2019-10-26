@@ -90,30 +90,34 @@ $work = [
 <a id="contact"></a>
 <section class="contact">
   <h2 class="contact_sectionTitle t-title--40l">&lt; contact &gt;</h2>
-  <p class="contact_instructions t-body--18l">Get in touch by emailing hello@sharonhartsell.com or by filling out the form below.</p>
-  <form method="post">
-    <div>
-      <label for="contactForm_name">Name</label>
-      <input type="text" id="contactForm_name" name="name" />
-    </div>
-    <div>
-      <label for="contactForm_email">Email</label>
-      <input type="email" id="contactForm_email" name="email" />
-    </div>
-    <div>
-      <label for="contactForm_msg">Message</label>
-      <textarea id="contactForm_msg" name="msg"></textarea>
-    </div>
-    <button type="submit" class="btn--primary t-title--20b t-caps">Send Message</button>
-  </form>
+  <?php if (empty($_POST)) : ?>
+    <p class="contact_instructions t-body--18l">Get in touch by emailing hello@sharonhartsell.com or by filling out the form below.</p>
+    <form method="post" class="contactForm">
+      <div class="contactForm_inputWrapper">
+        <input type="text" id="contactForm_name" name="name" class="contactForm_text t-body--18l" required />
+        <label for="contactForm_name" class="contactForm_label t-body--18l">Name</label>
+      </div>
+      <div class="contactForm_inputWrapper">
+        <input type="email" id="contactForm_email" name="email" class="contactForm_text t-body--18l" required />
+        <label for="contactForm_email" class="contactForm_label t-body--18l">Email</label>
+      </div>
+      <div class="contactForm_inputWrapper">
+        <textarea id="contactForm_msg" name="msg" class="contactForm_textarea t-body--18l" required></textarea>
+        <label for="contactForm_msg" class="contactForm_label t-body--18l">Message</label>
+      </div>
+      <button type="submit" class="contactForm_submitBtn btn--primary t-title--20b t-caps">Send Message</button>
+    </form>
   
-  <?php if (!empty($_POST)) : ?>
-  <?php
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $msg = $_POST['msg'];
-  ?>
-  <div>Thank you, <?php print $name; ?>, for your message!</div>
+  <?php else : ?>
+    <?php
+      $name = $_POST['name'];
+      $email = $_POST['email'];
+      $msg = $_POST['msg'];
+    ?>
+    <div class="contactForm_thanks">
+      <p class="contactForm_thanksStatus t-body--24sb">Message sent!</p>
+      <p class="contactForm_thanksMsg t-body--18l">Thank you, <?php print $name; ?>, for your message. I'll be in touch soon.</p>
+    </div>
   <?php endif; ?>
 </section>
 
