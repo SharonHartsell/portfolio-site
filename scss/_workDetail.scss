@@ -1,6 +1,7 @@
 .workDetail_intro {
   @include display-flex;
   @include background-image(linear-gradient(to bottom right, $gradientStart, $gradientEnd));
+  min-height: 80vh;
   padding-top: $navHt;
 }
 
@@ -19,21 +20,41 @@
     }
 
     .workDetail_summary {
+      margin: 0;
+
       color: white;
     }
+
+    .workDetail_title + .workDetail_summary {
+      margin-top: 20px;
+    }
+
+    .workDetail_dateCompany {
+      color: white;
+    }
+
+      .workDetail_date + .workDetail_company {
+        &:before {
+          content: '• ';
+        }
+      }
 
   .workDetail_introImageWrapper {
     @include flex(1);
     @include display-flex;
     @include align-items(flex-end);
+    padding-top: 40px;
+    padding-right: 40px;
   }
 
     .workDetail_introImage {
+      width: 100%;
       object-fit: contain;
     }
 
 .workDetail_roleSection {
   @include display-flex;
+  padding: 40px;
 }
 
   .workDetail_roleContent {
@@ -41,7 +62,6 @@
     @include display-flex;
     @include flex-direction(column);
     @include justify-content(center);
-    padding: 40px;
   }
 
     .workDetail_roleHeader {
@@ -59,6 +79,10 @@
 
     .workDetail_roleItem {
       color: $gray;
+
+      & + & {
+        margin-top: 10px;
+      }
     }
 
   .workDetail_roleImageWrap {
@@ -67,11 +91,16 @@
     height: 100%;
   }
 
-.workDetail_slideshowSection {
+  .workDetail_roleContent + .workDetail_roleImageWrap {
+    margin-left: 40px;
+  }
+
+.workDetail_slideshowWrapper {
   position: relative;
   @include flex(1);
   @include display-flex;
   height: 500px;
+  padding: 0px 40px;
 }
 
   .workDetail_slideshow {
@@ -90,6 +119,10 @@
       object-fit: contain;
 
       opacity: 0;
+      transition: opacity 0.5s;
+
+      filter: drop-shadow(0px 0px 1px rgba(0,0,0,.3))
+          drop-shadow(0px 0px 5px rgba(0,0,0,.3));
 
       &--active {
         opacity: 1;
@@ -99,15 +132,32 @@
   .workDetail_slideshowBtn {
     position: absolute;
     top: 50%;
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0;
+    
+    font-size: 60px;
+    color: $cta;
+
+    transform: translateY(-50%);
+
+    &:hover {
+      cursor: pointer;
+    }
 
     &--prev {
-      left: 40px;
+      left: 0;
     }
 
     &--next {
-      right: 40px;
+      right: 0;
     }
   }
+
+    .workDetail_slideshowBtnText {
+      display: none;
+    }
 
 .workDetail_codeSection {
   @include display-flex;
@@ -135,7 +185,7 @@
   }
 
 .workDetail_backLinkWrap {
-  padding: 40px;
+  padding: 0px 40px 40px 40px;
 
   text-align: center;
 }
@@ -143,4 +193,8 @@
 .workDetail_backLink {
   color: $gray;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

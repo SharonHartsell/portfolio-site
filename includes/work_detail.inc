@@ -12,6 +12,14 @@
 
     <h1 class="workDetail_title t-title--60b"><?php print $content['title']; ?></h1>
     <h2 class="workDetail_summary t-body--24sb"><?php print $content['summary']; ?></h2>
+    <p class="workDetail_dateCompany t-body--18l">
+    <?php if ( !empty($content['date']) ) : ?>
+      <span class="workDetail_date"><?php print $content['date']; ?></span>
+    <?php endif; ?>
+    <?php if ( !empty($content['company']) ) : ?>
+      <span class="workDetail_company"><?php print $content['company']; ?></span>
+    <?php endif; ?>
+    </p>
     <?php if ( !empty($content['live_link']) || !empty($content['github_link']) ) : ?>
       <div>
         <?php if ( !empty($content['live_link']) ) : ?>
@@ -24,7 +32,7 @@
     <?php endif; ?>
   </div>
   <div class="workDetail_introImageWrapper">
-    <img src="https://via.placeholder.com/600x400" class="workDetail_introImage" alt="" />
+    <img src="/img/work/<?php print $content['machine_name']; ?>/<?php print $content['intro_img']; ?>" class="workDetail_introImage" alt="" />
   </div>
 </section>
 
@@ -40,28 +48,34 @@
     <?php endif; ?>
   </div>
   <div class="workDetail_roleImageWrap">
-    <section class="workDetail_slideshowSection">
+    <div class="workDetail_slideshowWrapper">
       <div class="workDetail_slideshow">
         <?php $slide_counter = 1; ?>
         <?php foreach($content['slideshow_imgs'] as $img) : ?>
           <?php $active_slide_class = ($slide_counter == 1) ? 'workDetail_slideshowItem--active' : ''; ?>
-          <!-- <img src="/img/work/<?php print $img; ?>" class="workDetail_slideshowItem" alt="" /> -->
-          <img src="<?php print $img; ?>" class="workDetail_slideshowItem <?php print $active_slide_class; ?>" alt="" />
+          <img src="/img/work/<?php print $content['machine_name']; ?>/<?php print $img; ?>" class="workDetail_slideshowItem <?php print $active_slide_class; ?>" alt="" />
           <?php $slide_counter++; ?>
         <?php endforeach; ?>
       </div>
-      <button class="workDetail_slideshowBtn workDetail_slideshowBtn--prev">Previous</button>
-      <button class="workDetail_slideshowBtn workDetail_slideshowBtn--next">Next</button>
-    </section>
-    <img src="/img/work/<?php print $content['solution_img'];?>" class="workDetail-solutionImage" alt="" />
+      <button class="workDetail_slideshowBtn workDetail_slideshowBtn--prev">
+        <i class="fas fa-angle-left"></i>
+        <span class="workDetail_slideshowBtnText">Previous</span>
+      </button>
+      <button class="workDetail_slideshowBtn workDetail_slideshowBtn--next">
+        <i class="fas fa-angle-right"></i>
+        <span class="workDetail_slideshowBtnText">Next</span>
+      </button>
+    </div>
   </div>
 </section>
 
-<section class="workDetail_codeSection">
+<!-- <section class="workDetail_codeSection">
   <h2 class="workDetail_codeHeader t-title--40l">&gt; code sample</h2>
-  <div class="workDetail_codeText t-body--18l"><?php print $content['challenge']; ?></div>
-</section>
+  <div class="workDetail_codeText">
+    <pre><?php print $content['code_sample']; ?></pre>
+  </div>
+</section> -->
 
 <div class="workDetail_backLinkWrap">
-  <a href="/index.php" class="workDetail_backLink t-body--18l">&lt; Back to main page</a>
+  <a href="/index.php" class="workDetail_backLink t-body--18l">&lt; back</a>
 </div>
