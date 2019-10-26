@@ -26,6 +26,9 @@
     }
 
     .about_text {
+      margin: 0;
+
+      max-width: 500px;
       color: $gray;
     }
 
@@ -40,7 +43,7 @@
 
     .about_text + .about_resumeBtn,
     .about_resumeBtn + .about_socialLinks {
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .about_imageWrapper + .about_textWrapper {

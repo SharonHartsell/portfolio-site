@@ -75,11 +75,11 @@ $work = [
       <img src="/img/sharon-teal1.jpg" class="about_image" alt="Sharon" />
     </div>
     <div class="about_textWrapper">
-      <p class="about_text t-body--18l">Hi! I’m Sharon, a front-end web developer who specializes in creating user-friendly and engaging web experiences. I’ve been in the field for nearly two years, and I love learning new things, especially why things work the way they do. I’m a diligent problem solver who pays keen attention to details, partly due to my background in graphic design. Check out some of my latest work above, and contact me via the form below or directly at <a href="mailto:hello@sharonhartsell.com">hello@sharonhartsell.com</a>.</p>
+      <p class="about_text t-body--18l">Hi! I’m Sharon, a front-end web developer who specializes in creating user-friendly and engaging web experiences. I’ve been in the field for nearly two years, and I love learning new things, especially why things work the way they do. I’m a diligent problem solver who pays keen attention to details, partly due to my background in graphic design. Check out some of my latest work above, and contact me via the form below or directly at <a href="mailto:hello@sharonhartsell.com" >hello@sharonhartsell.com</a>.</p>
       <button class="about_resumeBtn btn--secondary t-title--20b t-caps">Download resume</button>
       <div class="about_socialLinks">
-        <a href="#" class="about_socialLink"><i class="fab fa-linkedin"></i></a>
-        <a href="#" class="about_socialLink"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sharonhartsell/" class="about_socialLink"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/SharonHartsell" class="about_socialLink"><i class="fab fa-github"></i></a>
         <a href="#" class="about_socialLink"><i class="fab fa-codepen"></i></a>
       </div>
     </div>
@@ -90,30 +90,34 @@ $work = [
 <a id="contact"></a>
 <section class="contact">
   <h2 class="contact_sectionTitle t-title--40l">&lt; contact &gt;</h2>
-  <p class="contact_instructions t-body--18l">Get in touch by emailing hello@sharonhartsell.com or by filling out the form below.</p>
-  <form method="post">
-    <div>
-      <label for="contactForm_name">Name</label>
-      <input type="text" id="contactForm_name" name="name" />
-    </div>
-    <div>
-      <label for="contactForm_email">Email</label>
-      <input type="email" id="contactForm_email" name="email" />
-    </div>
-    <div>
-      <label for="contactForm_msg">Message</label>
-      <textarea id="contactForm_msg" name="msg"></textarea>
-    </div>
-    <button type="submit" class="btn--primary t-title--20b t-caps">Send Message</button>
-  </form>
+  <?php if (empty($_POST)) : ?>
+    <p class="contact_instructions t-body--18l">Get in touch by emailing hello@sharonhartsell.com or by filling out the form below.</p>
+    <form method="post" class="contactForm">
+      <div class="contactForm_inputWrapper">
+        <input type="text" id="contactForm_name" name="name" class="contactForm_text t-body--18l" required />
+        <label for="contactForm_name" class="contactForm_label t-body--18l">Name</label>
+      </div>
+      <div class="contactForm_inputWrapper">
+        <input type="email" id="contactForm_email" name="email" class="contactForm_text t-body--18l" required />
+        <label for="contactForm_email" class="contactForm_label t-body--18l">Email</label>
+      </div>
+      <div class="contactForm_inputWrapper">
+        <textarea id="contactForm_msg" name="msg" class="contactForm_textarea t-body--18l" required></textarea>
+        <label for="contactForm_msg" class="contactForm_label t-body--18l">Message</label>
+      </div>
+      <button type="submit" class="contactForm_submitBtn btn--primary t-title--20b t-caps">Send Message</button>
+    </form>
   
-  <?php if (!empty($_POST)) : ?>
-  <?php
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $msg = $_POST['msg'];
-  ?>
-  <div>Thank you, <?php print $name; ?>, for your message!</div>
+  <?php else : ?>
+    <?php
+      $name = $_POST['name'];
+      $email = $_POST['email'];
+      $msg = $_POST['msg'];
+    ?>
+    <div class="contactForm_thanks">
+      <p class="contactForm_thanksStatus t-body--24sb">Message sent!</p>
+      <p class="contactForm_thanksMsg t-body--18l">Thank you, <?php print $name; ?>, for your message. I'll be in touch soon.</p>
+    </div>
   <?php endif; ?>
 </section>
 
