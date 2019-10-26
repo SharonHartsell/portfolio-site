@@ -3,8 +3,14 @@
 }
 
   .work_sectionTitle {
+    margin: 0;
+
     text-align: center;
     color: $gray;
+  }
+
+  .work_sectionTitle + .work_projectList {
+    margin-top: 40px;
   }
 
   .work_projectList {

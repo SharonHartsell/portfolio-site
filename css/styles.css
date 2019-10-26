@@ -241,11 +241,17 @@
 
 /* line 5, ../scss/_work.scss */
 .work_sectionTitle {
+  margin: 0;
   text-align: center;
   color: #707070;
 }
 
-/* line 10, ../scss/_work.scss */
+/* line 12, ../scss/_work.scss */
+.work_sectionTitle + .work_projectList {
+  margin-top: 40px;
+}
+
+/* line 16, ../scss/_work.scss */
 .work_projectList {
   display: -webkit-flex;
   display: flex;
@@ -256,7 +262,7 @@
   list-style: none;
 }
 
-/* line 19, ../scss/_work.scss */
+/* line 25, ../scss/_work.scss */
 .work_projectListItem {
   -webkit-flex: 1;
   flex: 1;
@@ -271,7 +277,7 @@
   background: white;
   padding: 40px;
 }
-/* line 29, ../scss/_work.scss */
+/* line 35, ../scss/_work.scss */
 .work_projectListItem:before {
   content: '';
   display: block;
@@ -290,23 +296,23 @@
   transition: transform 0.5s;
   z-index: -1;
 }
-/* line 44, ../scss/_work.scss */
+/* line 50, ../scss/_work.scss */
 .work_projectListItem + .work_projectListItem {
   margin-left: 40px;
 }
 
-/* line 49, ../scss/_work.scss */
+/* line 55, ../scss/_work.scss */
 .work_projectTitle {
   margin: 0;
   color: #707070;
 }
 
-/* line 55, ../scss/_work.scss */
+/* line 61, ../scss/_work.scss */
 .work_projectTeaser {
   color: #707070;
 }
 
-/* line 59, ../scss/_work.scss */
+/* line 65, ../scss/_work.scss */
 .work_projectTitle + .work_projectBtn,
 .work_projectTeaser + .work_projectBtn {
   margin-top: 20px;
