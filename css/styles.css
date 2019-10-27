@@ -252,76 +252,101 @@ a {
 .intro_techList {
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 31, ../scss/_intro.scss */
+/* line 33, ../scss/_intro.scss */
 .intro_techListItem {
   text-align: center;
   opacity: 0.75;
 }
-/* line 36, ../scss/_intro.scss */
-.intro_techListItem + .intro_techListItem {
-  margin-left: 40px;
+@media all and (min-width: 768px) {
+  /* line 38, ../scss/_intro.scss */
+  .intro_techListItem + .intro_techListItem {
+    margin-left: 40px;
+  }
 }
 
-/* line 41, ../scss/_intro.scss */
+/* line 45, ../scss/_intro.scss */
 .intro_techIcon {
   font-size: 30px;
   color: white;
 }
 
-/* line 46, ../scss/_intro.scss */
+/* line 50, ../scss/_intro.scss */
 .intro_techName {
   color: white;
 }
 
 /* line 1, ../scss/_work.scss */
 .work {
-  padding: 40px;
+  padding: 20px;
+}
+@media all and (min-width: 768px) {
+  /* line 1, ../scss/_work.scss */
+  .work {
+    padding: 40px;
+  }
 }
 
-/* line 5, ../scss/_work.scss */
+/* line 9, ../scss/_work.scss */
 .work_sectionTitle {
   margin: 0;
   text-align: center;
   color: #707070;
 }
 
-/* line 12, ../scss/_work.scss */
+/* line 16, ../scss/_work.scss */
 .work_sectionTitle + .work_projectList {
-  margin-top: 40px;
+  margin-top: 20px;
+}
+@media all and (min-width: 768px) {
+  /* line 16, ../scss/_work.scss */
+  .work_sectionTitle + .work_projectList {
+    margin-top: 40px;
+  }
 }
 
-/* line 16, ../scss/_work.scss */
+/* line 24, ../scss/_work.scss */
 .work_projectList {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
 }
+@media all and (min-width: 768px) {
+  /* line 24, ../scss/_work.scss */
+  .work_projectList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+}
+@media all and (min-width: 1024px) {
+  /* line 24, ../scss/_work.scss */
+  .work_projectList {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 
-/* line 25, ../scss/_work.scss */
+/* line 41, ../scss/_work.scss */
 .work_projectListItem {
-  -webkit-flex: 1;
-  flex: 1;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  max-width: 50%;
   position: relative;
   background: white;
   padding: 40px;
 }
-/* line 35, ../scss/_work.scss */
+/* line 49, ../scss/_work.scss */
 .work_projectListItem:before {
   content: '';
   display: block;
@@ -340,23 +365,35 @@ a {
   transition: transform 0.5s;
   z-index: -1;
 }
-/* line 50, ../scss/_work.scss */
+/* line 64, ../scss/_work.scss */
 .work_projectListItem + .work_projectListItem {
-  margin-left: 40px;
+  margin-top: 30px;
+}
+@media all and (min-width: 768px) {
+  /* line 64, ../scss/_work.scss */
+  .work_projectListItem + .work_projectListItem {
+    margin-top: 0;
+  }
+}
+@media all and (min-width: 1024px) {
+  /* line 64, ../scss/_work.scss */
+  .work_projectListItem + .work_projectListItem {
+    margin-left: 40px;
+  }
 }
 
-/* line 55, ../scss/_work.scss */
+/* line 78, ../scss/_work.scss */
 .work_projectTitle {
   margin: 0;
   color: #707070;
 }
 
-/* line 61, ../scss/_work.scss */
+/* line 84, ../scss/_work.scss */
 .work_projectTeaser {
   color: #707070;
 }
 
-/* line 65, ../scss/_work.scss */
+/* line 88, ../scss/_work.scss */
 .work_projectTitle + .work_projectBtn,
 .work_projectTeaser + .work_projectBtn {
   margin-top: 20px;
