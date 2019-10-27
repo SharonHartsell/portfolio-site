@@ -15,8 +15,13 @@
   }
 
   .about_contentWrapper {
+    @include display-flex;
+    @include flex-direction(column);
+    @include align-items(center);
+
     @include tablet {
-      @include display-flex;
+      @include flex-direction(row);
+      @include align-items(flex-start);
     }
     
     @include desktop {
