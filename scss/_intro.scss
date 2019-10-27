@@ -40,6 +40,10 @@
 
       opacity: 0.75;
 
+      @include tablet {
+        @include flex-basis(auto);
+      }
+
       & + & {
         @include tablet {
           margin-left: 40px;

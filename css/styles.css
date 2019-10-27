@@ -211,35 +211,56 @@ a {
   background-image: -moz-linear-gradient(top, rgba(0, 188, 222, 0.8), rgba(16, 213, 99, 0.8));
   background-image: -webkit-linear-gradient(top, rgba(0, 188, 222, 0.8), rgba(16, 213, 99, 0.8));
   background-image: linear-gradient(to bottom right, rgba(0, 188, 222, 0.8), rgba(16, 213, 99, 0.8));
-  padding: 40px;
+  padding: 20px;
+}
+@media all and (min-width: 768px) {
+  /* line 29, ../scss/_nav.scss */
+  .nav_list {
+    padding: 40px;
+  }
 }
 
-/* line 44, ../scss/_nav.scss */
+/* line 48, ../scss/_nav.scss */
 .nav_listItem {
   list-style-type: none;
 }
 
-/* line 48, ../scss/_nav.scss */
+/* line 52, ../scss/_nav.scss */
 .nav_link {
-  font: 300 100px/1 "Work Sans", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 80px;
+  line-height: 1.0;
+  font-family: "Work Sans", Helvetica, sans-serif;
   letter-spacing: 0.03em;
   color: white;
   text-decoration: none;
 }
-/* line 54, ../scss/_nav.scss */
-.nav_link:before, .nav_link:after {
-  opacity: 0;
-  transition: opacity 0.25s;
+@media all and (min-width: 768px) {
+  /* line 52, ../scss/_nav.scss */
+  .nav_link {
+    font-size: 100px;
+  }
 }
-/* line 60, ../scss/_nav.scss */
-.nav_link:before {
-  content: '< ';
+@media all and (min-width: 768px) {
+  /* line 65, ../scss/_nav.scss */
+  .nav_link:before, .nav_link:after {
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
 }
-/* line 64, ../scss/_nav.scss */
-.nav_link:after {
-  content: ' >';
+@media all and (min-width: 768px) {
+  /* line 73, ../scss/_nav.scss */
+  .nav_link:before {
+    content: '< ';
+  }
 }
-/* line 69, ../scss/_nav.scss */
+@media all and (min-width: 768px) {
+  /* line 79, ../scss/_nav.scss */
+  .nav_link:after {
+    content: ' >';
+  }
+}
+/* line 86, ../scss/_nav.scss */
 .nav_link:hover:before, .nav_link:hover:after {
   opacity: 1;
 }
@@ -305,19 +326,26 @@ a {
   opacity: 0.75;
 }
 @media all and (min-width: 768px) {
-  /* line 43, ../scss/_intro.scss */
+  /* line 37, ../scss/_intro.scss */
+  .intro_techListItem {
+    -webkit-flex-basis: auto;
+    flex-basis: auto;
+  }
+}
+@media all and (min-width: 768px) {
+  /* line 47, ../scss/_intro.scss */
   .intro_techListItem + .intro_techListItem {
     margin-left: 40px;
   }
 }
 
-/* line 50, ../scss/_intro.scss */
+/* line 54, ../scss/_intro.scss */
 .intro_techIcon {
   font-size: 30px;
   color: white;
 }
 
-/* line 55, ../scss/_intro.scss */
+/* line 59, ../scss/_intro.scss */
 .intro_techName {
   color: white;
 }

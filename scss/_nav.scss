@@ -38,7 +38,11 @@
     justify-content: space-around;
     margin: 0;
     @include background-image(linear-gradient(to bottom right, rgba($gradientStart, 0.8), rgba($gradientEnd, 0.8)));
-    padding: 40px;
+    padding: 20px;
+
+    @include tablet {
+      padding: 40px;
+    }
   }
 
     .nav_listItem {
@@ -46,23 +50,36 @@
     }
 
     .nav_link {
-      font: 300 100px/1.0 $sansTitle;
+      font-weight: 300;
+      font-size: 80px;
+      line-height: 1.0;
+      font-family: $sansTitle;
       letter-spacing: 0.03em;
       color: white;
       text-decoration: none;
 
+      @include tablet {
+        font-size: 100px;
+      }
+
       &:before,
       &:after {
-        opacity: 0;
-        transition: opacity 0.25s;
+        @include tablet {
+          opacity: 0;
+          transition: opacity 0.25s;
+        }
       }
 
       &:before {
-        content: '< ';
+        @include tablet {
+          content: '< ';
+        }
       }
 
       &:after {
-        content: ' >';
+        @include tablet {
+          content: ' >';
+        }
       }
 
       &:hover {
