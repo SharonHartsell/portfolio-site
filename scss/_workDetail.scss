@@ -1,17 +1,47 @@
 .workDetail_intro {
-  @include display-flex;
   @include background-image(linear-gradient(to bottom right, $gradientStart, $gradientEnd));
   min-height: 80vh;
   padding-top: $navHt;
+
+  @include desktop {
+    @include display-flex;
+  }
 }
 
   .workDetail_introText {
-    @include flex(1);
-    @include display-flex;
-    @include flex-direction(column);
-    @include justify-content(center);
-    padding: 40px;
+    padding: 20px;
+
+    @include tablet {
+      padding: 40px;
+    }
+
+    @include desktop {
+      @include flex(1);
+      @include display-flex;
+      @include flex-direction(column);
+      @include justify-content(center);
+    }
   }
+
+    .workDetail_techList {
+      @include display-flex;
+      margin: 0;
+      padding: 0;
+
+      list-style-type: none;
+    }
+
+      .workDetail_techListItem {
+        & + & {
+          margin-left: 20px;
+        }
+      }
+
+      .workDetail_techIcon {
+        color: white;
+        font-size: 30px;
+        opacity: 0.75;
+      }
 
     .workDetail_title {
       margin: 0;
@@ -25,6 +55,7 @@
       color: white;
     }
 
+    .workDetail_techList + .workDetail_title,
     .workDetail_title + .workDetail_summary {
       margin-top: 20px;
     }
@@ -40,11 +71,18 @@
       }
 
   .workDetail_introImageWrapper {
-    @include flex(1);
     @include display-flex;
     @include align-items(flex-end);
-    padding-top: 40px;
-    padding-right: 40px;
+    padding: 0px 20px;
+
+    @include tablet {
+      padding: 0px 40px;
+    }
+
+    @include desktop {
+      @include flex(1);
+      padding: 40px 40px 0px 0px;
+    }
   }
 
     .workDetail_introImage {
@@ -53,15 +91,21 @@
     }
 
 .workDetail_roleSection {
-  @include display-flex;
-  padding: 40px;
+  padding: 20px;
+
+  @include desktop {
+    @include display-flex;
+    padding: 40px;
+  }
 }
 
   .workDetail_roleContent {
-    @include flex(1);
-    @include display-flex;
-    @include flex-direction(column);
-    @include justify-content(center);
+    @include desktop {
+      @include flex(1);
+      @include display-flex;
+      @include flex-direction(column);
+      @include justify-content(center);
+    }
   }
 
     .workDetail_roleHeader {
@@ -77,13 +121,23 @@
       margin-top: 20px;
     }
 
-    .workDetail_roleItem {
-      color: $gray;
+    .workDetail_roleList {
+      @include tablet {
+        columns: 2;
+      }
 
-      & + & {
-        margin-top: 10px;
+      @include desktop {
+        columns: 1;
       }
     }
+
+      .workDetail_roleItem {
+        color: $gray;
+
+        & + & {
+          margin-top: 10px;
+        }
+      }
 
   .workDetail_roleImageWrap {
     @include flex(2);
@@ -92,15 +146,21 @@
   }
 
   .workDetail_roleContent + .workDetail_roleImageWrap {
-    margin-left: 40px;
+    @include desktop {
+      margin-left: 40px;
+    }
   }
 
 .workDetail_slideshowWrapper {
   position: relative;
   @include flex(1);
   @include display-flex;
-  height: 500px;
-  padding: 0px 40px;
+  height: 300px;
+
+  @include tablet {
+    height: 500px;
+    padding: 0px 40px;
+  }
 }
 
   .workDetail_slideshow {
@@ -185,9 +245,13 @@
   }
 
 .workDetail_backLinkWrap {
-  padding: 0px 40px 40px 40px;
+  padding: 0px 20px 20px 20px;
 
   text-align: center;
+
+  @include tablet {
+    padding: 0px 40px 40px 40px;
+  }
 }
 
 .workDetail_backLink {
