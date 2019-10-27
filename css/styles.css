@@ -568,40 +568,55 @@ a {
 
 /* line 1, ../scss/_contact.scss */
 .contact {
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
+  -webkit-align-items: center;
   align-items: center;
-  padding: 40px;
+  padding: 20px;
+}
+@media all and (min-width: 768px) {
+  /* line 1, ../scss/_contact.scss */
+  .contact {
+    padding: 40px;
+  }
 }
 
-/* line 8, ../scss/_contact.scss */
+/* line 12, ../scss/_contact.scss */
 .contact_sectionTitle {
   margin: 0;
   color: #707070;
 }
 
-/* line 14, ../scss/_contact.scss */
+/* line 18, ../scss/_contact.scss */
 .contact_instructions {
   margin: 0;
   color: #707070;
 }
 
-/* line 20, ../scss/_contact.scss */
+/* line 24, ../scss/_contact.scss */
 .contactForm {
-  width: 50%;
+  width: 100%;
   max-width: 600px;
 }
+@media all and (min-width: 768px) {
+  /* line 24, ../scss/_contact.scss */
+  .contactForm {
+    width: 50%;
+  }
+}
 
-/* line 25, ../scss/_contact.scss */
+/* line 33, ../scss/_contact.scss */
 .contactForm_inputWrapper {
   position: relative;
 }
-/* line 28, ../scss/_contact.scss */
+/* line 36, ../scss/_contact.scss */
 .contactForm_inputWrapper + .contactForm_inputWrapper {
   margin-top: 30px;
 }
 
-/* line 33, ../scss/_contact.scss */
+/* line 41, ../scss/_contact.scss */
 .contactForm_text,
 .contactForm_textarea {
   position: relative;
@@ -613,12 +628,12 @@ a {
   z-index: 1;
   transition: border 0.1s;
 }
-/* line 46, ../scss/_contact.scss */
+/* line 54, ../scss/_contact.scss */
 .contactForm_text:focus,
 .contactForm_textarea:focus {
   border-bottom-color: #00BCDE;
 }
-/* line 50, ../scss/_contact.scss */
+/* line 58, ../scss/_contact.scss */
 .contactForm_text:focus + .contactForm_label, .contactForm_text:valid + .contactForm_label,
 .contactForm_textarea:focus + .contactForm_label,
 .contactForm_textarea:valid + .contactForm_label {
@@ -627,7 +642,7 @@ a {
   transform: translateY(-10px);
 }
 
-/* line 58, ../scss/_contact.scss */
+/* line 66, ../scss/_contact.scss */
 .contactForm_label {
   position: absolute;
   top: 0;
@@ -639,40 +654,49 @@ a {
   transition: 0.1s;
 }
 
-/* line 71, ../scss/_contact.scss */
+/* line 79, ../scss/_contact.scss */
 .contactForm_submitBtn {
   display: block;
   margin: 0 auto;
 }
 
-/* line 76, ../scss/_contact.scss */
+/* line 84, ../scss/_contact.scss */
 .contactForm_thanks {
   text-align: center;
 }
 
-/* line 80, ../scss/_contact.scss */
+/* line 88, ../scss/_contact.scss */
 .contactForm_thanksStatus {
   margin: 0;
   color: #10D563;
 }
 
-/* line 86, ../scss/_contact.scss */
+/* line 94, ../scss/_contact.scss */
 .contactForm_thanksMsg {
   margin: 0;
   color: #707070;
 }
 
-/* line 92, ../scss/_contact.scss */
+/* line 100, ../scss/_contact.scss */
 .contactForm_thanksStatus + .contactForm_thanksMsg {
   margin-top: 20px;
 }
 
-/* line 96, ../scss/_contact.scss */
+/* line 104, ../scss/_contact.scss */
 .contact_sectionTitle + .contact_instructions,
 .contact_instructions + .contactForm,
 .contactForm_inputWrapper + .contactForm_submitBtn,
 .contact_sectionTitle + .contactForm_thanks {
-  margin-top: 40px;
+  margin-top: 20px;
+}
+@media all and (min-width: 768px) {
+  /* line 104, ../scss/_contact.scss */
+  .contact_sectionTitle + .contact_instructions,
+  .contact_instructions + .contactForm,
+  .contactForm_inputWrapper + .contactForm_submitBtn,
+  .contact_sectionTitle + .contactForm_thanks {
+    margin-top: 40px;
+  }
 }
 
 /* line 1, ../scss/_workDetail.scss */

@@ -1,8 +1,12 @@
 .contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
+  @include display-flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  padding: 20px;  
+
+  @include tablet {
+    padding: 40px;
+  }
 }
 
   .contact_sectionTitle {
@@ -18,8 +22,12 @@
   }
 
   .contactForm {
-    width: 50%;
+    width: 100%;
     max-width: 600px;
+
+    @include tablet {
+      width: 50%;
+    }
   }
 
     .contactForm_inputWrapper {
@@ -97,7 +105,11 @@
   .contact_instructions + .contactForm,
   .contactForm_inputWrapper + .contactForm_submitBtn,
   .contact_sectionTitle + .contactForm_thanks {
-    margin-top: 40px;
+    margin-top: 20px;
+
+    @include tablet {
+      margin-top: 40px;
+    }
   }
 
   
