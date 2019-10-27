@@ -23,47 +23,83 @@ a {
 /* line 6, ../scss/_t.scss */
 .t-title--20b {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
 }
-/* line 12, ../scss/_t.scss */
+@media all and (min-width: 768px) {
+  /* line 6, ../scss/_t.scss */
+  .t-title--20b {
+    font-size: 20px;
+  }
+}
+/* line 16, ../scss/_t.scss */
 .t-title--30b {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 24px;
 }
-/* line 18, ../scss/_t.scss */
+@media all and (min-width: 768px) {
+  /* line 16, ../scss/_t.scss */
+  .t-title--30b {
+    font-size: 30px;
+  }
+}
+/* line 26, ../scss/_t.scss */
 .t-title--40l {
   font-weight: 300;
-  font-size: 40px;
+  font-size: 30px;
 }
-/* line 24, ../scss/_t.scss */
+@media all and (min-width: 768px) {
+  /* line 26, ../scss/_t.scss */
+  .t-title--40l {
+    font-size: 40px;
+  }
+}
+/* line 36, ../scss/_t.scss */
 .t-title--60b {
   font-weight: 700;
-  font-size: 60px;
+  font-size: 40px;
+}
+@media all and (min-width: 768px) {
+  /* line 36, ../scss/_t.scss */
+  .t-title--60b {
+    font-size: 60px;
+  }
 }
 
-/* line 31, ../scss/_t.scss */
+/* line 47, ../scss/_t.scss */
 .t-body, .t-body--14l, .t-body--18l, .t-body--24sb {
   font-family: "Open Sans", Helvetica, sans-serif;
   letter-spacing: 0.03em;
   line-height: 1.5;
 }
-/* line 36, ../scss/_t.scss */
+/* line 52, ../scss/_t.scss */
 .t-body--14l {
   font-weight: 300;
   font-size: 14px;
 }
-/* line 42, ../scss/_t.scss */
+/* line 58, ../scss/_t.scss */
 .t-body--18l {
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
 }
-/* line 48, ../scss/_t.scss */
+@media all and (min-width: 768px) {
+  /* line 58, ../scss/_t.scss */
+  .t-body--18l {
+    font-size: 18px;
+  }
+}
+/* line 68, ../scss/_t.scss */
 .t-body--24sb {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 20px;
+}
+@media all and (min-width: 768px) {
+  /* line 68, ../scss/_t.scss */
+  .t-body--24sb {
+    font-size: 24px;
+  }
 }
 
-/* line 55, ../scss/_t.scss */
+/* line 79, ../scss/_t.scss */
 .t-caps {
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -181,35 +217,56 @@ a {
   background-image: -moz-linear-gradient(top, rgba(0, 188, 222, 0.8), rgba(16, 213, 99, 0.8));
   background-image: -webkit-linear-gradient(top, rgba(0, 188, 222, 0.8), rgba(16, 213, 99, 0.8));
   background-image: linear-gradient(to bottom right, rgba(0, 188, 222, 0.8), rgba(16, 213, 99, 0.8));
-  padding: 40px;
+  padding: 20px;
+}
+@media all and (min-width: 768px) {
+  /* line 29, ../scss/_nav.scss */
+  .nav_list {
+    padding: 40px;
+  }
 }
 
-/* line 44, ../scss/_nav.scss */
+/* line 48, ../scss/_nav.scss */
 .nav_listItem {
   list-style-type: none;
 }
 
-/* line 48, ../scss/_nav.scss */
+/* line 52, ../scss/_nav.scss */
 .nav_link {
-  font: 300 100px/1 "Work Sans", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 80px;
+  line-height: 1.0;
+  font-family: "Work Sans", Helvetica, sans-serif;
   letter-spacing: 0.03em;
   color: white;
   text-decoration: none;
 }
-/* line 54, ../scss/_nav.scss */
-.nav_link:before, .nav_link:after {
-  opacity: 0;
-  transition: opacity 0.25s;
+@media all and (min-width: 768px) {
+  /* line 52, ../scss/_nav.scss */
+  .nav_link {
+    font-size: 100px;
+  }
 }
-/* line 60, ../scss/_nav.scss */
-.nav_link:before {
-  content: '< ';
+@media all and (min-width: 768px) {
+  /* line 65, ../scss/_nav.scss */
+  .nav_link:before, .nav_link:after {
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
 }
-/* line 64, ../scss/_nav.scss */
-.nav_link:after {
-  content: ' >';
+@media all and (min-width: 768px) {
+  /* line 73, ../scss/_nav.scss */
+  .nav_link:before {
+    content: '< ';
+  }
 }
-/* line 69, ../scss/_nav.scss */
+@media all and (min-width: 768px) {
+  /* line 79, ../scss/_nav.scss */
+  .nav_link:after {
+    content: ' >';
+  }
+}
+/* line 86, ../scss/_nav.scss */
 .nav_link:hover:before, .nav_link:hover:after {
   opacity: 1;
 }
@@ -228,11 +285,17 @@ a {
   background-image: -moz-linear-gradient(top, #00bcde, #10d563);
   background-image: -webkit-linear-gradient(top, #00bcde, #10d563);
   background-image: linear-gradient(to bottom right, #00bcde, #10d563);
-  padding: 90px 40px 40px 40px;
+  padding: 70px 20px 20px 20px;
   text-align: center;
 }
+@media all and (min-width: 768px) {
+  /* line 1, ../scss/_intro.scss */
+  .intro {
+    padding: 90px 40px 40px 40px;
+  }
+}
 
-/* line 11, ../scss/_intro.scss */
+/* line 15, ../scss/_intro.scss */
 .intro_image {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -243,85 +306,125 @@ a {
   object-position: center;
 }
 
-/* line 19, ../scss/_intro.scss */
+/* line 23, ../scss/_intro.scss */
 .intro_headline {
   color: white;
 }
 
-/* line 23, ../scss/_intro.scss */
+/* line 27, ../scss/_intro.scss */
 .intro_techList {
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 31, ../scss/_intro.scss */
+/* line 37, ../scss/_intro.scss */
 .intro_techListItem {
+  -webkit-flex-basis: calc(100% / 3);
+  flex-basis: calc(100% / 3);
   text-align: center;
   opacity: 0.75;
 }
-/* line 36, ../scss/_intro.scss */
-.intro_techListItem + .intro_techListItem {
-  margin-left: 40px;
+@media all and (min-width: 768px) {
+  /* line 37, ../scss/_intro.scss */
+  .intro_techListItem {
+    -webkit-flex-basis: auto;
+    flex-basis: auto;
+  }
+}
+@media all and (min-width: 768px) {
+  /* line 47, ../scss/_intro.scss */
+  .intro_techListItem + .intro_techListItem {
+    margin-left: 40px;
+  }
 }
 
-/* line 41, ../scss/_intro.scss */
+/* line 54, ../scss/_intro.scss */
 .intro_techIcon {
   font-size: 30px;
   color: white;
 }
 
-/* line 46, ../scss/_intro.scss */
+/* line 59, ../scss/_intro.scss */
 .intro_techName {
   color: white;
 }
 
 /* line 1, ../scss/_work.scss */
 .work {
-  padding: 40px;
+  padding: 20px;
+}
+@media all and (min-width: 768px) {
+  /* line 1, ../scss/_work.scss */
+  .work {
+    padding: 40px;
+  }
 }
 
-/* line 5, ../scss/_work.scss */
+/* line 9, ../scss/_work.scss */
 .work_sectionTitle {
   margin: 0;
   text-align: center;
   color: #707070;
 }
 
-/* line 12, ../scss/_work.scss */
+/* line 16, ../scss/_work.scss */
 .work_sectionTitle + .work_projectList {
-  margin-top: 40px;
+  margin-top: 20px;
+}
+@media all and (min-width: 768px) {
+  /* line 16, ../scss/_work.scss */
+  .work_sectionTitle + .work_projectList {
+    margin-top: 40px;
+  }
 }
 
-/* line 16, ../scss/_work.scss */
+/* line 24, ../scss/_work.scss */
 .work_projectList {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
 }
+@media all and (min-width: 768px) {
+  /* line 24, ../scss/_work.scss */
+  .work_projectList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+}
+@media all and (min-width: 1024px) {
+  /* line 24, ../scss/_work.scss */
+  .work_projectList {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 
-/* line 25, ../scss/_work.scss */
+/* line 41, ../scss/_work.scss */
 .work_projectListItem {
-  -webkit-flex: 1;
-  flex: 1;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  max-width: 50%;
   position: relative;
   background: white;
-  padding: 40px;
+  padding: 30px;
 }
-/* line 35, ../scss/_work.scss */
+@media all and (min-width: 768px) {
+  /* line 41, ../scss/_work.scss */
+  .work_projectListItem {
+    padding: 40px;
+  }
+}
+/* line 53, ../scss/_work.scss */
 .work_projectListItem:before {
   content: '';
   display: block;
@@ -340,23 +443,35 @@ a {
   transition: transform 0.5s;
   z-index: -1;
 }
-/* line 50, ../scss/_work.scss */
+/* line 68, ../scss/_work.scss */
 .work_projectListItem + .work_projectListItem {
-  margin-left: 40px;
+  margin-top: 30px;
+}
+@media all and (min-width: 768px) {
+  /* line 68, ../scss/_work.scss */
+  .work_projectListItem + .work_projectListItem {
+    margin-top: 0;
+  }
+}
+@media all and (min-width: 1024px) {
+  /* line 68, ../scss/_work.scss */
+  .work_projectListItem + .work_projectListItem {
+    margin-left: 40px;
+  }
 }
 
-/* line 55, ../scss/_work.scss */
+/* line 82, ../scss/_work.scss */
 .work_projectTitle {
   margin: 0;
   color: #707070;
 }
 
-/* line 61, ../scss/_work.scss */
+/* line 88, ../scss/_work.scss */
 .work_projectTeaser {
   color: #707070;
 }
 
-/* line 65, ../scss/_work.scss */
+/* line 92, ../scss/_work.scss */
 .work_projectTitle + .work_projectBtn,
 .work_projectTeaser + .work_projectBtn {
   margin-top: 20px;
@@ -365,103 +480,177 @@ a {
 /* line 1, ../scss/_about.scss */
 .about {
   background: #f0f0f0;
-  padding: 40px;
+  padding: 20px;
+}
+@media all and (min-width: 768px) {
+  /* line 1, ../scss/_about.scss */
+  .about {
+    padding: 40px;
+  }
 }
 
-/* line 6, ../scss/_about.scss */
+/* line 10, ../scss/_about.scss */
 .about_sectionTitle {
+  margin: 0;
   text-align: center;
   color: #707070;
 }
 
-/* line 11, ../scss/_about.scss */
+/* line 17, ../scss/_about.scss */
 .about_contentWrapper {
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   align-items: center;
 }
-
-/* line 16, ../scss/_about.scss */
-.about_imageWrapper {
-  padding: 40px;
+@media all and (min-width: 768px) {
+  /* line 17, ../scss/_about.scss */
+  .about_contentWrapper {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+  }
+}
+@media all and (min-width: 1024px) {
+  /* line 17, ../scss/_about.scss */
+  .about_contentWrapper {
+    -webkit-align-items: center;
+    align-items: center;
+  }
 }
 
-/* line 20, ../scss/_about.scss */
+@media all and (min-width: 1024px) {
+  /* line 32, ../scss/_about.scss */
+  .about_imageWrapper {
+    padding: 40px;
+  }
+}
+
+/* line 38, ../scss/_about.scss */
 .about_image {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  width: 400px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   object-position: center;
 }
+@media all and (min-width: 1024px) {
+  /* line 38, ../scss/_about.scss */
+  .about_image {
+    width: 400px;
+    height: 400px;
+  }
+}
 
-/* line 28, ../scss/_about.scss */
+/* line 51, ../scss/_about.scss */
 .about_text {
   margin: 0;
   max-width: 500px;
   color: #707070;
 }
 
-/* line 35, ../scss/_about.scss */
+/* line 58, ../scss/_about.scss */
 .about_socialLink {
   color: #707070;
   font-size: 36px;
 }
-/* line 39, ../scss/_about.scss */
+/* line 62, ../scss/_about.scss */
 .about_socialLink + .about_socialLink {
   margin-left: 20px;
 }
 
-/* line 44, ../scss/_about.scss */
+/* line 67, ../scss/_about.scss */
 .about_text + .about_resumeBtn,
 .about_resumeBtn + .about_socialLinks {
-  margin-top: 30px;
+  margin-top: 20px;
+}
+@media all and (min-width: 768px) {
+  /* line 67, ../scss/_about.scss */
+  .about_text + .about_resumeBtn,
+  .about_resumeBtn + .about_socialLinks {
+    margin-top: 30px;
+  }
 }
 
-/* line 49, ../scss/_about.scss */
+/* line 76, ../scss/_about.scss */
+.about_sectionTitle + .about_contentWrapper {
+  margin-top: 20px;
+}
+@media all and (min-width: 768px) {
+  /* line 76, ../scss/_about.scss */
+  .about_sectionTitle + .about_contentWrapper {
+    margin-top: 40px;
+  }
+}
+
+/* line 84, ../scss/_about.scss */
 .about_imageWrapper + .about_textWrapper {
-  margin-left: 40px;
+  margin-top: 20px;
+}
+@media all and (min-width: 768px) {
+  /* line 84, ../scss/_about.scss */
+  .about_imageWrapper + .about_textWrapper {
+    margin-top: 0;
+    margin-left: 40px;
+  }
 }
 
 /* line 1, ../scss/_contact.scss */
 .contact {
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
+  -webkit-align-items: center;
   align-items: center;
-  padding: 40px;
+  padding: 20px;
+}
+@media all and (min-width: 768px) {
+  /* line 1, ../scss/_contact.scss */
+  .contact {
+    padding: 40px;
+  }
 }
 
-/* line 8, ../scss/_contact.scss */
+/* line 12, ../scss/_contact.scss */
 .contact_sectionTitle {
   margin: 0;
   color: #707070;
 }
 
-/* line 14, ../scss/_contact.scss */
+/* line 18, ../scss/_contact.scss */
 .contact_instructions {
   margin: 0;
   color: #707070;
 }
 
-/* line 20, ../scss/_contact.scss */
+/* line 24, ../scss/_contact.scss */
 .contactForm {
-  width: 50%;
+  width: 100%;
   max-width: 600px;
 }
+@media all and (min-width: 768px) {
+  /* line 24, ../scss/_contact.scss */
+  .contactForm {
+    width: 50%;
+  }
+}
 
-/* line 25, ../scss/_contact.scss */
+/* line 33, ../scss/_contact.scss */
 .contactForm_inputWrapper {
   position: relative;
 }
-/* line 28, ../scss/_contact.scss */
+/* line 36, ../scss/_contact.scss */
 .contactForm_inputWrapper + .contactForm_inputWrapper {
   margin-top: 30px;
 }
 
-/* line 33, ../scss/_contact.scss */
+/* line 41, ../scss/_contact.scss */
 .contactForm_text,
 .contactForm_textarea {
   position: relative;
@@ -473,12 +662,12 @@ a {
   z-index: 1;
   transition: border 0.1s;
 }
-/* line 46, ../scss/_contact.scss */
+/* line 54, ../scss/_contact.scss */
 .contactForm_text:focus,
 .contactForm_textarea:focus {
   border-bottom-color: #00BCDE;
 }
-/* line 50, ../scss/_contact.scss */
+/* line 58, ../scss/_contact.scss */
 .contactForm_text:focus + .contactForm_label, .contactForm_text:valid + .contactForm_label,
 .contactForm_textarea:focus + .contactForm_label,
 .contactForm_textarea:valid + .contactForm_label {
@@ -487,7 +676,7 @@ a {
   transform: translateY(-10px);
 }
 
-/* line 58, ../scss/_contact.scss */
+/* line 66, ../scss/_contact.scss */
 .contactForm_label {
   position: absolute;
   top: 0;
@@ -499,46 +688,53 @@ a {
   transition: 0.1s;
 }
 
-/* line 71, ../scss/_contact.scss */
+/* line 79, ../scss/_contact.scss */
 .contactForm_submitBtn {
   display: block;
   margin: 0 auto;
 }
 
-/* line 76, ../scss/_contact.scss */
+/* line 84, ../scss/_contact.scss */
 .contactForm_thanks {
   text-align: center;
 }
 
-/* line 80, ../scss/_contact.scss */
+/* line 88, ../scss/_contact.scss */
 .contactForm_thanksStatus {
   margin: 0;
   color: #10D563;
 }
 
-/* line 86, ../scss/_contact.scss */
+/* line 94, ../scss/_contact.scss */
 .contactForm_thanksMsg {
   margin: 0;
   color: #707070;
 }
 
-/* line 92, ../scss/_contact.scss */
+/* line 100, ../scss/_contact.scss */
 .contactForm_thanksStatus + .contactForm_thanksMsg {
   margin-top: 20px;
 }
 
-/* line 96, ../scss/_contact.scss */
+/* line 104, ../scss/_contact.scss */
 .contact_sectionTitle + .contact_instructions,
 .contact_instructions + .contactForm,
 .contactForm_inputWrapper + .contactForm_submitBtn,
 .contact_sectionTitle + .contactForm_thanks {
-  margin-top: 40px;
+  margin-top: 20px;
+}
+@media all and (min-width: 768px) {
+  /* line 104, ../scss/_contact.scss */
+  .contact_sectionTitle + .contact_instructions,
+  .contact_instructions + .contactForm,
+  .contactForm_inputWrapper + .contactForm_submitBtn,
+  .contact_sectionTitle + .contactForm_thanks {
+    margin-top: 40px;
+  }
 }
 
 /* line 1, ../scss/_workDetail.scss */
 .workDetail_intro {
-  display: -webkit-flex;
-  display: flex;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuMCIgeDI9IjEuMCIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYmNkZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzEwZDU2MyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
   background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #00bcde), color-stop(100%, #10d563));
@@ -548,85 +744,144 @@ a {
   min-height: 80vh;
   padding-top: 50px;
 }
-
-/* line 8, ../scss/_workDetail.scss */
-.workDetail_introText {
-  -webkit-flex: 1;
-  flex: 1;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-justify-content: center;
-  justify-content: center;
-  padding: 40px;
+@media all and (min-width: 1024px) {
+  /* line 1, ../scss/_workDetail.scss */
+  .workDetail_intro {
+    display: -webkit-flex;
+    display: flex;
+  }
 }
 
-/* line 16, ../scss/_workDetail.scss */
+/* line 11, ../scss/_workDetail.scss */
+.workDetail_introText {
+  padding: 20px;
+}
+@media all and (min-width: 768px) {
+  /* line 11, ../scss/_workDetail.scss */
+  .workDetail_introText {
+    padding: 40px;
+  }
+}
+@media all and (min-width: 1024px) {
+  /* line 11, ../scss/_workDetail.scss */
+  .workDetail_introText {
+    -webkit-flex: 1;
+    flex: 1;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+}
+
+/* line 26, ../scss/_workDetail.scss */
+.workDetail_techList {
+  display: -webkit-flex;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 35, ../scss/_workDetail.scss */
+.workDetail_techListItem + .workDetail_techListItem {
+  margin-left: 20px;
+}
+
+/* line 40, ../scss/_workDetail.scss */
+.workDetail_techIcon {
+  color: white;
+  font-size: 30px;
+  opacity: 0.75;
+}
+
+/* line 46, ../scss/_workDetail.scss */
 .workDetail_title {
   margin: 0;
   color: white;
 }
 
-/* line 22, ../scss/_workDetail.scss */
+/* line 52, ../scss/_workDetail.scss */
 .workDetail_summary {
   margin: 0;
   color: white;
 }
 
-/* line 28, ../scss/_workDetail.scss */
+/* line 58, ../scss/_workDetail.scss */
+.workDetail_techList + .workDetail_title,
 .workDetail_title + .workDetail_summary {
   margin-top: 20px;
 }
 
-/* line 32, ../scss/_workDetail.scss */
+/* line 63, ../scss/_workDetail.scss */
 .workDetail_dateCompany {
   color: white;
 }
 
-/* line 37, ../scss/_workDetail.scss */
+/* line 68, ../scss/_workDetail.scss */
 .workDetail_date + .workDetail_company:before {
   content: '• ';
 }
 
-/* line 42, ../scss/_workDetail.scss */
+/* line 73, ../scss/_workDetail.scss */
 .workDetail_introImageWrapper {
-  -webkit-flex: 1;
-  flex: 1;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: flex-end;
   align-items: flex-end;
-  padding-top: 40px;
-  padding-right: 40px;
+  padding: 0px 20px;
+}
+@media all and (min-width: 768px) {
+  /* line 73, ../scss/_workDetail.scss */
+  .workDetail_introImageWrapper {
+    padding: 0px 40px;
+  }
+}
+@media all and (min-width: 1024px) {
+  /* line 73, ../scss/_workDetail.scss */
+  .workDetail_introImageWrapper {
+    -webkit-flex: 1;
+    flex: 1;
+    padding: 40px 40px 0px 0px;
+  }
 }
 
-/* line 50, ../scss/_workDetail.scss */
+/* line 88, ../scss/_workDetail.scss */
 .workDetail_introImage {
   width: 100%;
   object-fit: contain;
 }
 
-/* line 55, ../scss/_workDetail.scss */
+/* line 93, ../scss/_workDetail.scss */
 .workDetail_roleSection {
-  display: -webkit-flex;
-  display: flex;
-  padding: 40px;
+  padding: 20px;
+}
+@media all and (min-width: 1024px) {
+  /* line 93, ../scss/_workDetail.scss */
+  .workDetail_roleSection {
+    display: -webkit-flex;
+    display: flex;
+    padding: 40px;
+  }
 }
 
-/* line 60, ../scss/_workDetail.scss */
-.workDetail_roleContent {
-  -webkit-flex: 1;
-  flex: 1;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-justify-content: center;
-  justify-content: center;
+@media all and (min-width: 1024px) {
+  /* line 102, ../scss/_workDetail.scss */
+  .workDetail_roleContent {
+    -webkit-flex: 1;
+    flex: 1;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
 }
 
-/* line 67, ../scss/_workDetail.scss */
+/* line 111, ../scss/_workDetail.scss */
 .workDetail_roleHeader {
   margin: 0;
   border-bottom: solid 5px #00BCDE;
@@ -635,21 +890,34 @@ a {
   color: #707070;
 }
 
-/* line 76, ../scss/_workDetail.scss */
+/* line 120, ../scss/_workDetail.scss */
 .workDetail_roleHeader + .workDetail_roleList {
   margin-top: 20px;
 }
 
-/* line 80, ../scss/_workDetail.scss */
+@media all and (min-width: 768px) {
+  /* line 124, ../scss/_workDetail.scss */
+  .workDetail_roleList {
+    columns: 2;
+  }
+}
+@media all and (min-width: 1024px) {
+  /* line 124, ../scss/_workDetail.scss */
+  .workDetail_roleList {
+    columns: 1;
+  }
+}
+
+/* line 134, ../scss/_workDetail.scss */
 .workDetail_roleItem {
   color: #707070;
 }
-/* line 83, ../scss/_workDetail.scss */
+/* line 137, ../scss/_workDetail.scss */
 .workDetail_roleItem + .workDetail_roleItem {
   margin-top: 10px;
 }
 
-/* line 88, ../scss/_workDetail.scss */
+/* line 142, ../scss/_workDetail.scss */
 .workDetail_roleImageWrap {
   -webkit-flex: 2;
   flex: 2;
@@ -658,30 +926,38 @@ a {
   height: 100%;
 }
 
-/* line 94, ../scss/_workDetail.scss */
-.workDetail_roleContent + .workDetail_roleImageWrap {
-  margin-left: 40px;
+@media all and (min-width: 1024px) {
+  /* line 148, ../scss/_workDetail.scss */
+  .workDetail_roleContent + .workDetail_roleImageWrap {
+    margin-left: 40px;
+  }
 }
 
-/* line 98, ../scss/_workDetail.scss */
+/* line 154, ../scss/_workDetail.scss */
 .workDetail_slideshowWrapper {
   position: relative;
   -webkit-flex: 1;
   flex: 1;
   display: -webkit-flex;
   display: flex;
-  height: 500px;
-  padding: 0px 40px;
+  height: 300px;
+}
+@media all and (min-width: 768px) {
+  /* line 154, ../scss/_workDetail.scss */
+  .workDetail_slideshowWrapper {
+    height: 500px;
+    padding: 0px 40px;
+  }
 }
 
-/* line 106, ../scss/_workDetail.scss */
+/* line 166, ../scss/_workDetail.scss */
 .workDetail_slideshow {
   position: relative;
   -webkit-flex: 1;
   flex: 1;
 }
 
-/* line 111, ../scss/_workDetail.scss */
+/* line 171, ../scss/_workDetail.scss */
 .workDetail_slideshowItem {
   position: absolute;
   top: 0;
@@ -695,12 +971,12 @@ a {
   transition: opacity 0.5s;
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3)) drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
 }
-/* line 127, ../scss/_workDetail.scss */
+/* line 187, ../scss/_workDetail.scss */
 .workDetail_slideshowItem--active {
   opacity: 1;
 }
 
-/* line 132, ../scss/_workDetail.scss */
+/* line 192, ../scss/_workDetail.scss */
 .workDetail_slideshowBtn {
   position: absolute;
   top: 50%;
@@ -712,25 +988,25 @@ a {
   color: #FF9D2B;
   transform: translateY(-50%);
 }
-/* line 145, ../scss/_workDetail.scss */
+/* line 205, ../scss/_workDetail.scss */
 .workDetail_slideshowBtn:hover {
   cursor: pointer;
 }
-/* line 149, ../scss/_workDetail.scss */
+/* line 209, ../scss/_workDetail.scss */
 .workDetail_slideshowBtn--prev {
   left: 0;
 }
-/* line 153, ../scss/_workDetail.scss */
+/* line 213, ../scss/_workDetail.scss */
 .workDetail_slideshowBtn--next {
   right: 0;
 }
 
-/* line 158, ../scss/_workDetail.scss */
+/* line 218, ../scss/_workDetail.scss */
 .workDetail_slideshowBtnText {
   display: none;
 }
 
-/* line 162, ../scss/_workDetail.scss */
+/* line 222, ../scss/_workDetail.scss */
 .workDetail_codeSection {
   display: -webkit-flex;
   display: flex;
@@ -742,7 +1018,7 @@ a {
   padding: 40px;
 }
 
-/* line 170, ../scss/_workDetail.scss */
+/* line 230, ../scss/_workDetail.scss */
 .workDetail_codeHeader {
   margin: 0;
   border-right: solid 5px #00BCDE;
@@ -751,28 +1027,34 @@ a {
   color: #707070;
 }
 
-/* line 179, ../scss/_workDetail.scss */
+/* line 239, ../scss/_workDetail.scss */
 .workDetail_codeText {
   color: #707070;
 }
 
-/* line 183, ../scss/_workDetail.scss */
+/* line 243, ../scss/_workDetail.scss */
 .workDetail_codeHeader + .workDetail_codeText {
   margin-left: 40px;
 }
 
-/* line 187, ../scss/_workDetail.scss */
+/* line 247, ../scss/_workDetail.scss */
 .workDetail_backLinkWrap {
-  padding: 0px 40px 40px 40px;
+  padding: 0px 20px 20px 20px;
   text-align: center;
 }
+@media all and (min-width: 768px) {
+  /* line 247, ../scss/_workDetail.scss */
+  .workDetail_backLinkWrap {
+    padding: 0px 40px 40px 40px;
+  }
+}
 
-/* line 193, ../scss/_workDetail.scss */
+/* line 257, ../scss/_workDetail.scss */
 .workDetail_backLink {
   color: #707070;
   text-decoration: none;
 }
-/* line 197, ../scss/_workDetail.scss */
+/* line 261, ../scss/_workDetail.scss */
 .workDetail_backLink:hover {
   text-decoration: underline;
 }

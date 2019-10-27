@@ -1,10 +1,10 @@
 <section class="workDetail_intro">
   <div class="workDetail_introText">
     <?php if ( count($content['tech']) > 0 ) : ?>
-      <ul class="intro_techList">
+      <ul class="workDetail_techList">
         <?php foreach($content['tech'] as $tech) : ?>
-          <li class="intro_techListItem">
-            <i class="fab fa-<?php print $tech; ?> intro_techIcon"></i>
+          <li class="workDetail_techListItem">
+            <i class="fab fa-<?php print $tech; ?> workDetail_techIcon"></i>
           </li>
         <?php endforeach; ?>
       </ul>
