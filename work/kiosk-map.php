@@ -3,7 +3,7 @@
 include('../includes/html_header.inc'); 
 include('../includes/header.inc');
 
-$sample_code = file_get_contents('./code_samples/fst-package-list.php');
+//$sample_code = file_get_contents('./code_samples/fst-package-list.php');
 
 $content = [
   'machine_name' => 'kiosk-map',
@@ -14,20 +14,25 @@ $content = [
   'company' => 'GlynnDevins',
   'live_link' => '',
   'github_link' => '',
-  'tech' => ['html5', 'css3', 'sass', 'js', 'jquery', 'php', 'drupal'],
+  'tech' => ['html5', 'css3', 'js', 'sass', 'php', 'drupal'],
   'intro_img' => 'map-on-kiosk-zoom-in.png',
 
+
+
   'my_role' => [
-    'Leverage Drupal API data',
-    'Asynchronous JavaScript',
-    'JavaScript promises',
-    'High-performing CSS animations',
-    'Optimized performance',
-    'CSS Grid and Flexbox', 
-    'HTML, CSS, JS',
-    'Dynamic SVG map',
-    'Web workers to asynchronously process API data',
-    'Implemented façade OOP design pattern for 3rd-party media integrations',
+    'HTML/CSS' => [
+      'CSS Flexbox',
+      'Optimized CSS animations',
+    ],
+    'JavaScript' => [
+      'Dynamic SVG map',
+      'Asynchronous JavaScript with Promises',
+      'Web Workers',
+      'Drupal API data manipulation',
+      'Zoom, center, and rotation calculations for SVG',
+      '3rd-party media integration (YouTube, Vimeo, Wistia)',
+    ],
+    'Documentation and training' => [],
   ],
   
   // Slideshow
@@ -44,7 +49,7 @@ $content = [
   ],
 
   // Code
-  'code_sample' => $sample_code,
+  //'code_sample' => $sample_code,
 ];
 
 include('../includes/work_detail.inc');

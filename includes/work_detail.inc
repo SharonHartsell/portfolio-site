@@ -41,8 +41,17 @@
     <h2 class="workDetail_roleHeader t-title--40l">&gt; what I did</h2>
     <?php if ( !empty($content['my_role']) ) : ?>
       <ul class="workDetail_roleList">
-        <?php foreach($content['my_role'] as $role) : ?>
-          <li class="workDetail_roleItem t-body--18l"><?php print $role; ?></li>
+        <?php foreach($content['my_role'] as $role => $sub_roles) : ?>
+          <li class="workDetail_roleItem t-body--18l">
+            <?php print $role; ?>
+            <?php if ( !empty($sub_roles) ) : ?>
+              <ul>
+                <?php foreach($sub_roles as $sub_role) : ?>
+                  <li><?php print $sub_role; ?></li>
+                <?php endforeach; ?>
+              </ul>
+            <?php endif; ?>
+          </li>
         <?php endforeach; ?>
       </ul>
     <?php endif; ?>
