@@ -70,11 +70,6 @@
 
         @include tablet {
           margin-top: 0;
-          
-        }
-
-        @include desktop {
-          margin-left: 40px;
         }
       }
     }
@@ -89,7 +84,6 @@
         color: $gray;
       }
 
-      .work_projectTitle + .work_projectBtn,
-      .work_projectTeaser + .work_projectBtn {
+      .work_projectTextWrapper + .work_projectBtn {
         margin-top: 20px;
       }

@@ -38,15 +38,15 @@
 $work = [
   'kiosk-map' => [
     'title' => 'Sales Kiosk Map',
-    'teaser' => 'Interactive SVG map in a decoupled front-end application that consumes Drupal API data.',
+    'teaser' => 'This interactive SVG map is part of a decoupled front-end web app that consumes Drupal API data.',
   ],
   'map-validator' => [
     'title' => 'Map SVG Validator',
-    'teaser' => 'React-based tool to identify issues with SVG illustrated map files before they are used in the <link>sales kiosk experience</link>.',
+    'teaser' => 'This React app identifies potential issues with illustrated SVG map files before they are used in a sales engagement tool.',
   ],
   'fst' => [
     'title' => 'Finishings Selection Tool',
-    'teaser' => 'Drupal-powered product to help people visualize different cabinets, flooring, and other finishing options in their future homes.',
+    'teaser' => 'This Drupal-powered product helps people visualize different paint colors, cabinets, flooring, and other finishings in their new homes.',
   ]
 ];
 ?>
@@ -75,23 +75,26 @@ $work = [
       <img src="/img/sharon-teal1.jpg" class="about_image" alt="Sharon" />
     </div>
     <div class="about_textWrapper">
-      <p class="about_text t-body--18l">Hi! I’m Sharon, a front-end web developer who specializes in creating user-friendly and engaging web experiences. I’ve been in the field for nearly two years, and I love learning new things, especially why things work the way they do. I’m a diligent problem solver who pays keen attention to details, partly due to my background in graphic design. Check out some of my latest work above, and contact me via the form below or directly at <a href="mailto:hello@sharonhartsell.com" >hello@sharonhartsell.com</a>.</p>
-      <button class="about_resumeBtn btn--secondary t-title--20b t-caps">Download resume</button>
+      <div class="about_text">
+        <p class="t-body--18l">Hi! I’m Sharon, a front-end web developer who specializes in creating user-friendly and engaging web experiences. While I love a well-organized CSS system, JavaScript is my real passion. I enjoy building the interactivity that brings a user interface to life. I’m a strong problem solver with a keen eye for details, a skill I built through my background in graphic design.</p>
+        <p class="t-body--18l">Check out some of my work above, and you can contact me at <a href="mailto:hello@sharonhartsell.com">hello@sharonhartsell.com</a>.</p>
+      </div>
+      <!-- <button class="about_resumeBtn btn--secondary t-title--20b t-caps">Download resume</button> -->
       <div class="about_socialLinks">
-        <a href="https://www.linkedin.com/in/sharonhartsell/" class="about_socialLink"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/SharonHartsell" class="about_socialLink"><i class="fab fa-github"></i></a>
-        <a href="#" class="about_socialLink"><i class="fab fa-codepen"></i></a>
+        <a href="https://www.linkedin.com/in/sharonhartsell/" class="about_socialLink" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/SharonHartsell" class="about_socialLink" target="_blank"><i class="fab fa-github"></i></a>
+        <!-- <a href="#" class="about_socialLink"><i class="fab fa-codepen"></i></a> -->
       </div>
     </div>
   </div>
 </section>
 
 <!-- Contact -->
-<a id="contact"></a>
+<!-- <a id="contact"></a>
 <section class="contact">
   <h2 class="contact_sectionTitle t-title--40l">&lt; contact &gt;</h2>
-  <?php if (empty($_POST)) : ?>
-    <p class="contact_instructions t-body--18l">Get in touch by emailing hello@sharonhartsell.com or by filling out the form below.</p>
+  <?php //if (empty($_POST['name'])) : ?>
+    <p class="contact_instructions t-body--18l">Get in touch by emailing <a href="mailto:hello@sharonhartsell.com">hello@sharonhartsell.com</a> or by filling out the form below.</p>
     <form method="post" class="contactForm">
       <div class="contactForm_inputWrapper">
         <input type="text" id="contactForm_name" name="name" class="contactForm_text t-body--18l" required />
@@ -107,19 +110,18 @@ $work = [
       </div>
       <button type="submit" class="contactForm_submitBtn btn--primary t-title--20b t-caps">Send Message</button>
     </form>
-  
-  <?php else : ?>
+  <?php //else : ?>
     <?php
-      $name = $_POST['name'];
-      $email = $_POST['email'];
-      $msg = $_POST['msg'];
+      // $name = $_POST['name'];
+      // $email = $_POST['email'];
+      // $msg = $_POST['msg'];
     ?>
     <div class="contactForm_thanks">
       <p class="contactForm_thanksStatus t-body--24sb">Message sent!</p>
       <p class="contactForm_thanksMsg t-body--18l">Thank you, <?php print $name; ?>, for your message. I'll be in touch soon.</p>
     </div>
-  <?php endif; ?>
-</section>
+  <?php //endif; ?>
+</section> -->
 
 <?php include("includes/footer.inc"); ?>
 <?php include("includes/html_footer.inc"); ?>

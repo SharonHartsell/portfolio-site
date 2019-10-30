@@ -17,9 +17,9 @@
         <li class="nav_listItem">
           <a href="/index.php#about" class="nav_link">about</a>
         </li>
-        <li class="nav_listItem">
+        <!-- <li class="nav_listItem">
           <a href="/index.php#contact" class="nav_link">contact</a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </nav>
