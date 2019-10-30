@@ -55,14 +55,22 @@
       color: $gray;
     }
 
-    .about_socialLink {
-      color: $gray;
-      font-size: 36px;
+    .about_socialLinks {
+      text-align: center;
 
-      & + & {
-        margin-left: 20px;
+      @include tablet {
+        text-align: left;
       }
     }
+
+      .about_socialLink {
+        color: $gray;
+        font-size: 36px;
+
+        & + & {
+          margin-left: 20px;
+        }
+      }
 
     .about_text + .about_resumeBtn,
     .about_resumeBtn + .about_socialLinks {

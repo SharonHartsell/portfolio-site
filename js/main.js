@@ -41,4 +41,9 @@ $(document).ready(function() {
 
     $('.nav_listWrapper').toggle(500);
   });
+
+  // Back link
+  $('.workDetail_backLink').on('click', function() {
+    window.history.back();
+  });
 });

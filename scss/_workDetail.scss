@@ -139,6 +139,14 @@
         }
       }
 
+        .workDetail_subRoleList {
+          padding-left: 20px;
+        }
+
+          .workDetail_subRoleListItem {
+            margin-top: 5px;
+          }
+
   .workDetail_roleImageWrap {
     @include flex(2);
     @include display-flex;
@@ -255,7 +263,7 @@
 }
 
 .workDetail_backLink {
-  color: $gray;
+  color: $gradientStart;
   text-decoration: none;
 
   &:hover {

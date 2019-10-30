@@ -45,9 +45,9 @@
           <li class="workDetail_roleItem t-body--18l">
             <?php print $role; ?>
             <?php if ( !empty($sub_roles) ) : ?>
-              <ul>
+              <ul class="workDetail_subRoleList">
                 <?php foreach($sub_roles as $sub_role) : ?>
-                  <li><?php print $sub_role; ?></li>
+                  <li class="workDetail_subRoleListItem"><?php print $sub_role; ?></li>
                 <?php endforeach; ?>
               </ul>
             <?php endif; ?>
@@ -86,5 +86,5 @@
 </section> -->
 
 <div class="workDetail_backLinkWrap">
-  <a href="/index.php" class="workDetail_backLink t-body--18l">&lt; back</a>
+  <a href="#" class="workDetail_backLink t-body--18l">&lt; back</a>
 </div>

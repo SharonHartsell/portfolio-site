@@ -6,7 +6,7 @@
 
 /* line 5, ../scss/_global.scss */
 a {
-  color: #FF9D2B;
+  color: #00BCDE;
 }
 
 /* line 9, ../scss/_global.scss */
@@ -453,27 +453,20 @@ a {
     margin-top: 0;
   }
 }
-@media all and (min-width: 1024px) {
-  /* line 68, ../scss/_work.scss */
-  .work_projectListItem + .work_projectListItem {
-    margin-left: 40px;
-  }
-}
 
-/* line 82, ../scss/_work.scss */
+/* line 77, ../scss/_work.scss */
 .work_projectTitle {
   margin: 0;
   color: #707070;
 }
 
-/* line 88, ../scss/_work.scss */
+/* line 83, ../scss/_work.scss */
 .work_projectTeaser {
   color: #707070;
 }
 
-/* line 92, ../scss/_work.scss */
-.work_projectTitle + .work_projectBtn,
-.work_projectTeaser + .work_projectBtn {
+/* line 87, ../scss/_work.scss */
+.work_projectTextWrapper + .work_projectBtn {
   margin-top: 20px;
 }
 
@@ -555,45 +548,56 @@ a {
 }
 
 /* line 58, ../scss/_about.scss */
+.about_socialLinks {
+  text-align: center;
+}
+@media all and (min-width: 768px) {
+  /* line 58, ../scss/_about.scss */
+  .about_socialLinks {
+    text-align: left;
+  }
+}
+
+/* line 66, ../scss/_about.scss */
 .about_socialLink {
   color: #707070;
   font-size: 36px;
 }
-/* line 62, ../scss/_about.scss */
+/* line 70, ../scss/_about.scss */
 .about_socialLink + .about_socialLink {
   margin-left: 20px;
 }
 
-/* line 67, ../scss/_about.scss */
+/* line 75, ../scss/_about.scss */
 .about_text + .about_resumeBtn,
 .about_resumeBtn + .about_socialLinks {
   margin-top: 20px;
 }
 @media all and (min-width: 768px) {
-  /* line 67, ../scss/_about.scss */
+  /* line 75, ../scss/_about.scss */
   .about_text + .about_resumeBtn,
   .about_resumeBtn + .about_socialLinks {
     margin-top: 30px;
   }
 }
 
-/* line 76, ../scss/_about.scss */
+/* line 84, ../scss/_about.scss */
 .about_sectionTitle + .about_contentWrapper {
   margin-top: 20px;
 }
 @media all and (min-width: 768px) {
-  /* line 76, ../scss/_about.scss */
+  /* line 84, ../scss/_about.scss */
   .about_sectionTitle + .about_contentWrapper {
     margin-top: 40px;
   }
 }
 
-/* line 84, ../scss/_about.scss */
+/* line 92, ../scss/_about.scss */
 .about_imageWrapper + .about_textWrapper {
   margin-top: 20px;
 }
 @media all and (min-width: 768px) {
-  /* line 84, ../scss/_about.scss */
+  /* line 92, ../scss/_about.scss */
   .about_imageWrapper + .about_textWrapper {
     margin-top: 0;
     margin-left: 40px;
@@ -918,6 +922,16 @@ a {
 }
 
 /* line 142, ../scss/_workDetail.scss */
+.workDetail_subRoleList {
+  padding-left: 20px;
+}
+
+/* line 146, ../scss/_workDetail.scss */
+.workDetail_subRoleListItem {
+  margin-top: 5px;
+}
+
+/* line 150, ../scss/_workDetail.scss */
 .workDetail_roleImageWrap {
   -webkit-flex: 2;
   flex: 2;
@@ -927,13 +941,13 @@ a {
 }
 
 @media all and (min-width: 1024px) {
-  /* line 148, ../scss/_workDetail.scss */
+  /* line 156, ../scss/_workDetail.scss */
   .workDetail_roleContent + .workDetail_roleImageWrap {
     margin-left: 40px;
   }
 }
 
-/* line 154, ../scss/_workDetail.scss */
+/* line 162, ../scss/_workDetail.scss */
 .workDetail_slideshowWrapper {
   position: relative;
   -webkit-flex: 1;
@@ -943,21 +957,21 @@ a {
   height: 300px;
 }
 @media all and (min-width: 768px) {
-  /* line 154, ../scss/_workDetail.scss */
+  /* line 162, ../scss/_workDetail.scss */
   .workDetail_slideshowWrapper {
     height: 500px;
     padding: 0px 40px;
   }
 }
 
-/* line 166, ../scss/_workDetail.scss */
+/* line 174, ../scss/_workDetail.scss */
 .workDetail_slideshow {
   position: relative;
   -webkit-flex: 1;
   flex: 1;
 }
 
-/* line 171, ../scss/_workDetail.scss */
+/* line 179, ../scss/_workDetail.scss */
 .workDetail_slideshowItem {
   position: absolute;
   top: 0;
@@ -971,12 +985,12 @@ a {
   transition: opacity 0.5s;
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3)) drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
 }
-/* line 187, ../scss/_workDetail.scss */
+/* line 195, ../scss/_workDetail.scss */
 .workDetail_slideshowItem--active {
   opacity: 1;
 }
 
-/* line 192, ../scss/_workDetail.scss */
+/* line 200, ../scss/_workDetail.scss */
 .workDetail_slideshowBtn {
   position: absolute;
   top: 50%;
@@ -988,25 +1002,25 @@ a {
   color: #FF9D2B;
   transform: translateY(-50%);
 }
-/* line 205, ../scss/_workDetail.scss */
+/* line 213, ../scss/_workDetail.scss */
 .workDetail_slideshowBtn:hover {
   cursor: pointer;
 }
-/* line 209, ../scss/_workDetail.scss */
+/* line 217, ../scss/_workDetail.scss */
 .workDetail_slideshowBtn--prev {
   left: 0;
 }
-/* line 213, ../scss/_workDetail.scss */
+/* line 221, ../scss/_workDetail.scss */
 .workDetail_slideshowBtn--next {
   right: 0;
 }
 
-/* line 218, ../scss/_workDetail.scss */
+/* line 226, ../scss/_workDetail.scss */
 .workDetail_slideshowBtnText {
   display: none;
 }
 
-/* line 222, ../scss/_workDetail.scss */
+/* line 230, ../scss/_workDetail.scss */
 .workDetail_codeSection {
   display: -webkit-flex;
   display: flex;
@@ -1018,7 +1032,7 @@ a {
   padding: 40px;
 }
 
-/* line 230, ../scss/_workDetail.scss */
+/* line 238, ../scss/_workDetail.scss */
 .workDetail_codeHeader {
   margin: 0;
   border-right: solid 5px #00BCDE;
@@ -1027,34 +1041,34 @@ a {
   color: #707070;
 }
 
-/* line 239, ../scss/_workDetail.scss */
+/* line 247, ../scss/_workDetail.scss */
 .workDetail_codeText {
   color: #707070;
 }
 
-/* line 243, ../scss/_workDetail.scss */
+/* line 251, ../scss/_workDetail.scss */
 .workDetail_codeHeader + .workDetail_codeText {
   margin-left: 40px;
 }
 
-/* line 247, ../scss/_workDetail.scss */
+/* line 255, ../scss/_workDetail.scss */
 .workDetail_backLinkWrap {
   padding: 0px 20px 20px 20px;
   text-align: center;
 }
 @media all and (min-width: 768px) {
-  /* line 247, ../scss/_workDetail.scss */
+  /* line 255, ../scss/_workDetail.scss */
   .workDetail_backLinkWrap {
     padding: 0px 40px 40px 40px;
   }
 }
 
-/* line 257, ../scss/_workDetail.scss */
+/* line 265, ../scss/_workDetail.scss */
 .workDetail_backLink {
-  color: #707070;
+  color: #00BCDE;
   text-decoration: none;
 }
-/* line 261, ../scss/_workDetail.scss */
+/* line 269, ../scss/_workDetail.scss */
 .workDetail_backLink:hover {
   text-decoration: underline;
 }
