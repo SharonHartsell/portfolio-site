@@ -115,11 +115,17 @@
 
     .workDetail_roleHeader {
       margin: 0;
-      border-bottom: solid 5px $gradientStart;
-      border-image: linear-gradient(to right, $gradientStart, $gradientEnd) 30;
       padding-bottom: 20px;
 
       color: $gray;
+
+      &:after {
+        content: '';
+        display: block;
+        margin-top: 20px;
+        @include background-image(linear-gradient(to bottom right, $gradientStart, $gradientEnd));
+        height: 5px;
+      }
     }
 
     .workDetail_roleHeader + .workDetail_roleList {
