@@ -5,10 +5,12 @@
 
   @include desktop {
     @include display-flex;
+    @include justify-content(center);
   }
 }
 
   .workDetail_introText {
+    max-width: 800px;
     padding: 20px;
 
     @include tablet {
@@ -71,6 +73,7 @@
       }
 
   .workDetail_introImageWrapper {
+    max-width: 800px;
     @include display-flex;
     @include align-items(flex-end);
     padding: 0px 20px;
@@ -95,11 +98,13 @@
 
   @include desktop {
     @include display-flex;
+    @include justify-content(center);
     padding: 40px;
   }
 }
 
   .workDetail_roleContent {
+    max-width: 600px;
     @include desktop {
       @include flex(1);
       @include display-flex;
@@ -151,6 +156,7 @@
     @include flex(2);
     @include display-flex;
     height: 100%;
+    max-width: 800px;
   }
 
   .workDetail_roleContent + .workDetail_roleImageWrap {
@@ -168,6 +174,10 @@
   @include tablet {
     height: 500px;
     padding: 0px 40px;
+  }
+
+  @include largedesktop {
+    height: 700px;
   }
 }
 
