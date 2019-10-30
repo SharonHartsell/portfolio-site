@@ -1,0 +1,288 @@
+.workDetail_intro {
+  @include background-image(linear-gradient(to bottom right, $gradientStart, $gradientEnd));
+  min-height: 80vh;
+  padding-top: $navHt;
+
+  @include desktop {
+    @include display-flex;
+    @include justify-content(center);
+  }
+}
+
+  .workDetail_introText {
+    max-width: 800px;
+    padding: 20px;
+
+    @include tablet {
+      padding: 40px;
+    }
+
+    @include desktop {
+      @include flex(1);
+      @include display-flex;
+      @include flex-direction(column);
+      @include justify-content(center);
+    }
+  }
+
+    .workDetail_techList {
+      @include display-flex;
+      margin: 0;
+      padding: 0;
+
+      list-style-type: none;
+    }
+
+      .workDetail_techListItem {
+        & + & {
+          margin-left: 20px;
+        }
+      }
+
+      .workDetail_techIcon {
+        color: white;
+        font-size: 30px;
+        opacity: 0.75;
+      }
+
+    .workDetail_title {
+      margin: 0;
+
+      color: white;
+    }
+
+    .workDetail_summary {
+      margin: 0;
+
+      color: white;
+    }
+
+    .workDetail_techList + .workDetail_title,
+    .workDetail_title + .workDetail_summary {
+      margin-top: 20px;
+    }
+
+    .workDetail_dateCompany {
+      color: white;
+    }
+
+      .workDetail_date + .workDetail_company {
+        &:before {
+          content: '• ';
+        }
+      }
+
+  .workDetail_introImageWrapper {
+    max-width: 800px;
+    @include display-flex;
+    @include align-items(flex-end);
+    padding: 0px 20px;
+
+    @include tablet {
+      padding: 0px 40px;
+    }
+
+    @include desktop {
+      @include flex(1);
+      padding: 40px 40px 0px 0px;
+    }
+  }
+
+    .workDetail_introImage {
+      width: 100%;
+      object-fit: contain;
+    }
+
+.workDetail_roleSection {
+  padding: 20px;
+
+  @include desktop {
+    @include display-flex;
+    @include justify-content(center);
+    padding: 40px;
+  }
+}
+
+  .workDetail_roleContent {
+    max-width: 600px;
+    @include desktop {
+      @include flex(1);
+      @include display-flex;
+      @include flex-direction(column);
+      @include justify-content(center);
+    }
+  }
+
+    .workDetail_roleHeader {
+      margin: 0;
+      padding-bottom: 20px;
+
+      color: $gray;
+
+      &:after {
+        content: '';
+        display: block;
+        margin-top: 20px;
+        @include background-image(linear-gradient(to bottom right, $gradientStart, $gradientEnd));
+        height: 5px;
+      }
+    }
+
+    .workDetail_roleHeader + .workDetail_roleList {
+      margin-top: 20px;
+    }
+
+    .workDetail_roleList {
+      @include tablet {
+        columns: 2;
+      }
+
+      @include desktop {
+        columns: 1;
+      }
+    }
+
+      .workDetail_roleItem {
+        color: $gray;
+
+        & + & {
+          margin-top: 10px;
+        }
+      }
+
+        .workDetail_subRoleList {
+          padding-left: 20px;
+        }
+
+          .workDetail_subRoleListItem {
+            margin-top: 5px;
+          }
+
+  .workDetail_roleImageWrap {
+    @include flex(2);
+    @include display-flex;
+    height: 100%;
+    max-width: 800px;
+  }
+
+  .workDetail_roleContent + .workDetail_roleImageWrap {
+    @include desktop {
+      margin-left: 40px;
+    }
+  }
+
+.workDetail_slideshowWrapper {
+  position: relative;
+  @include flex(1);
+  @include display-flex;
+  height: 300px;
+
+  @include tablet {
+    height: 500px;
+    padding: 0px 40px;
+  }
+
+  @include largedesktop {
+    height: 700px;
+  }
+}
+
+  .workDetail_slideshow {
+    position: relative;
+    @include flex(1);
+  }
+
+    .workDetail_slideshowItem {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+
+      opacity: 0;
+      transition: opacity 0.5s;
+
+      filter: drop-shadow(0px 0px 1px rgba(0,0,0,.3))
+          drop-shadow(0px 0px 5px rgba(0,0,0,.3));
+
+      &--active {
+        opacity: 1;
+      }
+    }
+
+  .workDetail_slideshowBtn {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0;
+    
+    font-size: 60px;
+    color: $cta;
+
+    transform: translateY(-50%);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+
+    .workDetail_slideshowBtnText {
+      display: none;
+    }
+
+.workDetail_codeSection {
+  @include display-flex;
+  @include align-items(center);
+  @include justify-content(center);
+  background: $ltGray;
+  padding: 40px;
+}
+
+  .workDetail_codeHeader {
+    margin: 0;
+    border-right: solid 5px $gradientStart;
+    border-image: linear-gradient(to right, $gradientStart, $gradientEnd) 30;
+    padding-right: 20px;
+    
+    color: $gray;
+  }
+
+  .workDetail_codeText {
+    color: $gray;
+  }
+
+  .workDetail_codeHeader + .workDetail_codeText {
+    margin-left: 40px;
+  }
+
+.workDetail_backLinkWrap {
+  padding: 0px 20px 20px 20px;
+
+  text-align: center;
+
+  @include tablet {
+    padding: 0px 40px 40px 40px;
+  }
+}
+
+.workDetail_backLink {
+  color: $gradientStart;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

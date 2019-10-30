@@ -1,0 +1,82 @@
+.t-title {
+  font-family: $sansTitle;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+
+  &--20b {
+    @extend .t-title;
+    font-weight: 700;
+    font-size: 18px;
+
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+
+  &--30b {
+    @extend .t-title;
+    font-weight: 700;
+    font-size: 24px;
+
+    @include tablet {
+      font-size: 30px;
+    }
+  }
+
+  &--40l {
+    @extend .t-title;
+    font-weight: 300;
+    font-size: 30px;
+
+    @include tablet {
+      font-size: 40px;
+    }
+  }
+
+  &--60b {
+    @extend .t-title;
+    font-weight: 700;
+    font-size: 40px;
+
+    @include tablet {
+      font-size: 60px;
+    }
+  }
+}
+
+.t-body {
+  font-family: $sansBody;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+
+  &--14l {
+    @extend .t-body;
+    font-weight: 300;
+    font-size: 14px;
+  }
+
+  &--18l {
+    @extend .t-body;
+    font-weight: 300;
+    font-size: 16px;
+
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+
+  &--24sb {
+    @extend .t-body;
+    font-weight: 600;
+    font-size: 20px;
+
+    @include tablet {
+      font-size: 24px;
+    }
+  }
+}
+
+.t-caps {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}

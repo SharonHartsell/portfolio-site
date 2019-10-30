@@ -1,0 +1,115 @@
+.contact {
+  @include display-flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  padding: 20px;  
+
+  @include tablet {
+    padding: 40px;
+  }
+}
+
+  .contact_sectionTitle {
+    margin: 0;
+
+    color: $gray;
+  }
+
+  .contact_instructions {
+    margin: 0;
+
+    color: $gray;
+  }
+
+  .contactForm {
+    width: 100%;
+    max-width: 600px;
+
+    @include tablet {
+      width: 50%;
+    }
+  }
+
+    .contactForm_inputWrapper {
+      position: relative;
+
+      & + & {
+        margin-top: 30px;
+      }
+    }
+
+      .contactForm_text,
+      .contactForm_textarea {
+        position: relative;
+        width: 100%;
+        outline: none;
+        border: none;
+        border-bottom: solid 1px $gray;
+        background: transparent;
+
+        z-index: 1;
+
+        transition: border 0.1s;
+
+        &:focus {
+          border-bottom-color: $gradientStart;
+        }
+
+        &:focus + .contactForm_label,
+        &:valid + .contactForm_label {
+          opacity: 0.5;
+          font-size: 10px;
+          transform: translateY(-10px);
+        }
+      }
+
+      .contactForm_label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        display: block;
+
+        color: $gray;
+
+        transition: 0.1s;
+      }
+
+    .contactForm_submitBtn {
+      display: block;
+      margin: 0 auto;
+    }
+
+  .contactForm_thanks {
+    text-align: center;
+  }
+
+    .contactForm_thanksStatus {
+      margin: 0;
+
+      color: $gradientEnd;
+    }
+
+    .contactForm_thanksMsg {
+      margin: 0;
+
+      color: $gray;
+    }
+
+    .contactForm_thanksStatus + .contactForm_thanksMsg {
+      margin-top: 20px;
+    }
+
+  .contact_sectionTitle + .contact_instructions,
+  .contact_instructions + .contactForm,
+  .contactForm_inputWrapper + .contactForm_submitBtn,
+  .contact_sectionTitle + .contactForm_thanks {
+    margin-top: 20px;
+
+    @include tablet {
+      margin-top: 40px;
+    }
+  }
+
+  

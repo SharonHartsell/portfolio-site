@@ -1,0 +1,91 @@
+.nav {
+  
+}
+
+  .nav_toggle {
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0;
+
+    color: white;
+    font-size: 30px;
+    text-align: right;
+    line-height: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .nav_toggleText {
+    font-size: 0px;
+  }
+
+  .nav_listWrapper {
+    display: none;
+  }
+
+  .nav_list {
+    position: fixed;
+    top: $navHt;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    @include background-image(linear-gradient(to bottom right, rgba($gradientStart, 0.8), rgba($gradientEnd, 0.8)));
+    padding: 20px;
+
+    @include tablet {
+      padding: 40px;
+    }
+  }
+
+    .nav_listItem {
+      list-style-type: none;
+    }
+
+    .nav_link {
+      font-weight: 300;
+      font-size: 80px;
+      line-height: 1.0;
+      font-family: $sansTitle;
+      letter-spacing: 0.03em;
+      color: white;
+      text-decoration: none;
+
+      @include tablet {
+        font-size: 100px;
+      }
+
+      &:before,
+      &:after {
+        @include tablet {
+          opacity: 0;
+          transition: opacity 0.25s;
+        }
+      }
+
+      &:before {
+        @include tablet {
+          content: '< ';
+        }
+      }
+
+      &:after {
+        @include tablet {
+          content: ' >';
+        }
+      }
+
+      &:hover {
+        &:before,
+        &:after {
+          opacity: 1;
+        }
+      }
+    }

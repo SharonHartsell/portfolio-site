@@ -1,0 +1,18 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  @include display-flex;
+  @include align-items(center);
+  @include justify-content(space-between);
+  @include background-image(linear-gradient(to right, $gradientStart, $gradientEnd));
+  padding: 10px;
+
+  z-index: 9999;
+}
+
+  .header_name {
+    text-decoration: none;
+    color: white;
+  }

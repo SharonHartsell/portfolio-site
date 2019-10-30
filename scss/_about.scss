@@ -1,0 +1,102 @@
+.about {
+  @include display-flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  background: $ltGray;
+  padding: 20px;
+
+  @include tablet {
+    padding: 40px;
+  }
+}
+
+  .about_sectionTitle {
+    margin: 0;
+
+    text-align: center;
+    color: $gray;
+  }
+
+  .about_contentWrapper {
+    @include display-flex;
+    @include flex-direction(column);
+    @include align-items(center);
+
+    @include tablet {
+      @include flex-direction(row);
+      @include align-items(flex-start);
+    }
+    
+    @include desktop {
+      @include align-items(center);
+    }
+  }
+
+    .about_imageWrapper {
+      @include desktop {
+        padding: 40px;
+      }
+    }
+
+    .about_image {
+      @include border-radius(50%);
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      object-position: center;
+
+      @include desktop {
+        width: 400px;
+        height: 400px;
+      }
+    }
+
+    .about_text {
+      margin: 0;
+
+      max-width: 500px;
+      color: $gray;
+    }
+
+    .about_socialLinks {
+      text-align: center;
+
+      @include tablet {
+        text-align: left;
+      }
+    }
+
+      .about_socialLink {
+        color: $gray;
+        font-size: 36px;
+
+        & + & {
+          margin-left: 20px;
+        }
+      }
+
+    .about_text + .about_resumeBtn,
+    .about_resumeBtn + .about_socialLinks {
+      margin-top: 20px;
+
+      @include tablet {
+        margin-top: 30px;
+      }
+    }
+
+    .about_sectionTitle + .about_contentWrapper {
+      margin-top: 20px;
+
+      @include tablet {
+        margin-top: 40px;
+      }
+    }
+
+    .about_imageWrapper + .about_textWrapper {
+      margin-top: 20px;
+
+      @include tablet {
+        margin-top: 0;
+        margin-left: 40px;
+      }
+    }
