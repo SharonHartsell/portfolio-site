@@ -1,4 +1,7 @@
 .about {
+  @include display-flex;
+  @include flex-direction(column);
+  @include align-items(center);
   background: $ltGray;
   padding: 20px;
 

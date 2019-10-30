@@ -43,7 +43,8 @@ $(document).ready(function() {
   });
 
   // Back link
-  $('.workDetail_backLink').on('click', function() {
+  $('.workDetail_backLink').on('click', function(event) {
+    event.preventDefault();
     window.history.back();
   });
 });

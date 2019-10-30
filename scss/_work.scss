@@ -1,4 +1,7 @@
 .work {
+  @include display-flex;
+  @include flex-direction(column);
+  @include align-items(center);
   padding: 20px;
 
   @include tablet {
@@ -35,6 +38,10 @@
 
     @include desktop {
       grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include largedesktop {
+      grid-template-columns: repeat(3, minmax(min-content, 600px));
     }
   }
 
