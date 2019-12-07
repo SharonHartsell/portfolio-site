@@ -21,6 +21,7 @@
   }
 
   .intro_headline {
+    max-width: 1000px;
     color: white;
   }
 
@@ -38,8 +39,6 @@
       @include flex-basis(calc(100% / 3));
       text-align: center;
 
-      opacity: 0.75;
-
       @include tablet {
         @include flex-basis(auto);
       }
@@ -54,6 +53,8 @@
       .intro_techIcon {
         font-size: 30px;
         color: white;
+
+        opacity: 0.75;
       }
 
       .intro_techName {

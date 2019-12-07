@@ -33,12 +33,33 @@
   }
 
     .about_imageWrapper {
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        height: 270px;
+        width: 270px;
+        @include border-radius(50%);
+        @include background-image(linear-gradient(to bottom, $gradientStart, $gradientEnd));
+
+        @include desktop {
+          width: 420px;
+          height: 420px;
+        }
+
+      }
       @include desktop {
         padding: 40px;
       }
     }
 
     .about_image {
+      position: relative;
       @include border-radius(50%);
       width: 250px;
       height: 250px;
@@ -68,7 +89,7 @@
 
       .about_socialLink {
         color: $gray;
-        font-size: 36px;
+        font-size: 30px;
 
         & + & {
           margin-left: 20px;
@@ -92,7 +113,7 @@
       }
     }
 
-    .about_imageWrapper + .about_textWrapper {
+    .about_textWrapper + .about_imageWrapper {
       margin-top: 20px;
 
       @include tablet {

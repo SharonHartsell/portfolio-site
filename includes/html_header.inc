@@ -11,7 +11,7 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="/css/vendor/normalize.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Work+Sans:300,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600|Work+Sans:300,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
 
   <meta name="theme-color" content="#fafafa">
