@@ -3,22 +3,32 @@
 include('../includes/html_header.inc'); 
 include('../includes/header.inc');
 
-//$sample_code = file_get_contents('./code_samples/fst-package-list.php');
-
 $content = [
   'machine_name' => 'kiosk-map',
   // Intro
   'title' => 'Sales Kiosk Map',
-  'summary' => 'Life Plan Communities use this tool to highlight their community’s lifestyle, amenities, and inventory to prospective residents. The interactive map allows prospects to explore the community via a touch-screen kiosk where they can view multimedia content and even choose their future home.',
   'date' => '2018',
   'company' => 'GlynnDevins',
-  'live_link' => 'lalala',
-  'github_link' => 'fafafa',
   'tech' => ['html5', 'css3', 'js', 'sass', 'php', 'drupal'],
-  'intro_img' => 'map-on-kiosk-zoom-in.png',
-
-
-
+  // Challenge / Solution
+  'challenge' => '',
+  'solution' => '',
+  'results' => '',
+  'live_link' => '',
+  'github_link' => '',
+  // Slideshow
+  'slideshow_imgs' => [
+    'map-zoom-out.jpg',
+    'map-zoom-in.jpg',
+    'map-levels-drawer.jpg',
+    'map-floor-plan-drawer.jpg',
+    'map-floor-plan-toggle.jpg',
+    'unit-modal-3d.jpg',
+    'unit-modal-2d.jpg',
+    'unit-modal-video.jpg',
+    'unit-modal-gallery.jpg',
+  ],
+  // My Role
   'my_role' => [
     'HTML/CSS' => [
       'CSS Flexbox',
@@ -34,22 +44,10 @@ $content = [
     ],
     'Documentation and training' => [],
   ],
-  
-  // Slideshow
-  'slideshow_imgs' => [
-    'map-zoom-out.jpg',
-    'map-zoom-in.jpg',
-    'map-levels-drawer.jpg',
-    'map-floor-plan-drawer.jpg',
-    'map-floor-plan-toggle.jpg',
-    'unit-modal-3d.jpg',
-    'unit-modal-2d.jpg',
-    'unit-modal-video.jpg',
-    'unit-modal-gallery.jpg',
-  ],
-
-  // Code
-  //'code_sample' => $sample_code,
+  'context_img' => 'map-on-kiosk-zoom-in.png',
+  // Testimonial
+  'testimonial' => 'We implemented Sales Engagement Tools in both of our discovery rooms. We started the process and expected a six-month process to achieve our 70% sales goal. The Ripple product created such a WOW factor in the sales process, <strong>it helped us achieve 100% sales in 60 days</strong>. Our sales team said on multiple occasions that the Ripple product was so impressive to our prospects and such a value-add to the process.',
+  'testimonial_src' => 'Marty Jensen, Executive Director at Wyndemere',
 ];
 
 include('../includes/work_detail.inc');

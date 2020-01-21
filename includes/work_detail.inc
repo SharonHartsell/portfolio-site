@@ -26,20 +26,17 @@
   <div class="workDetail_challengeCol">
     <div class="workDetail_challengeTextBlock">
       <h3 class="workDetail_challengeBlockTitle t-title--20sb">&gt; Challenge</h3>
-      <p class="workDetail_challengeBlockBody t-body--16l">Life Plan Communities use this tool to highlight their community’s lifestyle, amenities, and inventory to prospective residents. 
-</p>
+      <p class="workDetail_challengeBlockBody t-body--16l"><?php print $content['challenge']; ?></p>
     </div>
     <div class="workDetail_challengeTextBlock">
       <h3 class="workDetail_challengeBlockTitle t-title--20sb">&gt; Solution</h3>
-      <p class="workDetail_challengeBlockBody t-body--16l">Life Plan Communities use this tool to highlight their community’s lifestyle, amenities, and inventory to prospective residents. 
-</p>
+      <p class="workDetail_challengeBlockBody t-body--16l"><?php print $content['solution']; ?></p>
     </div>
   </div>
   <div class="workDetail_challengeCol workDetail_challengeCol--results">
     <div class="workDetail_challengeTextBlock">
       <h3 class="workDetail_challengeBlockTitle t-title--20sb">&gt; Results</h3>
-      <p class="workDetail_challengeBlockBody t-body--16sb">Life Plan Communities use this tool to highlight their community’s lifestyle, amenities, and inventory to prospective residents. 
-</p>
+      <p class="workDetail_challengeBlockBody t-body--16sb"><?php print $content['results']; ?></p>
     </div>
     <?php if ( !empty($content['live_link']) || !empty($content['github_link']) ) : ?>
       <div class="workDetail_liveGitWrapper">
@@ -54,28 +51,30 @@
   </div>
 </section>
 
-<section class="workDetail_slideshowSection">
-  <div class="workDetail_slideshowOuterWrapper">
-    <div class="workDetail_slideshowWrapper">
-      <div class="workDetail_slideshow">
-        <?php $slide_counter = 1; ?>
-        <?php foreach($content['slideshow_imgs'] as $img) : ?>
-          <?php $active_slide_class = ($slide_counter == 1) ? 'workDetail_slideshowItem--active' : ''; ?>
-          <img src="/img/work/<?php print $content['machine_name']; ?>/<?php print $img; ?>" class="workDetail_slideshowItem <?php print $active_slide_class; ?>" alt="" />
-          <?php $slide_counter++; ?>
-        <?php endforeach; ?>
+<?php if (!empty($content['slideshow_imgs'])) : ?>
+  <section class="workDetail_slideshowSection">
+    <div class="workDetail_slideshowOuterWrapper">
+      <div class="workDetail_slideshowWrapper">
+        <div class="workDetail_slideshow">
+          <?php $slide_counter = 1; ?>
+          <?php foreach($content['slideshow_imgs'] as $img) : ?>
+            <?php $active_slide_class = ($slide_counter == 1) ? 'workDetail_slideshowItem--active' : ''; ?>
+            <img src="/img/work/<?php print $content['machine_name']; ?>/<?php print $img; ?>" class="workDetail_slideshowItem <?php print $active_slide_class; ?>" alt="" />
+            <?php $slide_counter++; ?>
+          <?php endforeach; ?>
+        </div>
+        <button class="workDetail_slideshowBtn workDetail_slideshowBtn--prev">
+          <i class="fas fa-angle-left"></i>
+          <span class="workDetail_slideshowBtnText">Previous</span>
+        </button>
+        <button class="workDetail_slideshowBtn workDetail_slideshowBtn--next">
+          <i class="fas fa-angle-right"></i>
+          <span class="workDetail_slideshowBtnText">Next</span>
+        </button>
       </div>
-      <button class="workDetail_slideshowBtn workDetail_slideshowBtn--prev">
-        <i class="fas fa-angle-left"></i>
-        <span class="workDetail_slideshowBtnText">Previous</span>
-      </button>
-      <button class="workDetail_slideshowBtn workDetail_slideshowBtn--next">
-        <i class="fas fa-angle-right"></i>
-        <span class="workDetail_slideshowBtnText">Next</span>
-      </button>
     </div>
-  </div>
-</section>
+  </section>
+<?php endif; ?>
 
 <section class="workDetail_roleSection">
   <div class="workDetail_roleContent">
@@ -98,15 +97,18 @@
     <?php endif; ?>
   </div>
   <div class="workDetail_roleImageWrap">
-    <img src="/img/work/<?php print $content['machine_name']; ?>/<?php print $content['intro_img']; ?>" class="workDetail_roleImage" alt="" />
+    <img src="/img/work/<?php print $content['machine_name']; ?>/<?php print $content['context_img']; ?>" class="workDetail_roleImage" alt="" />
   </div>
 </section>
 
-<section class="workDetail__quoteSection">
-  <h2 class="workDetail_summary t-body--24sb"><?php print $content['summary']; ?></h2>
-</section>
-
-
+<?php if (!empty($content['testimonial'])) : ?>
+  <section class="workDetail_testimonialSection">
+    <blockquote class="t-body--20sb">
+      <?php print $content['testimonial']; ?>
+      <footer class="workDetail_testimonialSrc t-body--16l">-<?php print $content['testimonial_src']; ?></footer>
+    </blockquote>
+  </section>
+<?php endif; ?>
 
 <div class="workDetail_backLinkWrap">
   <a href="#" class="workDetail_backLink t-body--18l">&lt; back</a>

@@ -266,6 +266,11 @@
         object-fit: contain;
       }
 
+.workDetail_testimonialSection {
+  background: $ltGray;
+  padding: 40px;
+}
+
 // BACK LINK
 .workDetail_backLinkWrap {
   padding: 0px 20px 20px 20px;
@@ -291,7 +296,8 @@
 .workDetail_challengeBlockTitle + .workDetail_challengeBlockBody,
 .workDetail_challengeTextBlock + .workDetail_liveGitWrapper,
 .workDetail_challengeSection + .workDetail_slideshowSection,
-.workDetail_roleHeader + .workDetail_roleList {
+.workDetail_roleHeader + .workDetail_roleList,
+.workDetail_testimonialSrc {
   margin-top: 20px;
 }
 

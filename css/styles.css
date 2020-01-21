@@ -82,7 +82,7 @@ a {
 }
 
 /* line 63, ../scss/_t.scss */
-.t-body, .t-body--14l, .t-body--16l, .t-body--16sb, .t-body--18sb, .t-body--18l, .t-body--24sb {
+.t-body, .t-body--14l, .t-body--16l, .t-body--16sb, .t-body--18sb, .t-body--18l, .t-body--20sb, .t-body--24sb {
   font-family: "Open Sans", Helvetica, sans-serif;
   letter-spacing: 0.03em;
   line-height: 1.5;
@@ -137,18 +137,29 @@ a {
   }
 }
 /* line 114, ../scss/_t.scss */
+.t-body--20sb {
+  font-weight: 600;
+  font-size: 18px;
+}
+@media all and (min-width: 768px) {
+  /* line 114, ../scss/_t.scss */
+  .t-body--20sb {
+    font-size: 20px;
+  }
+}
+/* line 124, ../scss/_t.scss */
 .t-body--24sb {
   font-weight: 600;
   font-size: 20px;
 }
 @media all and (min-width: 768px) {
-  /* line 114, ../scss/_t.scss */
+  /* line 124, ../scss/_t.scss */
   .t-body--24sb {
     font-size: 24px;
   }
 }
 
-/* line 125, ../scss/_t.scss */
+/* line 135, ../scss/_t.scss */
 .t-caps {
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -1183,44 +1194,51 @@ a {
   object-fit: contain;
 }
 
-/* line 270, ../scss/_workDetail.scss */
+/* line 269, ../scss/_workDetail.scss */
+.workDetail_testimonialSection {
+  background: #f0f0f0;
+  padding: 40px;
+}
+
+/* line 275, ../scss/_workDetail.scss */
 .workDetail_backLinkWrap {
   padding: 0px 20px 20px 20px;
   text-align: center;
 }
 @media all and (min-width: 768px) {
-  /* line 270, ../scss/_workDetail.scss */
+  /* line 275, ../scss/_workDetail.scss */
   .workDetail_backLinkWrap {
     padding: 0px 40px 40px 40px;
   }
 }
 
-/* line 280, ../scss/_workDetail.scss */
+/* line 285, ../scss/_workDetail.scss */
 .workDetail_backLink {
   color: #00BCDE;
   text-decoration: none;
 }
-/* line 284, ../scss/_workDetail.scss */
+/* line 289, ../scss/_workDetail.scss */
 .workDetail_backLink:hover {
   text-decoration: underline;
 }
 
-/* line 290, ../scss/_workDetail.scss */
+/* line 295, ../scss/_workDetail.scss */
 .workDetail_techList + .workDetail_title,
 .workDetail_challengeBlockTitle + .workDetail_challengeBlockBody,
 .workDetail_challengeTextBlock + .workDetail_liveGitWrapper,
 .workDetail_challengeSection + .workDetail_slideshowSection,
-.workDetail_roleHeader + .workDetail_roleList {
+.workDetail_roleHeader + .workDetail_roleList,
+.workDetail_testimonialSrc {
   margin-top: 20px;
 }
 
-/* line 298, ../scss/_workDetail.scss */
+/* line 304, ../scss/_workDetail.scss */
 .workDetail_challengeCol + .workDetail_challengeCol,
 .workDetail_roleContent + .workDetail_roleImageWrap {
   margin-top: 20px;
 }
 @media all and (min-width: 768px) {
-  /* line 298, ../scss/_workDetail.scss */
+  /* line 304, ../scss/_workDetail.scss */
   .workDetail_challengeCol + .workDetail_challengeCol,
   .workDetail_roleContent + .workDetail_roleImageWrap {
     margin-top: 0;
@@ -1228,7 +1246,7 @@ a {
   }
 }
 
-/* line 308, ../scss/_workDetail.scss */
+/* line 314, ../scss/_workDetail.scss */
 .workDetail_liveBtn + .workDetail_githubLink {
   margin-left: 20px;
 }

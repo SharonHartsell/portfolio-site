@@ -111,6 +111,16 @@
     }
   }
 
+  &--20sb {
+    @extend .t-body;
+    font-weight: 600;
+    font-size: 18px;
+
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+
   &--24sb {
     @extend .t-body;
     font-weight: 600;
