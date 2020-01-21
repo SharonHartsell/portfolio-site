@@ -25,20 +25,20 @@
 <section class="workDetail_challengeSection">
   <div class="workDetail_challengeCol">
     <div class="workDetail_challengeTextBlock">
-      <h3 class="t-title--20sb">&gt; Challenge</h3>
-      <p class="t-body--16l">Life Plan Communities use this tool to highlight their community’s lifestyle, amenities, and inventory to prospective residents. 
+      <h3 class="workDetail_challengeBlockTitle t-title--20sb">&gt; Challenge</h3>
+      <p class="workDetail_challengeBlockBody t-body--16l">Life Plan Communities use this tool to highlight their community’s lifestyle, amenities, and inventory to prospective residents. 
 </p>
     </div>
     <div class="workDetail_challengeTextBlock">
-      <h3 class="t-title--20sb">&gt; Solution</h3>
-      <p class="t-body--16l">Life Plan Communities use this tool to highlight their community’s lifestyle, amenities, and inventory to prospective residents. 
+      <h3 class="workDetail_challengeBlockTitle t-title--20sb">&gt; Solution</h3>
+      <p class="workDetail_challengeBlockBody t-body--16l">Life Plan Communities use this tool to highlight their community’s lifestyle, amenities, and inventory to prospective residents. 
 </p>
     </div>
   </div>
   <div class="workDetail_challengeCol workDetail_challengeCol--results">
     <div class="workDetail_challengeTextBlock">
-      <h3 class="t-title--20sb">&gt; Results</h3>
-      <p class="t-body--16sb">Life Plan Communities use this tool to highlight their community’s lifestyle, amenities, and inventory to prospective residents. 
+      <h3 class="workDetail_challengeBlockTitle t-title--20sb">&gt; Results</h3>
+      <p class="workDetail_challengeBlockBody t-body--16sb">Life Plan Communities use this tool to highlight their community’s lifestyle, amenities, and inventory to prospective residents. 
 </p>
     </div>
     <?php if ( !empty($content['live_link']) || !empty($content['github_link']) ) : ?>
@@ -81,9 +81,9 @@
   <div class="workDetail_roleContent">
     <h2 class="workDetail_roleHeader t-title--40l">&gt; my role</h2>
     <?php if ( !empty($content['my_role']) ) : ?>
-      <ul class="workDetail_roleList">
+      <ul>
         <?php foreach($content['my_role'] as $role => $sub_roles) : ?>
-          <li class="workDetail_roleItem t-body--18l">
+          <li class="workDetail_roleItem t-body--16l">
             <?php print $role; ?>
             <?php if ( !empty($sub_roles) ) : ?>
               <ul class="workDetail_subRoleList">
@@ -97,12 +97,15 @@
       </ul>
     <?php endif; ?>
   </div>
-  <div class="workDetail_introImageWrapper">
-    <img src="/img/work/<?php print $content['machine_name']; ?>/<?php print $content['intro_img']; ?>" class="workDetail_introImage" alt="" />
+  <div class="workDetail_roleImageWrap">
+    <img src="/img/work/<?php print $content['machine_name']; ?>/<?php print $content['intro_img']; ?>" class="workDetail_roleImage" alt="" />
   </div>
 </section>
 
-<h2 class="workDetail_summary t-body--24sb"><?php print $content['summary']; ?></h2>
+<section class="workDetail__quoteSection">
+  <h2 class="workDetail_summary t-body--24sb"><?php print $content['summary']; ?></h2>
+</section>
+
 
 
 <div class="workDetail_backLinkWrap">

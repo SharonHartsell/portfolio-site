@@ -1,3 +1,4 @@
+// INTRO
 .workDetail_introSection {
   @include background-image(linear-gradient(to bottom right, $gradientStart, $gradientEnd));
   padding-top: $navHt;
@@ -50,10 +51,6 @@
       color: white;
     }
 
-    .workDetail_techList + .workDetail_title {
-      margin-top: 20px;
-    }
-
     .workDetail_dateCompany {
       color: white;
     }
@@ -64,31 +61,30 @@
         }
       }
 
+// CHALLENGE / SOLUTION
 .workDetail_challengeSection {
   padding: 20px;
 
   @include tablet {
     @include display-flex;
     @include justify-content(center);
-    padding: 80px;
+    padding: 60px;
   }
 }
 
   .workDetail_challengeCol {
-    max-width: 350px;
-    & + & {
-      @include tablet {
-        margin-left: 40px;
-      }
+    @include tablet {
+      max-width: 350px;
     }
 
     &--results {
       &:before {
         content: '';
         display: block;
-        margin: -5px;
+        // margin: -5px;
         @include background-image(linear-gradient(to left, $gradientStart, $gradientEnd));
         height: 5px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -97,9 +93,18 @@
       color: $gray;
 
       & + & {
-        margin-top: 60px;
+        margin-top: 20px;
+
+        @include tablet {
+          margin-top: 40px;
+        }
       }
     }
+
+      .workDetail_challengeBlockTitle,
+      .workDetail_challengeBlockBody {
+        margin: 0;
+      }
 
     .workDetail_liveGitWrapper {
       @include display-flex;
@@ -109,211 +114,159 @@
       .workDetail_githubLink {
         color: $gray;
         font-size: 30px;
-      }
+      }    
 
-      .workDetail_liveBtn + .workDetail_githubLink {
-        margin-left: 20px;
-      }
+// SLIDESHOW
+.workDetail_slideshowSection {
+  padding: 0px 40px;
+}
 
-  .workDetail_introImageWrapper {
-    max-width: 800px;
+  .workDetail_slideshowOuterWrapper {
     @include display-flex;
-    @include align-items(flex-end);
-    padding: 0px 20px;
-
-    @include tablet {
-      padding: 0px 40px;
-    }
-
-    @include desktop {
-      @include flex(1);
-      padding: 40px 40px 0px 0px;
-    }
+    height: 100%;
   }
 
-    .workDetail_introImage {
-      width: 100%;
-      object-fit: contain;
+    .workDetail_slideshowWrapper {
+      position: relative;
+      @include flex(1);
+      @include display-flex;
+      height: 300px;
+
+      @include tablet {
+        height: 500px;
+        padding: 0px 40px;
+      }
+
+      @include largedesktop {
+        height: 700px;
+      }
     }
 
+      .workDetail_slideshow {
+        position: relative;
+        @include flex(1);
+      }
+
+        .workDetail_slideshowItem {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+
+          opacity: 0;
+          transition: opacity 0.5s;
+
+          filter: drop-shadow(0px 0px 1px rgba(0,0,0,.3))
+              drop-shadow(0px 0px 5px rgba(0,0,0,.3));
+
+          &--active {
+            opacity: 1;
+          }
+        }
+
+      .workDetail_slideshowBtn {
+        position: absolute;
+        top: 50%;
+        outline: none;
+        border: none;
+        background: none;
+        padding: 0;
+        
+        font-size: 60px;
+        color: $cta;
+
+        transform: translateY(-50%);
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &--prev {
+          left: 0;
+        }
+
+        &--next {
+          right: 0;
+        }
+      }
+
+        .workDetail_slideshowBtnText {
+          display: none;
+        }
+
+// MY ROLE
 .workDetail_roleSection {
   padding: 20px;
 
-  @include desktop {
+  @include tablet {
     @include display-flex;
-    @include justify-content(center);
     padding: 40px;
   }
 }
 
   .workDetail_roleContent {
-    max-width: 600px;
-    @include desktop {
+    @include tablet {
+      max-width: 400px;
       @include flex(1);
-      @include display-flex;
-      @include flex-direction(column);
-      @include justify-content(center);
     }
   }
 
     .workDetail_roleHeader {
       margin: 0;
-      padding-bottom: 20px;
+      padding-bottom: 10px;
 
       color: $gray;
+
+      @include tablet {
+        padding-bottom: 20px;
+      }
 
       &:after {
         content: '';
         display: block;
-        margin-top: 20px;
+        margin-top: 10px;
         @include background-image(linear-gradient(to bottom right, $gradientStart, $gradientEnd));
         height: 5px;
+
+        @include tablet {
+          margin-top: 20px;
+        }
       }
     }
 
-    .workDetail_roleHeader + .workDetail_roleList {
-      margin-top: 20px;
+    .workDetail_roleItem {
+      color: $gray;
+
+      & + & {
+        margin-top: 10px;
+      }
     }
 
-    .workDetail_roleList {
+      .workDetail_subRoleList {
+        padding-left: 20px;
+      }
+
+        .workDetail_subRoleListItem {
+          margin-top: 5px;
+        }
+
+    .workDetail_roleImageWrap {
       @include tablet {
-        columns: 2;
-      }
-
-      @include desktop {
-        columns: 1;
+        @include flex(1);
       }
     }
 
-      .workDetail_roleItem {
-        color: $gray;
-
-        & + & {
-          margin-top: 10px;
-        }
+      .workDetail_roleImage {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
       }
 
-        .workDetail_subRoleList {
-          padding-left: 20px;
-        }
-
-          .workDetail_subRoleListItem {
-            margin-top: 5px;
-          }
-
-  .workDetail_slideshowOuterWrapper {
-    @include display-flex;
-    height: 100%;
-    // max-width: 800px;
-  }
-
-  .workDetail_roleContent + .workDetail_roleImageWrap {
-    @include desktop {
-      margin-left: 40px;
-    }
-  }
-
-.workDetail_slideshowWrapper {
-  position: relative;
-  @include flex(1);
-  @include display-flex;
-  height: 300px;
-
-  @include tablet {
-    height: 500px;
-    padding: 0px 40px;
-  }
-
-  @include largedesktop {
-    height: 700px;
-  }
-}
-
-  .workDetail_slideshowSection {
-    padding: 0px 40px;
-  }
-
-  .workDetail_slideshow {
-    position: relative;
-    @include flex(1);
-  }
-
-    .workDetail_slideshowItem {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-
-      opacity: 0;
-      transition: opacity 0.5s;
-
-      filter: drop-shadow(0px 0px 1px rgba(0,0,0,.3))
-          drop-shadow(0px 0px 5px rgba(0,0,0,.3));
-
-      &--active {
-        opacity: 1;
-      }
-    }
-
-  .workDetail_slideshowBtn {
-    position: absolute;
-    top: 50%;
-    outline: none;
-    border: none;
-    background: none;
-    padding: 0;
-    
-    font-size: 60px;
-    color: $cta;
-
-    transform: translateY(-50%);
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &--prev {
-      left: 0;
-    }
-
-    &--next {
-      right: 0;
-    }
-  }
-
-    .workDetail_slideshowBtnText {
-      display: none;
-    }
-
-.workDetail_codeSection {
-  @include display-flex;
-  @include align-items(center);
-  @include justify-content(center);
-  background: $ltGray;
-  padding: 40px;
-}
-
-  .workDetail_codeHeader {
-    margin: 0;
-    border-right: solid 5px $gradientStart;
-    border-image: linear-gradient(to right, $gradientStart, $gradientEnd) 30;
-    padding-right: 20px;
-    
-    color: $gray;
-  }
-
-  .workDetail_codeText {
-    color: $gray;
-  }
-
-  .workDetail_codeHeader + .workDetail_codeText {
-    margin-left: 40px;
-  }
-
+// BACK LINK
 .workDetail_backLinkWrap {
   padding: 0px 20px 20px 20px;
 
@@ -324,11 +277,34 @@
   }
 }
 
-.workDetail_backLink {
-  color: $gradientStart;
-  text-decoration: none;
+  .workDetail_backLink {
+    color: $gradientStart;
+    text-decoration: none;
 
-  &:hover {
-    text-decoration: underline;
+    &:hover {
+      text-decoration: underline;
+    }
   }
+
+// spacing
+.workDetail_techList + .workDetail_title,
+.workDetail_challengeBlockTitle + .workDetail_challengeBlockBody,
+.workDetail_challengeTextBlock + .workDetail_liveGitWrapper,
+.workDetail_challengeSection + .workDetail_slideshowSection,
+.workDetail_roleHeader + .workDetail_roleList {
+  margin-top: 20px;
+}
+
+.workDetail_challengeCol + .workDetail_challengeCol,
+.workDetail_roleContent + .workDetail_roleImageWrap {
+  margin-top: 20px;
+
+  @include tablet {
+    margin-top: 0;
+    margin-left: 40px;
+  }
+}
+
+.workDetail_liveBtn + .workDetail_githubLink {
+  margin-left: 20px;
 }
