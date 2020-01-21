@@ -1,5 +1,5 @@
-<section class="workDetail_intro">
-  <div class="workDetail_introText">
+<section class="workDetail_introSection">
+  <div class="workDetail_intro">
     <?php if ( count($content['tech']) > 0 ) : ?>
       <ul class="workDetail_techList">
         <?php foreach($content['tech'] as $tech) : ?>
@@ -10,8 +10,7 @@
       </ul>
     <?php endif; ?>
 
-    <h1 class="workDetail_title t-title--60b"><?php print $content['title']; ?></h1>
-    <h2 class="workDetail_summary t-body--24sb"><?php print $content['summary']; ?></h2>
+    <h1 class="workDetail_title t-title--60b"><?php print $content['title']; ?></h1>  
     <p class="workDetail_dateCompany t-body--18l">
     <?php if ( !empty($content['date']) ) : ?>
       <span class="workDetail_date"><?php print $content['date']; ?></span>
@@ -20,43 +19,43 @@
       <span class="workDetail_company"><?php print $content['company']; ?></span>
     <?php endif; ?>
     </p>
+  </div>
+</section>
+
+<section class="workDetail_challengeSection">
+  <div class="workDetail_challengeCol">
+    <div class="workDetail_challengeTextBlock">
+      <h3 class="t-title--20sb">&gt; Challenge</h3>
+      <p class="t-body--16l">Life Plan Communities use this tool to highlight their community’s lifestyle, amenities, and inventory to prospective residents. 
+</p>
+    </div>
+    <div class="workDetail_challengeTextBlock">
+      <h3 class="t-title--20sb">&gt; Solution</h3>
+      <p class="t-body--16l">Life Plan Communities use this tool to highlight their community’s lifestyle, amenities, and inventory to prospective residents. 
+</p>
+    </div>
+  </div>
+  <div class="workDetail_challengeCol workDetail_challengeCol--results">
+    <div class="workDetail_challengeTextBlock">
+      <h3 class="t-title--20sb">&gt; Results</h3>
+      <p class="t-body--16sb">Life Plan Communities use this tool to highlight their community’s lifestyle, amenities, and inventory to prospective residents. 
+</p>
+    </div>
     <?php if ( !empty($content['live_link']) || !empty($content['github_link']) ) : ?>
-      <div>
+      <div class="workDetail_liveGitWrapper">
         <?php if ( !empty($content['live_link']) ) : ?>
-          <a class="workDetail-liveBtn" href="#">See Live Site</a>
+          <a class="workDetail_liveBtn btn--primary t-title--16b t-caps" href="<?php print $content['live_link'];?>">Live Site</a>
         <?php endif; ?>
         <?php if ( !empty($content['github_link']) ) : ?>
-          <a class="workDetail-githubLink" href="#">Check out the code on <i class="fab fa-github"></i></a>
+          <a class="workDetail_githubLink" href="<?php print $content['github_link'];?>"><i class="fab fa-github"></i></a>
         <?php endif; ?>
       </div>
     <?php endif; ?>
   </div>
-  <div class="workDetail_introImageWrapper">
-    <img src="/img/work/<?php print $content['machine_name']; ?>/<?php print $content['intro_img']; ?>" class="workDetail_introImage" alt="" />
-  </div>
 </section>
 
-<section class="workDetail_roleSection">
-  <div class="workDetail_roleContent">
-    <h2 class="workDetail_roleHeader t-title--40l">&gt; what I did</h2>
-    <?php if ( !empty($content['my_role']) ) : ?>
-      <ul class="workDetail_roleList">
-        <?php foreach($content['my_role'] as $role => $sub_roles) : ?>
-          <li class="workDetail_roleItem t-body--18l">
-            <?php print $role; ?>
-            <?php if ( !empty($sub_roles) ) : ?>
-              <ul class="workDetail_subRoleList">
-                <?php foreach($sub_roles as $sub_role) : ?>
-                  <li class="workDetail_subRoleListItem"><?php print $sub_role; ?></li>
-                <?php endforeach; ?>
-              </ul>
-            <?php endif; ?>
-          </li>
-        <?php endforeach; ?>
-      </ul>
-    <?php endif; ?>
-  </div>
-  <div class="workDetail_roleImageWrap">
+<section class="workDetail_slideshowSection">
+  <div class="workDetail_slideshowOuterWrapper">
     <div class="workDetail_slideshowWrapper">
       <div class="workDetail_slideshow">
         <?php $slide_counter = 1; ?>
@@ -78,12 +77,33 @@
   </div>
 </section>
 
-<!-- <section class="workDetail_codeSection">
-  <h2 class="workDetail_codeHeader t-title--40l">&gt; code sample</h2>
-  <div class="workDetail_codeText">
-    <pre><?php print $content['code_sample']; ?></pre>
+<section class="workDetail_roleSection">
+  <div class="workDetail_roleContent">
+    <h2 class="workDetail_roleHeader t-title--40l">&gt; my role</h2>
+    <?php if ( !empty($content['my_role']) ) : ?>
+      <ul class="workDetail_roleList">
+        <?php foreach($content['my_role'] as $role => $sub_roles) : ?>
+          <li class="workDetail_roleItem t-body--18l">
+            <?php print $role; ?>
+            <?php if ( !empty($sub_roles) ) : ?>
+              <ul class="workDetail_subRoleList">
+                <?php foreach($sub_roles as $sub_role) : ?>
+                  <li class="workDetail_subRoleListItem"><?php print $sub_role; ?></li>
+                <?php endforeach; ?>
+              </ul>
+            <?php endif; ?>
+          </li>
+        <?php endforeach; ?>
+      </ul>
+    <?php endif; ?>
   </div>
-</section> -->
+  <div class="workDetail_introImageWrapper">
+    <img src="/img/work/<?php print $content['machine_name']; ?>/<?php print $content['intro_img']; ?>" class="workDetail_introImage" alt="" />
+  </div>
+</section>
+
+<h2 class="workDetail_summary t-body--24sb"><?php print $content['summary']; ?></h2>
+
 
 <div class="workDetail_backLinkWrap">
   <a href="#" class="workDetail_backLink t-body--18l">&lt; back</a>

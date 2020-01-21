@@ -12,8 +12,8 @@ $content = [
   'summary' => 'Life Plan Communities use this tool to highlight their community’s lifestyle, amenities, and inventory to prospective residents. The interactive map allows prospects to explore the community via a touch-screen kiosk where they can view multimedia content and even choose their future home.',
   'date' => '2018',
   'company' => 'GlynnDevins',
-  'live_link' => '',
-  'github_link' => '',
+  'live_link' => 'lalala',
+  'github_link' => 'fafafa',
   'tech' => ['html5', 'css3', 'js', 'sass', 'php', 'drupal'],
   'intro_img' => 'map-on-kiosk-zoom-in.png',
 
