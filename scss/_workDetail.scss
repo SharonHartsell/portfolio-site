@@ -1,32 +1,25 @@
 // INTRO
 .workDetail_introSection {
   @include background-image(linear-gradient(to bottom right, $gradientStart, $gradientEnd));
+  @include display-flex;
+  @include justify-content(center);
   padding-top: $navHt;
-
-  @include desktop {
-    @include display-flex;
-    @include justify-content(center);
-  }
 }
 
   .workDetail_intro {
-    max-width: 800px;
+    @include flex(1);
     padding: 20px;
+
+    text-align: center;
 
     @include tablet {
       padding: 40px;
-    }
-
-    @include desktop {
-      @include flex(1);
-      @include display-flex;
-      @include flex-direction(column);
-      @include align-items(center);
     }
   }
 
     .workDetail_techList {
       @include display-flex;
+      @include justify-content(center);
       margin: 0;
       padding: 0;
 
@@ -70,18 +63,18 @@
     @include justify-content(center);
     padding: 60px;
   }
+
+  @include largedesktop {
+    padding: 80px;
+  }
 }
 
   .workDetail_challengeCol {
-    @include tablet {
-      max-width: 350px;
-    }
-
     &--results {
       &:before {
         content: '';
         display: block;
-        // margin: -5px;
+        margin: -25px;
         @include background-image(linear-gradient(to left, $gradientStart, $gradientEnd));
         height: 5px;
         margin-bottom: 20px;
@@ -119,6 +112,14 @@
 // SLIDESHOW
 .workDetail_slideshowSection {
   padding: 0px 40px;
+
+  @include tablet {
+    padding: 0px 40px;
+  }
+
+  @include largedesktop {
+    padding: 0px 80px;
+  }
 }
 
   .workDetail_slideshowOuterWrapper {
@@ -206,11 +207,14 @@
     @include display-flex;
     padding: 40px;
   }
+
+  @include largedesktop {
+    padding: 80px;
+  }
 }
 
   .workDetail_roleContent {
     @include tablet {
-      max-width: 400px;
       @include flex(1);
     }
   }
@@ -267,29 +271,29 @@
       }
 
 .workDetail_testimonialSection {
+  @include display-flex;
+  @include justify-content(center);
   background: $ltGray;
-  padding: 40px;
+  padding: 20px;
+
+  @include tablet {
+    padding: 40px;
+  }
 }
+
+  .workDetail_testimonial {
+    margin: 0;
+
+    @include largedesktop {
+      max-width: 60%;
+    }
+  }
 
 // BACK LINK
 .workDetail_backLinkWrap {
-  padding: 0px 20px 20px 20px;
-
-  text-align: center;
-
-  @include tablet {
-    padding: 0px 40px 40px 40px;
-  }
+  @include display-flex;
+  @include justify-content(center);
 }
-
-  .workDetail_backLink {
-    color: $gradientStart;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 
 // spacing
 .workDetail_techList + .workDetail_title,
@@ -297,7 +301,8 @@
 .workDetail_challengeTextBlock + .workDetail_liveGitWrapper,
 .workDetail_challengeSection + .workDetail_slideshowSection,
 .workDetail_roleHeader + .workDetail_roleList,
-.workDetail_testimonialSrc {
+.workDetail_testimonialSrc,
+.workDetail_backLinkWrap {
   margin-top: 20px;
 }
 

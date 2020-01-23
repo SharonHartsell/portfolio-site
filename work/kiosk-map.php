@@ -11,11 +11,11 @@ $content = [
   'company' => 'GlynnDevins',
   'tech' => ['html5', 'css3', 'js', 'sass', 'php', 'drupal'],
   // Challenge / Solution
-  'challenge' => '',
-  'solution' => '',
-  'results' => '',
-  'live_link' => '',
-  'github_link' => '',
+  'challenge' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pharetra augue vitae pharetra commodo. Curabitur finibus orci sapien, vel porttitor est venenatis sit amet. Ut porta, ex ac tempus dictum, nunc urna faucibus sapien, vitae egestas sem ante at massa. Integer vitae pharetra sem.',
+  'solution' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pharetra augue vitae pharetra commodo. Curabitur finibus orci sapien, vel porttitor est venenatis sit amet. Ut porta, ex ac tempus dictum, nunc urna faucibus sapien, vitae egestas sem ante at massa. Integer vitae pharetra sem.',
+  'results' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pharetra augue vitae pharetra commodo. Curabitur finibus orci sapien, vel porttitor est venenatis sit amet. Ut porta, ex ac tempus dictum, nunc urna faucibus sapien, vitae egestas sem ante at massa. Integer vitae pharetra sem.',
+  'live_link' => 'boop',
+  'github_link' => 'boop',
   // Slideshow
   'slideshow_imgs' => [
     'map-zoom-out.jpg',

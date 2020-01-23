@@ -103,13 +103,13 @@
 
 <?php if (!empty($content['testimonial'])) : ?>
   <section class="workDetail_testimonialSection">
-    <blockquote class="t-body--20sb">
+    <blockquote class="workDetail_testimonial t-body--20sb">
       <?php print $content['testimonial']; ?>
-      <footer class="workDetail_testimonialSrc t-body--16l">-<?php print $content['testimonial_src']; ?></footer>
+      <footer class="workDetail_testimonialSrc t-body--16l">- <?php print $content['testimonial_src']; ?></footer>
     </blockquote>
   </section>
 <?php endif; ?>
 
 <div class="workDetail_backLinkWrap">
-  <a href="#" class="workDetail_backLink t-body--18l">&lt; back</a>
+  <a href="#" class="btn--secondary t-title--16b t-caps">Back</a>
 </div>

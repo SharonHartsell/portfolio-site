@@ -10,6 +10,10 @@
   padding: 10px;
 
   z-index: 9999;
+
+  @include largedesktop {
+    padding: 20px;
+  }
 }
 
   .header_name {
