@@ -43,6 +43,10 @@
     @include tablet {
       padding: 40px;
     }
+
+    @include largedesktop {
+      top: $navHt + 20px;
+    }
   }
 
     .nav_listItem {

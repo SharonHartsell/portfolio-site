@@ -8,6 +8,10 @@
   @include tablet {
     padding: 40px;
   }
+
+  @include largedesktop {
+    padding: 40px 80px;
+  }
 }
 
   .about_sectionTitle {
@@ -51,10 +55,6 @@
           width: 420px;
           height: 420px;
         }
-
-      }
-      @include desktop {
-        padding: 40px;
       }
     }
 
@@ -75,7 +75,7 @@
     .about_text {
       margin: 0;
 
-      max-width: 500px;
+      max-width: 600px;
       color: $gray;
     }
 
@@ -119,5 +119,9 @@
       @include tablet {
         margin-top: 0;
         margin-left: 40px;
+      }
+
+      @include desktop {
+        margin-left: 80px;
       }
     }

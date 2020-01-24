@@ -80,7 +80,7 @@ $work = [
     
     <div class="about_textWrapper">
       <div class="about_text">
-        <p class="t-body--18l">Hi there!</p>
+        <p class="t-title--20sb">Hi there!</p>
         <p class="t-body--18l">I’m Sharon, a front-end web developer who specializes in creating user-friendly and engaging web experiences. While I love a well-organized CSS system, JavaScript is my real passion. I enjoy building the interactivity that brings a user interface to life. I’m a strong problem solver with a keen eye for details, a skill I built through my background in graphic design.</p>
         <p class="t-body--18l">Check out some of my work above, and you can contact me at <a href="mailto:hello@sharonhartsell.com">hello@sharonhartsell.com</a>.</p>
       </div>

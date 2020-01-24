@@ -1,6 +1,16 @@
 .footer {
-  margin-top: 20px;
   padding: 10px;
   
   text-align: center;
+  color: $gray;
 }
+
+  .footer__email {
+    color: $gray;
+
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }

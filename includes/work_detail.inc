@@ -96,10 +96,12 @@
       </ul>
     <?php endif; ?>
   </div>
-  <div class="workDetail_roleImageWrap">
+  
+</section>
+
+<div class="workDetail_roleImageWrap">
     <img src="/img/work/<?php print $content['machine_name']; ?>/<?php print $content['context_img']; ?>" class="workDetail_roleImage" alt="" />
   </div>
-</section>
 
 <?php if (!empty($content['testimonial'])) : ?>
   <section class="workDetail_testimonialSection">

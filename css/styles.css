@@ -291,13 +291,19 @@ a {
     padding: 40px;
   }
 }
+@media all and (min-width: 1170px) {
+  /* line 29, ../scss/_nav.scss */
+  .nav_list {
+    top: 70px;
+  }
+}
 
-/* line 48, ../scss/_nav.scss */
+/* line 52, ../scss/_nav.scss */
 .nav_listItem {
   list-style-type: none;
 }
 
-/* line 52, ../scss/_nav.scss */
+/* line 56, ../scss/_nav.scss */
 .nav_link {
   font-weight: 300;
   font-size: 80px;
@@ -308,31 +314,31 @@ a {
   text-decoration: none;
 }
 @media all and (min-width: 768px) {
-  /* line 52, ../scss/_nav.scss */
+  /* line 56, ../scss/_nav.scss */
   .nav_link {
     font-size: 100px;
   }
 }
 @media all and (min-width: 768px) {
-  /* line 65, ../scss/_nav.scss */
+  /* line 69, ../scss/_nav.scss */
   .nav_link:before, .nav_link:after {
     opacity: 0;
     transition: opacity 0.25s;
   }
 }
 @media all and (min-width: 768px) {
-  /* line 73, ../scss/_nav.scss */
+  /* line 77, ../scss/_nav.scss */
   .nav_link:before {
     content: '< ';
   }
 }
 @media all and (min-width: 768px) {
-  /* line 79, ../scss/_nav.scss */
+  /* line 83, ../scss/_nav.scss */
   .nav_link:after {
     content: ' >';
   }
 }
-/* line 86, ../scss/_nav.scss */
+/* line 90, ../scss/_nav.scss */
 .nav_link:hover:before, .nav_link:hover:after {
   opacity: 1;
 }
@@ -439,33 +445,39 @@ a {
     padding: 40px;
   }
 }
+@media all and (min-width: 1170px) {
+  /* line 1, ../scss/_work.scss */
+  .work {
+    padding: 40px 80px;
+  }
+}
 
-/* line 12, ../scss/_work.scss */
+/* line 16, ../scss/_work.scss */
 .work_sectionTitle {
   margin: 0;
   text-align: center;
   color: #707070;
 }
 
-/* line 19, ../scss/_work.scss */
+/* line 23, ../scss/_work.scss */
 .work_sectionTitle + .work_projectList {
   margin-top: 20px;
 }
 @media all and (min-width: 768px) {
-  /* line 19, ../scss/_work.scss */
+  /* line 23, ../scss/_work.scss */
   .work_sectionTitle + .work_projectList {
     margin-top: 40px;
   }
 }
 
-/* line 27, ../scss/_work.scss */
+/* line 31, ../scss/_work.scss */
 .work_projectList {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 @media all and (min-width: 768px) {
-  /* line 27, ../scss/_work.scss */
+  /* line 31, ../scss/_work.scss */
   .work_projectList {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -473,19 +485,19 @@ a {
   }
 }
 @media all and (min-width: 1024px) {
-  /* line 27, ../scss/_work.scss */
+  /* line 31, ../scss/_work.scss */
   .work_projectList {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media all and (min-width: 1170px) {
-  /* line 27, ../scss/_work.scss */
+  /* line 31, ../scss/_work.scss */
   .work_projectList {
     grid-template-columns: repeat(3, minmax(min-content, 600px));
   }
 }
 
-/* line 48, ../scss/_work.scss */
+/* line 52, ../scss/_work.scss */
 .work_projectListItem {
   display: -webkit-flex;
   display: flex;
@@ -498,12 +510,12 @@ a {
   padding: 30px 0px 30px 30px;
 }
 @media all and (min-width: 768px) {
-  /* line 48, ../scss/_work.scss */
+  /* line 52, ../scss/_work.scss */
   .work_projectListItem {
     padding: 40px 0px 40px 40px;
   }
 }
-/* line 60, ../scss/_work.scss */
+/* line 64, ../scss/_work.scss */
 .work_projectListItem:before {
   content: '';
   display: block;
@@ -522,18 +534,18 @@ a {
   transition: transform 0.5s;
   z-index: -1;
 }
-/* line 75, ../scss/_work.scss */
+/* line 79, ../scss/_work.scss */
 .work_projectListItem + .work_projectListItem {
   margin-top: 30px;
 }
 @media all and (min-width: 768px) {
-  /* line 75, ../scss/_work.scss */
+  /* line 79, ../scss/_work.scss */
   .work_projectListItem + .work_projectListItem {
     margin-top: 0;
   }
 }
 
-/* line 84, ../scss/_work.scss */
+/* line 88, ../scss/_work.scss */
 .work_projectThumbImg {
   width: 100%;
   height: 200px;
@@ -541,24 +553,24 @@ a {
   object-position: center center;
 }
 
-/* line 91, ../scss/_work.scss */
+/* line 95, ../scss/_work.scss */
 .work_projectTitle {
   margin: 0;
   color: #707070;
 }
 
-/* line 97, ../scss/_work.scss */
+/* line 101, ../scss/_work.scss */
 .work_projectTeaser {
   color: #707070;
 }
 
-/* line 101, ../scss/_work.scss */
+/* line 105, ../scss/_work.scss */
 .work_projectBtn {
   -webkit-align-self: flex-start;
   align-self: flex-start;
 }
 
-/* line 105, ../scss/_work.scss */
+/* line 109, ../scss/_work.scss */
 .work_projectThumbImg + .work_projectTextWrapper,
 .work_projectTextWrapper + .work_projectBtn {
   margin-top: 20px;
@@ -581,15 +593,21 @@ a {
     padding: 40px;
   }
 }
+@media all and (min-width: 1170px) {
+  /* line 1, ../scss/_about.scss */
+  .about {
+    padding: 40px 80px;
+  }
+}
 
-/* line 13, ../scss/_about.scss */
+/* line 17, ../scss/_about.scss */
 .about_sectionTitle {
   margin: 0;
   text-align: center;
   color: #707070;
 }
 
-/* line 20, ../scss/_about.scss */
+/* line 24, ../scss/_about.scss */
 .about_contentWrapper {
   display: -webkit-flex;
   display: flex;
@@ -599,7 +617,7 @@ a {
   align-items: center;
 }
 @media all and (min-width: 768px) {
-  /* line 20, ../scss/_about.scss */
+  /* line 24, ../scss/_about.scss */
   .about_contentWrapper {
     -webkit-flex-direction: row;
     flex-direction: row;
@@ -608,18 +626,18 @@ a {
   }
 }
 @media all and (min-width: 1024px) {
-  /* line 20, ../scss/_about.scss */
+  /* line 24, ../scss/_about.scss */
   .about_contentWrapper {
     -webkit-align-items: center;
     align-items: center;
   }
 }
 
-/* line 35, ../scss/_about.scss */
+/* line 39, ../scss/_about.scss */
 .about_imageWrapper {
   position: relative;
 }
-/* line 38, ../scss/_about.scss */
+/* line 42, ../scss/_about.scss */
 .about_imageWrapper:before {
   content: '';
   position: absolute;
@@ -640,16 +658,10 @@ a {
   background-image: linear-gradient(to bottom, #00bcde, #10d563);
 }
 @media all and (min-width: 1024px) {
-  /* line 38, ../scss/_about.scss */
+  /* line 42, ../scss/_about.scss */
   .about_imageWrapper:before {
     width: 420px;
     height: 420px;
-  }
-}
-@media all and (min-width: 1024px) {
-  /* line 35, ../scss/_about.scss */
-  .about_imageWrapper {
-    padding: 40px;
   }
 }
 
@@ -675,7 +687,7 @@ a {
 /* line 75, ../scss/_about.scss */
 .about_text {
   margin: 0;
-  max-width: 500px;
+  max-width: 600px;
   color: #707070;
 }
 
@@ -733,6 +745,12 @@ a {
   .about_textWrapper + .about_imageWrapper {
     margin-top: 0;
     margin-left: 40px;
+  }
+}
+@media all and (min-width: 1024px) {
+  /* line 116, ../scss/_about.scss */
+  .about_textWrapper + .about_imageWrapper {
+    margin-left: 80px;
   }
 }
 
@@ -989,12 +1007,17 @@ a {
 }
 
 /* line 97, ../scss/_workDetail.scss */
-.workDetail_challengeBlockTitle,
-.workDetail_challengeBlockBody {
+.workDetail_challengeBlockTitle {
   margin: 0;
 }
 
-/* line 102, ../scss/_workDetail.scss */
+/* line 101, ../scss/_workDetail.scss */
+.workDetail_challengeBlockBody {
+  margin: 0;
+  max-width: 700px;
+}
+
+/* line 106, ../scss/_workDetail.scss */
 .workDetail_liveGitWrapper {
   display: -webkit-flex;
   display: flex;
@@ -1002,37 +1025,37 @@ a {
   align-items: center;
 }
 
-/* line 107, ../scss/_workDetail.scss */
+/* line 111, ../scss/_workDetail.scss */
 .workDetail_githubLink {
   color: #707070;
   font-size: 30px;
 }
 
-/* line 113, ../scss/_workDetail.scss */
+/* line 117, ../scss/_workDetail.scss */
 .workDetail_slideshowSection {
   padding: 0px 40px;
 }
 @media all and (min-width: 768px) {
-  /* line 113, ../scss/_workDetail.scss */
+  /* line 117, ../scss/_workDetail.scss */
   .workDetail_slideshowSection {
     padding: 0px 40px;
   }
 }
 @media all and (min-width: 1170px) {
-  /* line 113, ../scss/_workDetail.scss */
+  /* line 117, ../scss/_workDetail.scss */
   .workDetail_slideshowSection {
     padding: 0px 80px;
   }
 }
 
-/* line 125, ../scss/_workDetail.scss */
+/* line 129, ../scss/_workDetail.scss */
 .workDetail_slideshowOuterWrapper {
   display: -webkit-flex;
   display: flex;
   height: 100%;
 }
 
-/* line 130, ../scss/_workDetail.scss */
+/* line 134, ../scss/_workDetail.scss */
 .workDetail_slideshowWrapper {
   position: relative;
   -webkit-flex: 1;
@@ -1042,27 +1065,33 @@ a {
   height: 300px;
 }
 @media all and (min-width: 768px) {
-  /* line 130, ../scss/_workDetail.scss */
+  /* line 134, ../scss/_workDetail.scss */
   .workDetail_slideshowWrapper {
     height: 500px;
     padding: 0px 40px;
   }
 }
-@media all and (min-width: 1170px) {
-  /* line 130, ../scss/_workDetail.scss */
+@media all and (min-width: 1024px) {
+  /* line 134, ../scss/_workDetail.scss */
   .workDetail_slideshowWrapper {
     height: 700px;
   }
 }
+@media all and (min-width: 1170px) {
+  /* line 134, ../scss/_workDetail.scss */
+  .workDetail_slideshowWrapper {
+    height: 1000px;
+  }
+}
 
-/* line 146, ../scss/_workDetail.scss */
+/* line 154, ../scss/_workDetail.scss */
 .workDetail_slideshow {
   position: relative;
   -webkit-flex: 1;
   flex: 1;
 }
 
-/* line 151, ../scss/_workDetail.scss */
+/* line 159, ../scss/_workDetail.scss */
 .workDetail_slideshowItem {
   position: absolute;
   top: 0;
@@ -1076,12 +1105,12 @@ a {
   transition: opacity 0.5s;
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3)) drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
 }
-/* line 167, ../scss/_workDetail.scss */
+/* line 175, ../scss/_workDetail.scss */
 .workDetail_slideshowItem--active {
   opacity: 1;
 }
 
-/* line 172, ../scss/_workDetail.scss */
+/* line 180, ../scss/_workDetail.scss */
 .workDetail_slideshowBtn {
   position: absolute;
   top: 50%;
@@ -1093,30 +1122,30 @@ a {
   color: #FF9D2B;
   transform: translateY(-50%);
 }
-/* line 185, ../scss/_workDetail.scss */
+/* line 193, ../scss/_workDetail.scss */
 .workDetail_slideshowBtn:hover {
   cursor: pointer;
 }
-/* line 189, ../scss/_workDetail.scss */
+/* line 197, ../scss/_workDetail.scss */
 .workDetail_slideshowBtn--prev {
   left: 0;
 }
-/* line 193, ../scss/_workDetail.scss */
+/* line 201, ../scss/_workDetail.scss */
 .workDetail_slideshowBtn--next {
   right: 0;
 }
 
-/* line 198, ../scss/_workDetail.scss */
+/* line 206, ../scss/_workDetail.scss */
 .workDetail_slideshowBtnText {
   display: none;
 }
 
-/* line 203, ../scss/_workDetail.scss */
+/* line 211, ../scss/_workDetail.scss */
 .workDetail_roleSection {
   padding: 20px;
 }
 @media all and (min-width: 768px) {
-  /* line 203, ../scss/_workDetail.scss */
+  /* line 211, ../scss/_workDetail.scss */
   .workDetail_roleSection {
     display: -webkit-flex;
     display: flex;
@@ -1124,33 +1153,33 @@ a {
   }
 }
 @media all and (min-width: 1170px) {
-  /* line 203, ../scss/_workDetail.scss */
+  /* line 211, ../scss/_workDetail.scss */
   .workDetail_roleSection {
     padding: 80px;
   }
 }
 
 @media all and (min-width: 768px) {
-  /* line 216, ../scss/_workDetail.scss */
+  /* line 224, ../scss/_workDetail.scss */
   .workDetail_roleContent {
     -webkit-flex: 1;
     flex: 1;
   }
 }
 
-/* line 222, ../scss/_workDetail.scss */
+/* line 230, ../scss/_workDetail.scss */
 .workDetail_roleHeader {
   margin: 0;
   padding-bottom: 10px;
   color: #707070;
 }
 @media all and (min-width: 768px) {
-  /* line 222, ../scss/_workDetail.scss */
+  /* line 230, ../scss/_workDetail.scss */
   .workDetail_roleHeader {
     padding-bottom: 20px;
   }
 }
-/* line 232, ../scss/_workDetail.scss */
+/* line 240, ../scss/_workDetail.scss */
 .workDetail_roleHeader:after {
   content: '';
   display: block;
@@ -1164,47 +1193,47 @@ a {
   height: 5px;
 }
 @media all and (min-width: 768px) {
-  /* line 232, ../scss/_workDetail.scss */
+  /* line 240, ../scss/_workDetail.scss */
   .workDetail_roleHeader:after {
     margin-top: 20px;
   }
 }
 
-/* line 245, ../scss/_workDetail.scss */
+/* line 253, ../scss/_workDetail.scss */
 .workDetail_roleItem {
   color: #707070;
 }
-/* line 248, ../scss/_workDetail.scss */
+/* line 256, ../scss/_workDetail.scss */
 .workDetail_roleItem + .workDetail_roleItem {
   margin-top: 10px;
 }
 
-/* line 253, ../scss/_workDetail.scss */
+/* line 261, ../scss/_workDetail.scss */
 .workDetail_subRoleList {
   padding-left: 20px;
 }
 
-/* line 257, ../scss/_workDetail.scss */
+/* line 265, ../scss/_workDetail.scss */
 .workDetail_subRoleListItem {
   margin-top: 5px;
 }
 
 @media all and (min-width: 768px) {
-  /* line 261, ../scss/_workDetail.scss */
+  /* line 269, ../scss/_workDetail.scss */
   .workDetail_roleImageWrap {
     -webkit-flex: 1;
     flex: 1;
   }
 }
 
-/* line 267, ../scss/_workDetail.scss */
+/* line 275, ../scss/_workDetail.scss */
 .workDetail_roleImage {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-/* line 273, ../scss/_workDetail.scss */
+/* line 281, ../scss/_workDetail.scss */
 .workDetail_testimonialSection {
   display: -webkit-flex;
   display: flex;
@@ -1214,24 +1243,19 @@ a {
   padding: 20px;
 }
 @media all and (min-width: 768px) {
-  /* line 273, ../scss/_workDetail.scss */
+  /* line 281, ../scss/_workDetail.scss */
   .workDetail_testimonialSection {
     padding: 40px;
   }
 }
 
-/* line 284, ../scss/_workDetail.scss */
+/* line 292, ../scss/_workDetail.scss */
 .workDetail_testimonial {
   margin: 0;
-}
-@media all and (min-width: 1170px) {
-  /* line 284, ../scss/_workDetail.scss */
-  .workDetail_testimonial {
-    max-width: 60%;
-  }
+  max-width: 1000px;
 }
 
-/* line 293, ../scss/_workDetail.scss */
+/* line 298, ../scss/_workDetail.scss */
 .workDetail_backLinkWrap {
   display: -webkit-flex;
   display: flex;
@@ -1239,24 +1263,36 @@ a {
   justify-content: center;
 }
 
-/* line 299, ../scss/_workDetail.scss */
+/* line 304, ../scss/_workDetail.scss */
 .workDetail_techList + .workDetail_title,
 .workDetail_challengeBlockTitle + .workDetail_challengeBlockBody,
 .workDetail_challengeTextBlock + .workDetail_liveGitWrapper,
 .workDetail_challengeSection + .workDetail_slideshowSection,
 .workDetail_roleHeader + .workDetail_roleList,
-.workDetail_testimonialSrc,
-.workDetail_backLinkWrap {
+.workDetail_testimonialSrc {
   margin-top: 20px;
 }
 
-/* line 309, ../scss/_workDetail.scss */
+/* line 313, ../scss/_workDetail.scss */
+.workDetail_testimonialSection + .workDetail_backLinkWrap,
+.workDetail_backLinkWrap + .footer {
+  margin-top: 20px;
+}
+@media all and (min-width: 768px) {
+  /* line 313, ../scss/_workDetail.scss */
+  .workDetail_testimonialSection + .workDetail_backLinkWrap,
+  .workDetail_backLinkWrap + .footer {
+    margin-top: 40px;
+  }
+}
+
+/* line 322, ../scss/_workDetail.scss */
 .workDetail_challengeCol + .workDetail_challengeCol,
 .workDetail_roleContent + .workDetail_roleImageWrap {
   margin-top: 20px;
 }
 @media all and (min-width: 768px) {
-  /* line 309, ../scss/_workDetail.scss */
+  /* line 322, ../scss/_workDetail.scss */
   .workDetail_challengeCol + .workDetail_challengeCol,
   .workDetail_roleContent + .workDetail_roleImageWrap {
     margin-top: 0;
@@ -1264,14 +1300,24 @@ a {
   }
 }
 
-/* line 319, ../scss/_workDetail.scss */
+/* line 332, ../scss/_workDetail.scss */
 .workDetail_liveBtn + .workDetail_githubLink {
   margin-left: 20px;
 }
 
 /* line 1, ../scss/_footer.scss */
 .footer {
-  margin-top: 20px;
   padding: 10px;
   text-align: center;
+  color: #707070;
+}
+
+/* line 8, ../scss/_footer.scss */
+.footer__email {
+  color: #707070;
+  text-decoration: none;
+}
+/* line 13, ../scss/_footer.scss */
+.footer__email:hover {
+  text-decoration: underline;
 }

@@ -94,9 +94,13 @@
       }
     }
 
-      .workDetail_challengeBlockTitle,
+      .workDetail_challengeBlockTitle {
+        margin: 0;
+      }
+
       .workDetail_challengeBlockBody {
         margin: 0;
+        max-width: $maxTextWidth16;
       }
 
     .workDetail_liveGitWrapper {
@@ -138,8 +142,12 @@
         padding: 0px 40px;
       }
 
-      @include largedesktop {
+      @include desktop {
         height: 700px;
+      }
+
+      @include largedesktop {
+        height: 1000px;
       }
     }
 
@@ -283,10 +291,7 @@
 
   .workDetail_testimonial {
     margin: 0;
-
-    @include largedesktop {
-      max-width: 60%;
-    }
+    max-width: $maxTextWidth20;
   }
 
 // BACK LINK
@@ -301,9 +306,17 @@
 .workDetail_challengeTextBlock + .workDetail_liveGitWrapper,
 .workDetail_challengeSection + .workDetail_slideshowSection,
 .workDetail_roleHeader + .workDetail_roleList,
-.workDetail_testimonialSrc,
-.workDetail_backLinkWrap {
+.workDetail_testimonialSrc {
   margin-top: 20px;
+}
+
+.workDetail_testimonialSection + .workDetail_backLinkWrap,
+.workDetail_backLinkWrap + .footer {
+  margin-top: 20px;
+
+  @include tablet {
+    margin-top: 40px;
+  }
 }
 
 .workDetail_challengeCol + .workDetail_challengeCol,
